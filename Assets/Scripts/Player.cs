@@ -48,6 +48,17 @@ public class Player : MonoBehaviour
            
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftControl) && isGrounded == true)
+        {
+            speed *= .5f;
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            speed = 4f;
+
+        }
     }
 
     void Jumping()
