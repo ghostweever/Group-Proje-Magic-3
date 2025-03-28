@@ -6,6 +6,7 @@ public class MakeCloud : MonoBehaviour
 {
 
     public GameObject cloud;
+    public GameObject player;
     private int cloudAmount = 2;
     private bool canMakeCloud = true;
     
@@ -38,7 +39,7 @@ public class MakeCloud : MonoBehaviour
         {
             
 
-           var cloudCopy = Instantiate(cloud, transform.position, transform.rotation);
+           var cloudCopy = Instantiate(cloud, new Vector3(player.transform.position.x, player.transform.position.y - 1.5f, player.transform.position.z), transform.rotation);
             
             cloudAmount--;
 

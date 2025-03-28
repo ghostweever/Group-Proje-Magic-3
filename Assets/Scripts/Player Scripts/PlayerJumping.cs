@@ -24,6 +24,8 @@ public class PlayerJumping : MonoBehaviour
         if (Input.GetButtonDown("Jump") && canDoubleJump == true)
         {
 
+            moveDirection.y += Mathf.Sqrt(jumpSpeed * 2 * gravity);
+
             moveDirection.y = jumpSpeed;
             jumpAmount--;
 
@@ -36,8 +38,9 @@ public class PlayerJumping : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
         characterController.Move(moveDirection * Time.deltaTime);
 
-        if (characterController.isGrounded)
+        if (characterController.isGrounded && moveDirection.y < 0)
         {
+            moveDirection.y = 0f;
             canDoubleJump = true;
             jumpAmount = 2;
         }
