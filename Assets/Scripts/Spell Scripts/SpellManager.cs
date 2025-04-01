@@ -8,12 +8,12 @@ public class SpellManager : MonoBehaviour
 
     public int whatSpellAmI;
     private CharacterController characterController;
-    private bool isGrounded;
+    public PlayerMovement playerMovement;
     void Start()
     {
         whatSpellAmI = 0;
         characterController = GetComponent<CharacterController>();
-
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class SpellManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
 
-            if (whatSpellAmI == 0 && !isGrounded)
+            if (whatSpellAmI == 0 && !playerMovement.IsGrounded())
             {
                 GameObject.Find("Player").GetComponent<MakeCloud>().CloudSpell();
             }
@@ -54,23 +54,4 @@ public class SpellManager : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "Floor")
-        {
-            isGrounded = true;
-
-
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.collider.tag == "Floor")
-        {
-            isGrounded = false;
-
-
-        }
-    }
 }

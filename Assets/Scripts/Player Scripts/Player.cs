@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     private bool isGrounded;
     private SpellManager spellManager;
+    public GameObject player;
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         spellManager.WhichSpellToCast();
+
     }    
 
 }
