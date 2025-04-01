@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
+using UnityEngine.UI;
+using Color = System.Drawing.Color;
 
 public class PlayerMovement : MonoBehaviour
 {
     
     private CharacterController characterController;
-    public bool isGrounded = true;
+    public bool isGrounded;
 
     [SerializeField] private float speed;
+    public LayerMask groundMask;
 
     void Start()
     {
@@ -36,26 +40,24 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        IsGrounded();
+
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public bool IsGrounded()
     {
-        if (collision.collider.tag == "Floor")
+        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out RaycastHit hit, 1.5f))
         {
-            isGrounded = true;
-
-
+            Debug.Log("Hit");
+            
+            return true;
+            
+        } else
+        {
+            Debug.Log("Nope");
+            
+            return false;
         }
     }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.collider.tag == "Floor")
-        {
-            isGrounded = false;
-
-
-        }
-    }
-
+    
 }
