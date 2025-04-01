@@ -28,7 +28,7 @@ public class SpellManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
 
-            if (whatSpellAmI == 0 && isGrounded == false)
+            if (whatSpellAmI == 0 && !isGrounded)
             {
                 GameObject.Find("Player").GetComponent<MakeCloud>().CloudSpell();
             }
