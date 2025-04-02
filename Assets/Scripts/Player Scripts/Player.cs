@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         spellManager.WhichSpellToCast();
+        spellManager.WhichSecondarySpellToCast();
 
     }    
 
