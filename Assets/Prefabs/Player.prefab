@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4407363953541222891}
   - component: {fileID: 8937541751575222724}
   - component: {fileID: 6830763125840108580}
+  - component: {fileID: 3861583007201418406}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928bc994d348a9744a8776679dae5edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &4677184664523168355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrounded: 1
   speed: 0
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!143 &2632593337488380545
 CharacterController:
   m_ObjectHideFlags: 0
@@ -223,6 +228,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vine: {fileID: 5502978109102781641, guid: 0901392680865214bba60438a4cf52d5, type: 3}
   player: {fileID: 8656819230776656306}
+--- !u!114 &3861583007201418406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656819230776656306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a05d6e4698f74fa1359a959593057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 10
+  dashLength: 5
+  dashCooldown: 1
 --- !u!1001 &1908799613297777585
 PrefabInstance:
   m_ObjectHideFlags: 0

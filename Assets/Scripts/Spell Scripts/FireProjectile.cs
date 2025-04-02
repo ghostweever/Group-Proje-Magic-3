@@ -6,6 +6,7 @@ public class FireProjectile : MonoBehaviour
 {
     public float speed;
     public Rigidbody Fireball;
+    public GameObject player;
 
 
 
@@ -23,7 +24,7 @@ public class FireProjectile : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
 
-            var clone = Instantiate(Fireball, transform.position, transform.rotation);
+            var clone = Instantiate(Fireball, this.transform.position, transform.rotation);
 
             clone.velocity = Vector3.forward * speed;
 
