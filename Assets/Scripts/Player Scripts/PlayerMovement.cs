@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         characterController.Move(move * Time.deltaTime * speed);
-
+        //Sprint
         if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded == true)
         {
             Debug.Log("hi");
@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    //Sends out raycast to detect if the player is touching the ground
     public bool IsGrounded()
     {
         if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out RaycastHit hit, 1.5f))

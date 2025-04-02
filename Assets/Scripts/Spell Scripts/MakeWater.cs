@@ -37,6 +37,8 @@ public class MakeWater : MonoBehaviour
         {
 
             GameObject currentWater = Instantiate(water, spawnPos, playerRotation);
+
+            //Sends out the water prefab with force applied
             currentWater.GetComponent<Rigidbody>().AddForce(Vector3.forward * magnitude, ForceMode.Impulse);
 
             water.transform.Translate(new Vector3(0, 2, 0) * Time.deltaTime * 2f);

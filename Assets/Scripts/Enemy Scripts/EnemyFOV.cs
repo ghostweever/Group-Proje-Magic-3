@@ -25,6 +25,7 @@ public class EnemyFOV : MonoBehaviour
         enemy = GetComponent<NavMeshAgent>();
     }
 
+    //Runs function to check if player is in FOV+
     private IEnumerator FOV()
     {
         float delay = 0.2f;
@@ -38,6 +39,7 @@ public class EnemyFOV : MonoBehaviour
         }
     }
 
+    //Sends out a raycast that if the target (player) is inside will cause enemy to chase until they're outside of radius
     private void FieldOfViewCheck()
     {
         Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);

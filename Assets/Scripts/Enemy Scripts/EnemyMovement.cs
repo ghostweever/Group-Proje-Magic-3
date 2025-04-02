@@ -24,11 +24,13 @@ public class EnemyMovement : MonoBehaviour
             if (RandomDestination(center.position, range, out point))
             {
                 Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+                //Sends enemy to that random point
                 enemy.SetDestination(point);
             }
         }
     }
 
+    //Throws out a net and the enemy will travel to any point in that net; range depends on input value
     bool RandomDestination(Vector3 center, float range, out Vector3 result)
     {
         Vector3 randomPoint = center + Random.insideUnitSphere * range;
