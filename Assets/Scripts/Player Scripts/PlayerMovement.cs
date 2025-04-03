@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 currentMovement = Vector3.zero;
     private float verticalRotation;
 
-    private float mouseSensitivity = 2.0f;
+    private float mouseSensitivity = .15f;
     private float upDownRange = 80.0f;
     
 
@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        if (inputHandler.JumpTriggered && canJump && IsGrounded())
+        if (inputHandler.JumpTrigger && canJump && IsGrounded())
         {
 
             if (playJumpSound)
@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
  
-            if (inputHandler.JumpTriggered && canDoubleJump)
+            if (inputHandler.JumpTrigger && canDoubleJump)
             {
                 
 

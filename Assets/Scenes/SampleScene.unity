@@ -290,25 +290,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da5d1846cbe46048a3c8acc4cdb0145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControls: {fileID: -944628639613478452, guid: 45972f1304f123a4c9c7833f7ca661fb, type: 3}
+  playerControls: {fileID: -944628639613478452, guid: b1ffd9f8f1c73314e92a347d07e22cd9, type: 3}
   actionMapName: Player
   move: Move
-  look: Look
   jump: Jump
+  look: Look
   sprint: Sprint
   primarySpell: Primary Spell
   secondarySpell: Secondary Spell
-  primarySwitch: Switch Primary
-  SecondarySwitch: Switch Secondary
-  jumpAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 7c7d9773-ba6c-404e-9fb4-21127fc7c9e2
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
+  primarySpellSwitch: Switch Primary
+  secondarySpellSwitch: Switch Secondary
 --- !u!4 &306476019
 Transform:
   m_ObjectHideFlags: 0
