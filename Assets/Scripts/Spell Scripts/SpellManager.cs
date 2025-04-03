@@ -9,9 +9,10 @@ public class SpellManager : MonoBehaviour
     private int whatSpellAmI;
     private int whatSecondarySpellAmI;
     private CharacterController characterController;
-    public PlayerMovement playerMovement;
+    private PlayerMovement playerMovement;
     public int[] manaUse = {10, 25, 10};
     public int playerMana;
+    public AudioClip attackClip;
     void Start()
     {
         whatSpellAmI = 0;
@@ -31,6 +32,9 @@ public class SpellManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
+            
+
             //Grass Attack Spell
             if (whatSpellAmI == 0 && playerMana >= manaUse[0])
             {
@@ -81,15 +85,17 @@ public class SpellManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            
+
             //Grass and Water Mobility Spell
             if (whatSecondarySpellAmI == 0)
             {
-                GameObject.Find("Player").GetComponent<MakeCloud>().CloudSpell();
+                
             }
             //Fire and Water Mobility Spell
             else if (whatSecondarySpellAmI == 1 && !playerMovement.isGrounded)
             {
-                
+                GameObject.Find("Player").GetComponent<MakeCloud>().CloudSpell();
             }
             //Fire and Grass Mobility Spell
             else if (whatSecondarySpellAmI == 2)

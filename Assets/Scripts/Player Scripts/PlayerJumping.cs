@@ -8,42 +8,22 @@ public class PlayerJumping : MonoBehaviour
     private CharacterController characterController;
     [SerializeField] private float jumpSpeed = 3.5f;
     [SerializeField] private float gravity = 4.5f;
-    private bool canDoubleJump = true;
-    private int jumpAmount = 2;
+    private PlayerMovement playerMovement;
+   
     private Vector3 moveDirection = Vector3.zero;
+    private PlayerInputHandler inputHandler;
 
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        playerMovement = GetComponent<PlayerMovement>();
+        inputHandler = PlayerInputHandler.Instance;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetButtonDown("Jump") && canDoubleJump == true)
-        {
-
-            moveDirection.y += Mathf.Sqrt(jumpSpeed * 2 * gravity);
-
-            moveDirection.y = jumpSpeed;
-            jumpAmount--;
-
-            if (jumpAmount <= 0)
-            {
-                canDoubleJump = false;
-            }
-        }
-
-        moveDirection.y -= gravity * Time.deltaTime;
-        characterController.Move(moveDirection * Time.deltaTime);
-
-        if (characterController.isGrounded && moveDirection.y < 0)
-        {
-            moveDirection.y = 0f;
-            canDoubleJump = true;
-            jumpAmount = 2;
-        }
+       
 
     }
 }
