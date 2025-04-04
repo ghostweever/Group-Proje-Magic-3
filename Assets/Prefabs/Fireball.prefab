@@ -160,5 +160,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  Fireball: {fileID: 0}
+  Fireball: {fileID: 7525640225070392789}
   player: {fileID: 8656819230776656306, guid: 9bf80ab73bc0a7649babd944f21f4487, type: 3}
