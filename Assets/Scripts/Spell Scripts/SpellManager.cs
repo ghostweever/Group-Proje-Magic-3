@@ -11,31 +11,40 @@ public class SpellManager : MonoBehaviour
 
     private CharacterController characterController;
     private PlayerMovement playerMovement;
+    private ChangeSpellImages changeSpellImages;
+    private ManaBar manaBar;
 
     private Dash dash;
     public int[] manaUse = {10, 25, 10};
+    public int maxMana;
     public int playerMana;
     public AudioClip attackClip;
     void Start()
     {
         whatSpellAmI = 0;
-        playerMana = 100;
+        whatSecondarySpellAmI = 0;
+
         characterController = GetComponent<CharacterController>();
         playerMovement = GetComponent<PlayerMovement>();
+        changeSpellImages = GetComponent<ChangeSpellImages>();
         dash = GetComponent<Dash>();
+        manaBar = GetComponent<ManaBar>();
+
+        maxMana = 100;
+        playerMana = maxMana;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-        
+        manaBar.SetMana(playerMana);
     }
 
     public void WhichSpellToCast()
     {
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("XboxFire1"))
         {
+
+            
 
             //Grass Attack Spell
             if (whatSpellAmI == 0 && playerMana >= manaUse[0])
@@ -76,8 +85,15 @@ public class SpellManager : MonoBehaviour
         //Changes Primary Element
         if (Input.GetButtonDown("Switch1") || Input.GetButtonDown("XboxLB"))
         {
+
+            changeSpellImages.ChangePrimary();
             whatSpellAmI++;
             Debug.Log(whatSpellAmI);
+
+            if (whatSecondarySpellAmI == whatSpellAmI)
+            {
+                whatSpellAmI++;
+            }
 
             if (whatSpellAmI >= 3)
             {
@@ -115,13 +131,26 @@ public class SpellManager : MonoBehaviour
         //Changes Secondary Element
         if (Input.GetButtonDown("Switch2") || Input.GetButtonDown("XboxRB"))
         {
+            changeSpellImages.ChangeSecondary();
             whatSecondarySpellAmI++;
             Debug.Log(whatSecondarySpellAmI);
+
+            if(whatSecondarySpellAmI == whatSpellAmI)
+            {
+                whatSecondarySpellAmI++;
+            }
+
             if (whatSecondarySpellAmI >= 3)
             {
                 whatSecondarySpellAmI = 0;
             }
         }
+    }
+
+    public void EarnMana(int manaAmount)
+    {
+        playerMana += manaAmount;
+        manaBar.SetMana(playerMana);
     }
 
 }

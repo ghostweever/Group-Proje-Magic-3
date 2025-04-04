@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class VineCollision : MonoBehaviour
 {
-    
+    private SpellManager spellManager;
+
     void Start()
     {
-        
+        spellManager = GetComponent<SpellManager>();
     }
 
     // Update is called once per frame
@@ -20,7 +21,9 @@ public class VineCollision : MonoBehaviour
     {
         if (collision.collider.tag == "Enemy")
         {
+            GameObject.Find("Player").GetComponent<SpellManager>().EarnMana(25);
             Destroy(collision.gameObject);
+            
         }
     }
 
