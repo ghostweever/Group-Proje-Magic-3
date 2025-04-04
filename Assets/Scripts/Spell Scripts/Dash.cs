@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Dash : MonoBehaviour
 
@@ -11,43 +12,50 @@ public class Dash : MonoBehaviour
     public float dashLength = 5f;
     public float dashCooldown = 1f;
 
-    private float dashTimer;
-    private bool isDashing;
-    private bool canDash = true;
+    CharacterController characterController;
+    private PlayerMovement playerMovement;
 
+    public float dashTimer;
+    public bool isDashing;
+    public bool canDash;
+
+    public GameObject player;
+
+
+     void Start()
+    {
+        canDash = false;
+        characterController = GetComponent<CharacterController>();
+        playerMovement = GetComponent<PlayerMovement>();
+    }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B) && canDash)
-        {
-            isDashing = true;
-            canDash = false;
-            dashTimer = 0f;
-        }
-
-        if (isDashing)
-        {
-            // Move the character during the dash
-            CharacterController characterController = GetComponent<CharacterController>();
-            if (characterController != null)
-            {
-                characterController.Move(transform.forward * dashSpeed * Time.deltaTime);
-            }
-            dashTimer += Time.deltaTime;
-            if (dashTimer >= dashLength)
-            {
-                isDashing = false;
-                dashTimer = 0f;
-                Invoke("ResetDash", dashCooldown);
-            }
-        }
+        
     }
 
-    void ResetDash()
+    public void DashSpell()
     {
-        canDash = true;
+        
+            playerMovement.walking = dashSpeed;
+            InvokeRepeating("RepeatRun", 0.001f, .001f);
+            StartCoroutine(DisableDash());         
+
+    }
+
+    void RepeatRun()
+    {
+        player.transform.Translate(Vector3.forward.normalized * Time.deltaTime * 10f);
+    }
+
+    private IEnumerator DisableDash()
+    {
+        yield return new WaitForSeconds(5f);
+        playerMovement.walking = 5f;
+        CancelInvoke();
+        
     }
 
 

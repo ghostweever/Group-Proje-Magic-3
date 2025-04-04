@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
-{
-    private bool isGrounded;
+{   
     private SpellManager spellManager;
+    private PlayerJumping jumping;
+    private PlayerMovement playerMovement;
+    private PlayerRotation rotation;
+
     public GameObject player;
 
     void Start()
     {
         spellManager = GetComponent<SpellManager>();
+        jumping = GetComponent<PlayerJumping>();
+        playerMovement = GetComponent<PlayerMovement>();
+        rotation = GetComponent<PlayerRotation>();
     }
 
     // Update is called once per frame
@@ -18,6 +24,9 @@ public class Player : MonoBehaviour
     {
         spellManager.WhichSpellToCast();
         spellManager.WhichSecondarySpellToCast();
+        jumping.Jumping();
+        playerMovement.Movement();
+        rotation.Rotation();
 
     }    
 
