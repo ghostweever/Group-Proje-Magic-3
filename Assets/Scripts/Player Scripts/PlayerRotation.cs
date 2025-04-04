@@ -7,7 +7,7 @@ public class PlayerRotation : MonoBehaviour
 
     private PlayerInputHandler inputHandler;
 
-    private float mouseSensitivity = .35f;
+    private float mouseSensitivity = .25f;
     private float upDownRange = 80.0f;
     private float verticalRotation;
 
