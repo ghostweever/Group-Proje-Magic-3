@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< Updated upstream
+=======
+using Color = System.Drawing.Color;
+>>>>>>> Stashed changes
 
 public class PlayerMovement : MonoBehaviour
 {
