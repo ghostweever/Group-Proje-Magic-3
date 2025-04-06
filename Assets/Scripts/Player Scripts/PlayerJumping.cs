@@ -6,44 +6,51 @@ public class PlayerJumping : MonoBehaviour
 {
 
     private CharacterController characterController;
+    private PlayerMovement playerMovement;
+
     [SerializeField] private float jumpSpeed = 3.5f;
     [SerializeField] private float gravity = 4.5f;
-    private bool canDoubleJump = true;
-    private int jumpAmount = 2;
-    private Vector3 moveDirection = Vector3.zero;
+    
+    private bool canJump;
+    private int jumpAmount;
+    public AudioClip jumpClip;
+
 
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        playerMovement = GetComponent<PlayerMovement>();
+        jumpAmount = 2;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Jumping()
     {
-
-        if (Input.GetButtonDown("Jump") && canDoubleJump == true)
+        if (playerMovement.IsGrounded() && playerMovement.currentMovement.y < 0)
         {
-
-            moveDirection.y += Mathf.Sqrt(jumpSpeed * 2 * gravity);
-
-            moveDirection.y = jumpSpeed;
-            jumpAmount--;
-
-            if (jumpAmount <= 0)
-            {
-                canDoubleJump = false;
-            }
-        }
-
-        moveDirection.y -= gravity * Time.deltaTime;
-        characterController.Move(moveDirection * Time.deltaTime);
-
-        if (characterController.isGrounded && moveDirection.y < 0)
-        {
-            moveDirection.y = 0f;
-            canDoubleJump = true;
+            playerMovement.currentMovement.y = 0f;
+            canJump = true;
             jumpAmount = 2;
         }
 
+        if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("XboxJump")) && canJump)
+        {
+            AudioSource.PlayClipAtPoint(jumpClip, transform.position, .7f);
+            playerMovement.currentMovement.y += Mathf.Sqrt(jumpSpeed * 2 * gravity);
+            playerMovement.currentMovement.y = jumpSpeed;
+            jumpAmount--;
+            Debug.Log(jumpAmount);
+
+
+            if (jumpAmount <= 0)
+            {
+                canJump = false;
+            }
+
+        }
+
+        playerMovement.currentMovement.y -= gravity * Time.deltaTime;
+
     }
+
 }

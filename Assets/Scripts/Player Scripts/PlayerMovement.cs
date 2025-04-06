@@ -1,65 +1,71 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 <<<<<<< Updated upstream
 =======
 using Color = System.Drawing.Color;
 >>>>>>> Stashed changes
 
+using Color = System.Drawing.Color;
+
 public class PlayerMovement : MonoBehaviour
 {
-    
-    private CharacterController characterController;
-    public bool isGrounded = true;
 
-    [SerializeField] private float speed;
+    private CharacterController characterController;
+    private PlayerInputHandler inputHandler;
+    private PlayerJumping jumping;
+
+    private float speed;
+    public LayerMask groundMask;
+    public Vector3 currentMovement = Vector3.zero;
+
+    public float walking = 5f;
+    private float sprintMultiplier = 1.5f;
+
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        speed = 5f;
+        inputHandler = PlayerInputHandler.Instance;
+        
+        
     }
 
-    // Update is called once per frame
-    void Update()
+   public void Movement()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        float speed = walking * (inputHandler.SprintValue > 0 ? sprintMultiplier : 1f);
 
-        characterController.Move(move * Time.deltaTime * speed);
+        Vector3 horizontalMovement = new Vector3(inputHandler.MoveInput.x, 0f, inputHandler.MoveInput.y);
+        horizontalMovement = transform.forward * horizontalMovement.z + transform.right * horizontalMovement.x;
+        horizontalMovement.Normalize();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded == true)
-        {
-            Debug.Log("hi");
-            speed *= 1.5f;
+        currentMovement.x = horizontalMovement.x * speed;
+        currentMovement.z = horizontalMovement.z * speed;
 
-        }
+        
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            speed = 4f;
-
-        }
-
+        characterController.Move(currentMovement * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    //Sends out raycast to detect if the player is touching the ground
+    public bool IsGrounded()
     {
-        if (collision.collider.tag == "Floor")
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out RaycastHit hit, 1.5f))
         {
-            isGrounded = true;
+            Debug.Log("hit");
 
+            return true;
 
         }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.collider.tag == "Floor")
+        else
         {
-            isGrounded = false;
+            Debug.Log("no");
 
-
+            return false;
         }
     }
 
 }
+
