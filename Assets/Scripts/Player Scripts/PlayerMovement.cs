@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+<<<<<<< Updated upstream
+=======
+using Color = System.Drawing.Color;
+>>>>>>> Stashed changes
 
 using Color = System.Drawing.Color;
 
