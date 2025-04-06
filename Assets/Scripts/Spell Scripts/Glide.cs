@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Glide : MonoBehaviour
 {
-    private PlayerMovement playerMovement;
+   private PlayerMovement playerMovement;
    private Player Jumping playerJumping;
 
     // Update is called once per frame
