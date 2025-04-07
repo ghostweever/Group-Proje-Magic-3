@@ -13,11 +13,11 @@ public class SpellManager : MonoBehaviour
     private PlayerMovement playerMovement;
     private ChangeSpellImages changeSpellImages;
     private ManaBar manaBar;
-
+    private PlayerMana playerMana;
     private Dash dash;
-    public int[] manaUse = {10, 25, 10};
-    public int maxMana;
-    public int playerMana;
+
+    public int[] manaUse = { 10, 25 };
+
     public AudioClip attackClip;
     void Start()
     {
@@ -29,14 +29,15 @@ public class SpellManager : MonoBehaviour
         changeSpellImages = GetComponent<ChangeSpellImages>();
         dash = GetComponent<Dash>();
         manaBar = GetComponent<ManaBar>();
+        playerMana = GetComponent<PlayerMana>();
 
-        maxMana = 100;
-        playerMana = maxMana;
+        playerMana.maxMana = 100;
+        playerMana.mana = playerMana.maxMana;
     }
 
     void Update()
     {
-        manaBar.SetMana(playerMana);
+        manaBar.SetMana(playerMana.mana);
     }
 
     public void WhichSpellToCast()
@@ -44,40 +45,29 @@ public class SpellManager : MonoBehaviour
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("XboxFire1"))
         {
 
-            
+            GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
 
             //Grass Attack Spell
-            if (whatSpellAmI == 0 && playerMana >= manaUse[0])
+            if (whatSpellAmI == 0 && playerMana.mana > manaUse[0])
             {
                 AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                 GameObject.Find("Player").GetComponent<MakeVineWhip>().VineSpell();
-                playerMana -= manaUse[0];
-                Debug.Log(playerMana);
-            } else if (whatSpellAmI == 0 && (playerMana < manaUse[0]))
-            {
-                Debug.Log("Need to recharge mana!");
+                Debug.Log(playerMana.mana);
             }
             //Water Attack Spell
-            if (whatSpellAmI == 1 && playerMana >= manaUse[1])
+            if (whatSpellAmI == 1 && playerMana.mana > manaUse[0])
             {
                 AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                 GameObject.Find("Player").GetComponent<MakeWater>().WaterSpell();
-                playerMana -= manaUse[1];
                 Debug.Log(playerMana);
             }
-            else if (whatSpellAmI == 1 && playerMana < manaUse[1])
-            {
-                Debug.Log("Need to recharge mana!");
-            }
-            //Fire Attack Spell
-            if (whatSpellAmI == 2 && playerMana > manaUse[2])
+            if (whatSpellAmI == 2 && playerMana.mana > manaUse[0])
             {
                 AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                 GameObject.Find("Player").GetComponent<FireProjectile>().FireSpell();
-                playerMana -= manaUse[2];
                 Debug.Log(playerMana);
             }
-            else if (whatSpellAmI == 2 && playerMana < manaUse[2])
+            else if (playerMana.mana < manaUse[0])
             {
                 Debug.Log("Need to recharge mana!");
             }
@@ -89,11 +79,6 @@ public class SpellManager : MonoBehaviour
             changeSpellImages.ChangePrimary();
             whatSpellAmI++;
             Debug.Log(whatSpellAmI);
-
-            if (whatSecondarySpellAmI == whatSpellAmI)
-            {
-                whatSpellAmI++;
-            }
 
             if (whatSpellAmI >= 3)
             {
@@ -135,11 +120,6 @@ public class SpellManager : MonoBehaviour
             whatSecondarySpellAmI++;
             Debug.Log(whatSecondarySpellAmI);
 
-            if(whatSecondarySpellAmI == whatSpellAmI)
-            {
-                whatSecondarySpellAmI++;
-            }
-
             if (whatSecondarySpellAmI >= 3)
             {
                 whatSecondarySpellAmI = 0;
@@ -147,10 +127,6 @@ public class SpellManager : MonoBehaviour
         }
     }
 
-    public void EarnMana(int manaAmount)
-    {
-        playerMana += manaAmount;
-        manaBar.SetMana(playerMana);
-    }
+    
 
 }
