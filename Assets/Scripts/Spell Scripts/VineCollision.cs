@@ -17,14 +17,6 @@ public class VineCollision : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "Enemy")
-        {
-            GameObject.Find("Player").GetComponent<SpellManager>().EarnMana(25);
-            Destroy(collision.gameObject);
-            
-        }
-    }
+    
 
 }

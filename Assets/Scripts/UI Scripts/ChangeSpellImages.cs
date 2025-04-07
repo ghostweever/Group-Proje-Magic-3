@@ -21,7 +21,7 @@ public class ChangeSpellImages : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ChangePrimary()
@@ -29,10 +29,12 @@ public class ChangeSpellImages : MonoBehaviour
         if (originalPrimary.sprite == sprites[0])
         {
             originalPrimary.sprite = sprites[1];
-        } else if (originalPrimary.sprite == sprites[1])
+        }
+        else if (originalPrimary.sprite == sprites[1])
         {
             originalPrimary.sprite = sprites[2];
-        } else if(originalPrimary.sprite == sprites[2])
+        }
+        else if (originalPrimary.sprite == sprites[2])
         {
             originalPrimary.sprite = sprites[0];
         }
