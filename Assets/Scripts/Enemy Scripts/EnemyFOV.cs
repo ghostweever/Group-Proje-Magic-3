@@ -11,8 +11,12 @@ public class EnemyFOV : MonoBehaviour
 
     public GameObject player;
 
+    public AudioClip enemyAlert;
+
     public LayerMask targetMask;
     public LayerMask obstacleMask;
+
+    private int canPlayAudio = 1;
 
     public bool canSeePlayer;
 
@@ -55,12 +59,19 @@ public class EnemyFOV : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask))
                 {
+                    if (canPlayAudio == 1)
+                    {
+                        AudioSource.PlayClipAtPoint(enemyAlert, transform.position, 2f);
+                        canPlayAudio--;
+                        StartCoroutine(resetAudio());
+                    }
                     canSeePlayer = true;
                     enemy.SetDestination(player.transform.position);
                 }
                 else
                 {
                     canSeePlayer = false;
+
                 }
             }
             else
@@ -73,6 +84,13 @@ public class EnemyFOV : MonoBehaviour
             canSeePlayer = false;
         }
 
+    }
+
+
+    private IEnumerator resetAudio()
+    {
+        yield return new WaitForSeconds(2f);
+        canPlayAudio = 1;
     }
 }
 

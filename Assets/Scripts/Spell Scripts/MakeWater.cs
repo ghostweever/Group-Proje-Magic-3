@@ -10,6 +10,7 @@ public class MakeWater : MonoBehaviour
     public GameObject user;
     private bool canCastWater = true;
    
+    public AudioClip waterSound;
 
     float magnitude = 20;
 
@@ -33,6 +34,7 @@ public class MakeWater : MonoBehaviour
 
         if (canCastWater == true)
         {
+            AudioSource.PlayClipAtPoint(waterSound, transform.position, 2f);
 
             GameObject currentWater = Instantiate(water, spawnPos, playerRotation);
 
@@ -57,6 +59,7 @@ public class MakeWater : MonoBehaviour
 
         if (canCastWater == true)
         {
+            AudioSource.PlayClipAtPoint(waterSound, transform.position, 2f);
 
             GameObject currentWater = Instantiate(waterAmplifier, spawnPos, playerRotation);
 

@@ -9,6 +9,8 @@ public class Crystal : MonoBehaviour
     private PlayerCrystalManager playerCrystalManager;
     public int whatCrystalAmI;
 
+    public AudioClip crystalClip;
+
     private bool canCollect;
 
     void Start()
@@ -35,6 +37,7 @@ public class Crystal : MonoBehaviour
     {
         if (collision.tag == "Player" && whatCrystalAmI == 0 && canCollect)
         {
+            AudioSource.PlayClipAtPoint(crystalClip, transform.position, 2f);
             DeactivateCrystal();
             ActivateCrystalIcon();
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
