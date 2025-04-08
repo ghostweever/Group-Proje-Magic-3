@@ -31,18 +31,21 @@ public class PlayerMovement : MonoBehaviour
 
    public void Movement()
     {
-        float speed = walking * (inputHandler.SprintValue > 0 ? sprintMultiplier : 1f);
+        if (GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().isPaused == false)
+        {
+            float speed = walking * (inputHandler.SprintValue > 0 ? sprintMultiplier : 1f);
 
-        Vector3 horizontalMovement = new Vector3(inputHandler.MoveInput.x, 0f, inputHandler.MoveInput.y);
-        horizontalMovement = transform.forward * horizontalMovement.z + transform.right * horizontalMovement.x;
-        horizontalMovement.Normalize();
+            Vector3 horizontalMovement = new Vector3(inputHandler.MoveInput.x, 0f, inputHandler.MoveInput.y);
+            horizontalMovement = transform.forward * horizontalMovement.z + transform.right * horizontalMovement.x;
+            horizontalMovement.Normalize();
 
-        currentMovement.x = horizontalMovement.x * speed;
-        currentMovement.z = horizontalMovement.z * speed;
+            currentMovement.x = horizontalMovement.x * speed;
+            currentMovement.z = horizontalMovement.z * speed;
 
-        
 
-        characterController.Move(currentMovement * Time.deltaTime);
+
+            characterController.Move(currentMovement * Time.deltaTime);
+        }
     }
 
     //Sends out raycast to detect if the player is touching the ground

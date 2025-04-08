@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     private PlayerJumping jumping;
     private PlayerMovement playerMovement;
     private PlayerRotation rotation;
+    private MenuButtons menuButtons;
+    
 
     public GameObject player;
 
@@ -17,6 +19,7 @@ public class Player : MonoBehaviour
         jumping = GetComponent<PlayerJumping>();
         playerMovement = GetComponent<PlayerMovement>();
         rotation = GetComponent<PlayerRotation>();
+        menuButtons = GetComponent<MenuButtons>();
     }
 
     // Update is called once per frame
@@ -27,7 +30,16 @@ public class Player : MonoBehaviour
         jumping.Jumping();
         playerMovement.Movement();
         rotation.Rotation();
+        Void();
+        
 
-    }    
+    }
+
+    void Void()
+    {            
+        if(player.transform.position.y <= -50)
+        GameObject.Find("Void").GetComponent<MenuButtons>().GameOver();
+        
+    }
 
 }

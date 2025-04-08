@@ -87,6 +87,8 @@ public class PlayerInputHandler : MonoBehaviour
 
         secondarySpellSwitchAction.performed += context => SecondarySpellSwitchTrigger = true;
         secondarySpellSwitchAction.canceled += context => SecondarySpellSwitchTrigger = false;
+
+        
     }
 
     private void OnEnable()
@@ -99,18 +101,8 @@ public class PlayerInputHandler : MonoBehaviour
         secondarySpellAction.Enable();
         primarySpellSwitchAction.Enable();
         secondarySpellSwitchAction.Enable();
+        
     }
 
-
-    private void OnDisable()
-    {
-        moveAction.Disable();
-        jumpAction.Disable();
-        lookAction.Disable();
-        sprintAction.Disable();
-        primarySpellAction.Disable();
-        secondarySpellAction.Disable();
-        primarySpellSwitchAction.Disable();
-        secondarySpellSwitchAction.Disable();
-    }
+   
 }

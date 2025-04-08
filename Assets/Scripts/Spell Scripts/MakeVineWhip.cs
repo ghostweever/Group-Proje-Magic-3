@@ -5,6 +5,7 @@ using UnityEngine;
 public class MakeVineWhip : MonoBehaviour
 {
     public GameObject vine;
+    public GameObject vineAmplifier;
     public GameObject player;
 
 
@@ -25,14 +26,21 @@ public class MakeVineWhip : MonoBehaviour
         StartCoroutine(DestroyVine());
     }
 
+    public void VineComboSpell()
+    {
+        player.transform.GetChild(1).gameObject.SetActive(true);
+        StartCoroutine(DestroyComboVine());
+    }
 
     private IEnumerator DestroyVine()
     {
         yield return new WaitForSeconds(.5f);
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
-
-    
-
+    private IEnumerator DestroyComboVine()
+    {
+        yield return new WaitForSeconds(.5f);
+        gameObject.transform.GetChild(1).gameObject.SetActive(false);
+    }
 
 }
