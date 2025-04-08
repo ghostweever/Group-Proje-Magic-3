@@ -9,13 +9,14 @@ public class PlayerJumping : MonoBehaviour
     private PlayerMovement playerMovement;
     private PauseMenu pauseMenu;
 
-    [SerializeField] private float jumpSpeed = 3.5f;
-    [SerializeField] private float gravity = 4.5f;
+    [SerializeField] private float jumpSpeed = 5f;
+    public float gravity = 6;
 
     private Animator animator;
 
     private bool canJump;
     public AudioClip jumpClip;
+    public AudioClip jumpSFXClip;
 
 
     private void Start()
@@ -49,6 +50,7 @@ public class PlayerJumping : MonoBehaviour
                 
                 StartCoroutine(JumpAnimator());
                 AudioSource.PlayClipAtPoint(jumpClip, transform.position, .7f);
+                AudioSource.PlayClipAtPoint(jumpSFXClip, transform.position, .7f);
                 playerMovement.currentMovement.y += Mathf.Sqrt(jumpSpeed * 2 * gravity);
                 playerMovement.currentMovement.y = jumpSpeed;
             }

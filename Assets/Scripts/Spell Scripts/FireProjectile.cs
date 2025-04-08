@@ -11,7 +11,7 @@ public class FireProjectile : MonoBehaviour
     Vector3 mouseWorldPosition;
     private PlayerInputHandler inputHandler;
 
-
+    public AudioClip fireSpell;
 
     // Start is called before the first frame update
     void Start()
@@ -31,28 +31,24 @@ public class FireProjectile : MonoBehaviour
     {
         speed = 25f;
 
-    Vector3 playerPos = player.transform.position;
+         Vector3 playerPos = player.transform.position;
         Vector3 playerDirection = player.transform.forward;
         Quaternion playerRotation = player.transform.rotation;
         float spawnDistance = 1;
 
-        Vector3 mouseScreenPosition = Input.mousePosition;
+
 
         Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
 
-        RaycastHit hit;
+        AudioSource.PlayClipAtPoint(fireSpell, transform.position, 2f);
 
-        Ray ray = Camera.main.ScreenPointToRay(mouseScreenPosition);
+        var clone = Instantiate(Fireball, spawnPos, Quaternion.identity);
 
-        if (Physics.Raycast(ray, out hit)) {
 
-            var clone = Instantiate(Fireball, spawnPos, Quaternion.identity);
-           mouseScreenPosition = hit.point;
+        clone.velocity = Vector3.forward * speed;
 
-            clone.velocity = Vector3.forward * speed;
-
-            Destroy(clone, 2f);
-        }
+        Destroy(clone, 2f);
+        
 
     }
 
@@ -65,24 +61,16 @@ public class FireProjectile : MonoBehaviour
         Quaternion playerRotation = player.transform.rotation;
         float spawnDistance = 1;
 
-        Vector3 mouseScreenPosition = Input.mousePosition;
-
         Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
 
-        RaycastHit hit;
+        var clone = Instantiate(FireballAmplifier, spawnPos, Quaternion.identity);
 
-        Ray ray = Camera.main.ScreenPointToRay(mouseScreenPosition);
+        AudioSource.PlayClipAtPoint(fireSpell, transform.position, 2f);
 
-        if (Physics.Raycast(ray, out hit))
-        {
+        clone.velocity = Vector3.forward * speed;
 
-            var clone = Instantiate(FireballAmplifier, spawnPos, Quaternion.identity);
-            mouseScreenPosition = hit.point;
-
-            clone.velocity = Vector3.forward * speed;
-
-            Destroy(clone, 2f);
-        }
+        Destroy(clone, 2f);
+        
 
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Carrot : MonoBehaviour
 {
 
+    public AudioClip carrotClip;
     
 
     void Start()
@@ -19,6 +20,7 @@ public class Carrot : MonoBehaviour
     {
         GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(15);
         GameObject.Find("GameManager").GetComponent<GameManager>().Score(50);
+        AudioSource.PlayClipAtPoint(carrotClip, transform.position, .7f);
     }
 
     private void OnTriggerEnter(Collider other)
