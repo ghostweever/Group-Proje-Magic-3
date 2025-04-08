@@ -39,7 +39,7 @@ public class MakeCloud : MonoBehaviour
         {
             
             //Spawns cloud slightly below player so they dont get caught in it
-           var cloudCopy = Instantiate(cloud, new Vector3(player.transform.position.x, player.transform.position.y - 1.5f, player.transform.position.z), transform.rotation);
+           var cloudCopy = Instantiate(cloud, new Vector3(player.transform.position.x, player.transform.position.y - .5f, player.transform.position.z), transform.rotation);
             
             cloudAmount--;
 

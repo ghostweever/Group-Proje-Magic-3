@@ -38,10 +38,8 @@ public class Dash : MonoBehaviour
 
     public void DashSpell()
     {
-        
-            playerMovement.walking = dashSpeed;
-            InvokeRepeating("RepeatRun", 0.001f, .001f);
-            StartCoroutine(DisableDash());         
+            StartCoroutine(EnableDash());
+                   
 
     }
 
@@ -59,7 +57,13 @@ public class Dash : MonoBehaviour
     }
 
 
-
+    private IEnumerator EnableDash()
+    {
+        yield return new WaitForSeconds(.7f);
+        playerMovement.walking = dashSpeed;
+        InvokeRepeating("RepeatRun", 0.001f, .001f);
+        StartCoroutine(DisableDash());
+    }
 
 
 

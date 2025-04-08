@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInputHandler inputHandler;
     private PlayerJumping jumping;
 
+    private Animator animator;
+
     private float speed;
     public LayerMask groundMask;
     public Vector3 currentMovement = Vector3.zero;
@@ -25,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         inputHandler = PlayerInputHandler.Instance;
-        
+        animator = GetComponent<Animator>();
         
     }
 
@@ -42,16 +44,29 @@ public class PlayerMovement : MonoBehaviour
             currentMovement.x = horizontalMovement.x * speed;
             currentMovement.z = horizontalMovement.z * speed;
 
-
+            if (horizontalMovement == Vector3.zero)
+            {
+                animator.SetFloat("Speed", 0);
+            }
+            else if (speed > walking)
+            {
+                animator.SetFloat("Speed", 1f);
+            }
+            else
+            {
+                animator.SetFloat("Speed", .011f);
+            }
 
             characterController.Move(currentMovement * Time.deltaTime);
+
+
         }
     }
 
     //Sends out raycast to detect if the player is touching the ground
     public bool IsGrounded()
     {
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out RaycastHit hit, 1.5f))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out RaycastHit hit, 1f))
         {
             Debug.Log("hit");
 
