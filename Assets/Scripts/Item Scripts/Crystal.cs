@@ -9,6 +9,8 @@ public class Crystal : MonoBehaviour
     private PlayerCrystalManager playerCrystalManager;
     public int whatCrystalAmI;
 
+    private bool canCollect;
+
     void Start()
     {
         playerCrystalManager = GetComponent<PlayerCrystalManager>();
@@ -16,6 +18,7 @@ public class Crystal : MonoBehaviour
 
     public void ActivateCrystal()
     {
+        canCollect = true;
         crystalHolder.transform.GetChild(0).gameObject.SetActive(true);
     }
 
@@ -30,7 +33,7 @@ public class Crystal : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == "Player" && whatCrystalAmI == 0)
+        if (collision.tag == "Player" && whatCrystalAmI == 0 && canCollect)
         {
             DeactivateCrystal();
             ActivateCrystalIcon();
