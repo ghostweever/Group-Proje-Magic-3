@@ -25,6 +25,12 @@ public class MenuButtons : MonoBehaviour
     {
         SceneManager.LoadScene("GameOver");
     }
+
+    public void Win()
+    {
+        SceneManager.LoadScene("Win");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
