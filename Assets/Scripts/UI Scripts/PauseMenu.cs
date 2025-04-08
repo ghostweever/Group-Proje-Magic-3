@@ -6,7 +6,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
 
     // Bool to track if the game is paused
-    public bool isPaused = false;
+    public bool isPaused;
 
     void Start()
     {
