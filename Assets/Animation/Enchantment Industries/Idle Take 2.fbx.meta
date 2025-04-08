@@ -41,8 +41,8 @@ ModelImporter:
       name: Idle Take 2
       takeName: Idle Take 2
       internalID: 3161774321573632790
-      firstFrame: 288
-      lastFrame: 1444
+      firstFrame: 318
+      lastFrame: 1427
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -50,7 +50,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0

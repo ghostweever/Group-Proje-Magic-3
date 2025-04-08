@@ -7,9 +7,10 @@ public class PlayerRotation : MonoBehaviour
 
     private PlayerInputHandler inputHandler;
 
-    private float mouseSensitivity = .45f;
-    private float upDownRange = 80.0f;
+    public float mouseSensitivity = 2f;
+    private float upDownRange = 40.0f;
     private float verticalRotation;
+    private float speed = 5;
 
     void Start()
     {
@@ -19,6 +20,8 @@ public class PlayerRotation : MonoBehaviour
     // Update is called once per frame
     public void Rotation()
     {
+
+
         float mouseXRotation = inputHandler.LookInput.x * mouseSensitivity * .7f;
         transform.Rotate(0, mouseXRotation, 0);
 

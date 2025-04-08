@@ -16,6 +16,8 @@ public class SpellManager : MonoBehaviour
     private PlayerMana playerMana;
     private Dash dash;
 
+    private Animator animator;
+
     public int[] manaUse = { 10, 25 };
 
     public AudioClip attackClip;
@@ -33,6 +35,8 @@ public class SpellManager : MonoBehaviour
 
         playerMana.maxMana = 100;
         playerMana.mana = playerMana.maxMana;
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -53,6 +57,7 @@ public class SpellManager : MonoBehaviour
                 //Grass Attack Spell
                 if (whatSpellAmI == 0 && playerMana.mana > manaUse[0])
                 {
+                    animator.SetTrigger("Grass");
                     AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                     GameObject.Find("Player").GetComponent<MakeVineWhip>().VineSpell();
                     Debug.Log(playerMana.mana);
@@ -60,12 +65,14 @@ public class SpellManager : MonoBehaviour
                 //Water Attack Spell
                 if (whatSpellAmI == 1 && playerMana.mana > manaUse[0])
                 {
+                    animator.SetTrigger("Water");
                     AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                     GameObject.Find("Player").GetComponent<MakeWater>().WaterSpell();
                     Debug.Log(playerMana);
                 }
                 if (whatSpellAmI == 2 && playerMana.mana > manaUse[0])
                 {
+                    animator.SetTrigger("Fire");
                     AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                     GameObject.Find("Player").GetComponent<FireProjectile>().FireSpell();
                     Debug.Log(playerMana);
@@ -103,17 +110,19 @@ public class SpellManager : MonoBehaviour
                 //Grass and Water Mobility Spell
                 if ((whatSecondarySpellAmI == 0 && whatSpellAmI == 0) || (whatSecondarySpellAmI == 2 && whatSpellAmI == 1))
                 {
-
+                    animator.SetTrigger("Glide");
                 }
                 //Fire and Water Mobility Spell
                 else if (((whatSecondarySpellAmI == 1 && whatSpellAmI == 1) || (whatSecondarySpellAmI == 0 && whatSpellAmI == 2)) && !playerMovement.IsGrounded())
                 {
+                    animator.SetTrigger("Cloud");
                     Debug.Log("Y");
                     GameObject.Find("Player").GetComponent<MakeCloud>().CloudSpell();
                 }
                 //Fire and Grass Mobility Spell
                 else if ((whatSecondarySpellAmI == 2 && whatSpellAmI == 2) || (whatSecondarySpellAmI == 1 && whatSpellAmI == 0))
                 {
+                    animator.SetTrigger("Dash");
                     dash.canDash = true;
                     Debug.Log("MEOW");
                     GameObject.Find("Player").GetComponent<Dash>().DashSpell();
@@ -121,16 +130,19 @@ public class SpellManager : MonoBehaviour
                 //Grass and Grass Combo
                 else if((whatSecondarySpellAmI == 2 && whatSpellAmI == 0))
                 {
+                    animator.SetTrigger("Grass");
                     GameObject.Find("Player").GetComponent<MakeVineWhip>().VineComboSpell();
                 }
                 //Water and Water Combo
                 else if ((whatSecondarySpellAmI == 0 && whatSpellAmI == 1))
                 {
+                    animator.SetTrigger("Water");
                     GameObject.Find("Player").GetComponent<MakeWater>().WaterComboSpell();
                 }
                 //Fire and Fire Combo
                 else if ((whatSecondarySpellAmI == 1 && whatSpellAmI == 2))
                 {
+                    animator.SetTrigger("Fire");
                     GameObject.Find("Player").GetComponent<FireProjectile>().FireComboSpell();
                 }
             }

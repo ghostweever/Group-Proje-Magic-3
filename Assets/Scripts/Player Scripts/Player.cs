@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private PlayerMovement playerMovement;
     private PlayerRotation rotation;
     private MenuButtons menuButtons;
+    private Animator animator;
     
 
     public GameObject player;
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         rotation = GetComponent<PlayerRotation>();
         menuButtons = GetComponent<MenuButtons>();
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,7 +34,14 @@ public class Player : MonoBehaviour
         playerMovement.Movement();
         rotation.Rotation();
         Void();
-        
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            animator.SetTrigger("Death");
+        } else if (Input.GetKeyDown(KeyCode.R))
+        {
+            animator.SetTrigger("Win");
+        }
 
     }
 

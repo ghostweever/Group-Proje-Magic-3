@@ -9,13 +9,13 @@ public class MakeWater : MonoBehaviour
     Rigidbody rb;
     public GameObject user;
     private bool canCastWater = true;
+   
 
     float magnitude = 20;
 
     void Start()
     {
         rb = water.GetComponent<Rigidbody>();
-        
     }
 
     // Update is called once per frame

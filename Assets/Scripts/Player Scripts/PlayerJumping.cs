@@ -11,18 +11,23 @@ public class PlayerJumping : MonoBehaviour
 
     [SerializeField] private float jumpSpeed = 3.5f;
     [SerializeField] private float gravity = 4.5f;
-    
+
+    private Animator animator;
+
     private bool canJump;
-    private int jumpAmount;
     public AudioClip jumpClip;
 
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();        
+    }
 
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
         playerMovement = GetComponent<PlayerMovement>();
         pauseMenu = GetComponent<PauseMenu>();
-        jumpAmount = 2;
 
     }
 
@@ -33,29 +38,31 @@ public class PlayerJumping : MonoBehaviour
         {
             if (playerMovement.IsGrounded() && playerMovement.currentMovement.y < 0)
             {
-                playerMovement.currentMovement.y = 0f;
+                
                 canJump = true;
-                jumpAmount = 2;
             }
 
             if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("XboxJump")) && canJump)
             {
+
+                animator.SetTrigger("Jump");
+                
+                StartCoroutine(JumpAnimator());
                 AudioSource.PlayClipAtPoint(jumpClip, transform.position, .7f);
                 playerMovement.currentMovement.y += Mathf.Sqrt(jumpSpeed * 2 * gravity);
                 playerMovement.currentMovement.y = jumpSpeed;
-                jumpAmount--;
-                Debug.Log(jumpAmount);
-
-
-                if (jumpAmount <= 0)
-                {
-                    canJump = false;
-                }
-
             }
 
             playerMovement.currentMovement.y -= gravity * Time.deltaTime;
 
         }
+    }
+
+    private IEnumerator JumpAnimator()
+    {
+        yield return new WaitForSeconds(.01f);
+        animator.SetBool("Jump", false);
+        canJump = false;
+
     }
 }
