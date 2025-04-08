@@ -6,10 +6,13 @@ public class PlayerCrystalManager : MonoBehaviour
 {
 
     public int playerCrystalCount;
+    public bool winCon = true;
+    private int crystalsNeeded;
 
     void Start()
     {
-        
+        playerCrystalCount = 0;
+        crystalsNeeded = 3;
     }
 
     // Update is called once per frame
@@ -23,11 +26,17 @@ public class PlayerCrystalManager : MonoBehaviour
         playerCrystalCount += amount;
     }
 
-    void WinCondition()
+
+
+    public bool WinCondition()
     {
-        if(playerCrystalCount == 3)
+        if(playerCrystalCount == crystalsNeeded)
         {
-            //Put win screen load here
+            return true;
+            
+        } else
+        {
+            return false;
         }
     }
 

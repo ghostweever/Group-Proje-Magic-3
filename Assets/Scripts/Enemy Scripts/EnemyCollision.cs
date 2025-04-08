@@ -28,6 +28,11 @@ public class EnemyCollision : MonoBehaviour
             Destroy(gameObject);
 
         }
+
+        if(collision.collider.tag == "Player")
+        {
+            GameObject.Find("Void").GetComponent<MenuButtons>().GameOver();
+        }
     }
 
 

@@ -10,8 +10,7 @@ public class Player : MonoBehaviour
     private PlayerRotation rotation;
     private MenuButtons menuButtons;
     private Animator animator;
-    
-
+   
     public GameObject player;
 
     void Start()

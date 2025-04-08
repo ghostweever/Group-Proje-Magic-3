@@ -240,7 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab90859cdf5d6e49b3f2bc2c2709187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCrystalCount: 0
+  playerCrystalCount: 3
+  winCon: 1
 --- !u!114 &6739443157002511064
 MonoBehaviour:
   m_ObjectHideFlags: 0
