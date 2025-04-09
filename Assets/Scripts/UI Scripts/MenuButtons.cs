@@ -8,7 +8,7 @@ public class MenuButtons : MonoBehaviour
    
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level 1 Whiteboxing EI");
+        SceneManager.LoadScene("Level 1 Whiteboxing EI 1");
     }
 
     public void Settings()
