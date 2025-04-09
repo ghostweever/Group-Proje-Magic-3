@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyCollision : MonoBehaviour
 {
@@ -8,11 +9,13 @@ public class EnemyCollision : MonoBehaviour
     private Crystal crystal;
     public int whatEnemyAmI;
     public int enemyLives;
+    public NavMeshAgent agent;
 
     void Start()
     {
         crystal = GetComponent<Crystal>();
         WhoAmI();
+        agent = GetComponent<NavMeshAgent>();  
     }
 
     // Update is called once per frame
@@ -29,7 +32,18 @@ public class EnemyCollision : MonoBehaviour
         else if (whatEnemyAmI == 1)
         {
             enemyLives = 5;
+            agent.speed = 3f;
 
+        }
+        else if (whatEnemyAmI == 2)
+        {
+            enemyLives = 3;
+            agent.speed = 6f;
+        }
+        else if (whatEnemyAmI == 3)
+        {
+            enemyLives = 4;
+            agent.speed = 5f;
         }
     }
 
@@ -37,12 +51,24 @@ public class EnemyCollision : MonoBehaviour
     {
         enemyLives -= amount;
 
-        if (enemyLives <= 0)
+        if (enemyLives <= 0 && whatEnemyAmI == 1)
         {
             Destroy(gameObject);
             GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(25);
             GameObject.Find("GameManager").GetComponent<GameManager>().Score(100);
             GameObject.Find("CrystalHolder").GetComponent<Crystal>().ActivateCrystal();
+        } else if (enemyLives <= 0 && whatEnemyAmI == 2)
+        {
+            Destroy(gameObject);
+            GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(25);
+            GameObject.Find("GameManager").GetComponent<GameManager>().Score(100);
+            GameObject.Find("CrystalHolder (1)").GetComponent<Crystal>().ActivateCrystal();
+        } else if (enemyLives <= 0 && whatEnemyAmI == 3)
+        {
+            Destroy(gameObject);
+            GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(25);
+            GameObject.Find("GameManager").GetComponent<GameManager>().Score(100);
+            GameObject.Find("CrystalHolder (2)").GetComponent<Crystal>().ActivateCrystal();
         }
     }
 
