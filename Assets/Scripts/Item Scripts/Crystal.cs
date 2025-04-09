@@ -22,10 +22,11 @@ public class Crystal : MonoBehaviour
     {
         canCollect = true;
         crystalHolder.transform.GetChild(0).gameObject.SetActive(true);
+
     }
 
     public void DeactivateCrystal() {
-        crystalHolder.transform.GetChild(0).gameObject.SetActive(false);
+        Destroy(crystalHolder);
     }
 
     public void ActivateCrystalIcon()
@@ -41,18 +42,21 @@ public class Crystal : MonoBehaviour
             DeactivateCrystal();
             ActivateCrystalIcon();
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
-        } else if (collision.tag == "Player" && whatCrystalAmI == 1)
+        } else if (collision.tag == "Player" && whatCrystalAmI == 1 && canCollect)
         {
+            AudioSource.PlayClipAtPoint(crystalClip, transform.position, 2f);
             DeactivateCrystal();
             ActivateCrystalIcon();
 
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
         }
-        else if (collision.tag == "Player" && whatCrystalAmI == 2)
+        else if (collision.tag == "Player" && whatCrystalAmI == 2 && canCollect)
         {
+            AudioSource.PlayClipAtPoint(crystalClip, transform.position, 2f);
             DeactivateCrystal();
             ActivateCrystalIcon();
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
         }
     }
+
 }
