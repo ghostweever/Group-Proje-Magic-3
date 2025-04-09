@@ -81,14 +81,13 @@ public class EnemyCollision : MonoBehaviour
             EnemyLives(1);
             Debug.Log(enemyLives);
         }
-    }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "Player")
+        if (collision.tag == "Player")
         {
             GameObject.Find("Void").GetComponent<MenuButtons>().GameOver();
         }
     }
 }
+
+
         
