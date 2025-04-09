@@ -38,12 +38,12 @@ public class EnemyCollision : MonoBehaviour
         else if (whatEnemyAmI == 2)
         {
             enemyLives = 3;
-            agent.speed = 6f;
+            agent.speed = 3f;
         }
         else if (whatEnemyAmI == 3)
         {
             enemyLives = 4;
-            agent.speed = 5f;
+            agent.speed = 3f;
         }
     }
 
@@ -87,7 +87,7 @@ public class EnemyCollision : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
         {
-            //GameObject.Find("Void").GetComponent<MenuButtons>().GameOver();
+            GameObject.Find("Void").GetComponent<MenuButtons>().GameOver();
         }
     }
 }
