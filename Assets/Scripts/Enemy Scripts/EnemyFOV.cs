@@ -16,6 +16,8 @@ public class EnemyFOV : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
+    
+
     private int canPlayAudio = 1;
 
     public bool canSeePlayer;
@@ -85,7 +87,6 @@ public class EnemyFOV : MonoBehaviour
         }
 
     }
-
 
     private IEnumerator resetAudio()
     {
