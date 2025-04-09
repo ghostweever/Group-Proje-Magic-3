@@ -334,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4811620920155866083, guid: ac4ab3f8b1d0ec14d9e6d6024c3ba09a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.901
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 4811620920155866083, guid: ac4ab3f8b1d0ec14d9e6d6024c3ba09a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -367,6 +367,10 @@ PrefabInstance:
     - target: {fileID: 5300067258709236057, guid: ac4ab3f8b1d0ec14d9e6d6024c3ba09a, type: 3}
       propertyPath: m_Name
       value: flower_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300067258709236057, guid: ac4ab3f8b1d0ec14d9e6d6024c3ba09a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

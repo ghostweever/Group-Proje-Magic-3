@@ -342,6 +342,7 @@ MonoBehaviour:
   radius: 5
   angle: 82
   player: {fileID: 8656819230776656306, guid: 9bf80ab73bc0a7649babd944f21f4487, type: 3}
+  enemyAlert: {fileID: 0}
   targetMask:
     serializedVersion: 2
     m_Bits: 128

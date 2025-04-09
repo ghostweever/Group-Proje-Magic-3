@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCrystalManager : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PlayerCrystalManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        WinCondition();
     }
 
     public void EarnCrystal(int amount)
@@ -26,18 +27,23 @@ public class PlayerCrystalManager : MonoBehaviour
         playerCrystalCount += amount;
     }
 
-
-
-    public bool WinCondition()
+    public void WinCondition()
     {
-        if(playerCrystalCount == crystalsNeeded)
+        if (playerCrystalCount == crystalsNeeded)
         {
-            return true;
-            
-        } else
-        {
-            return false;
+            SceneManager.LoadScene("Win");
         }
-    }
 
+        //public bool WinCondition()
+        //{
+        //    if(playerCrystalCount == crystalsNeeded)
+        //    {
+        //        return true;
+
+        //    } else
+        //    {
+        //        return false;
+        //    }
+        //}
+    }
 }
