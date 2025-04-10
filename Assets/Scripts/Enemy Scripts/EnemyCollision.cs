@@ -23,7 +23,7 @@ public class EnemyCollision : MonoBehaviour
     {
         
     }
-    void WhoAmI()
+    public void WhoAmI()
     {
         if (whatEnemyAmI == 0)
         {
@@ -32,18 +32,18 @@ public class EnemyCollision : MonoBehaviour
         else if (whatEnemyAmI == 1)
         {
             enemyLives = 5;
-            agent.speed = 3f;
+            agent.speed = 7f;
 
         }
         else if (whatEnemyAmI == 2)
         {
             enemyLives = 3;
-            agent.speed = 3f;
+            agent.speed = 7f;
         }
         else if (whatEnemyAmI == 3)
         {
             enemyLives = 4;
-            agent.speed = 3f;
+            agent.speed = 5f;
         }
     }
 

@@ -27,23 +27,18 @@ public class PlayerCrystalManager : MonoBehaviour
         playerCrystalCount += amount;
     }
 
-    public void WinCondition()
-    {
+
+    public bool WinCondition()
+      {
         if (playerCrystalCount == crystalsNeeded)
-        {
-            SceneManager.LoadScene("Win");
+           {
+             return true;
+
+            }
+            else
+            {
+                return false;
+            }
         }
-
-        //public bool WinCondition()
-        //{
-        //    if(playerCrystalCount == crystalsNeeded)
-        //    {
-        //        return true;
-
-        //    } else
-        //    {
-        //        return false;
-        //    }
-        //}
-    }
+    
 }
