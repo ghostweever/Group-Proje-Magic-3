@@ -5,22 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-
-    public GameObject settingsMenu;
-
+   
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level 1 Whiteboxing EI 1");
+        SceneManager.LoadScene("Level 1 Whiteboxing EI");
     }
 
-    public void GoToSettings()
+    public void Settings()
     {
-        settingsMenu.SetActive(true);
-    }
-
-    public void SettingsToMain()
-    {
-        settingsMenu.SetActive(false);
+        SceneManager.LoadScene("Settings");
     }
 
     public void BackToMain()

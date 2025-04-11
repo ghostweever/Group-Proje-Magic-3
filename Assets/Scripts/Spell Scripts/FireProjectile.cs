@@ -47,7 +47,7 @@ public class FireProjectile : MonoBehaviour
 
         clone.velocity = Vector3.forward * speed;
 
-        Destroy(clone, 5f);
+        Destroy(clone, 2f);
         
 
     }

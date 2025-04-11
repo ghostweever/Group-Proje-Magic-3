@@ -56,7 +56,7 @@ public class SpellManager : MonoBehaviour
 
                 if (playerMana.mana > manaUse[0]) {
 
-                    
+                    GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
 
                     //Grass Attack Spell
                     if (whatSpellAmI == 0)
@@ -66,34 +66,34 @@ public class SpellManager : MonoBehaviour
                         animator.SetTrigger("Grass");
                         AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                         GameObject.Find("Player").GetComponent<MakeVineWhip>().VineSpell();
-                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
                         Debug.Log(playerMana.mana);
                     }
                     //Water Attack Spell
-                    if (whatSpellAmI == 1)
+                    if (whatSpellAmI == 1 && playerMana.mana > manaUse[0])
                     {
                         spellInUse = true;
                         StartCoroutine(ComboSpellCooldown());
                         animator.SetTrigger("Water");
                         AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                         GameObject.Find("Player").GetComponent<MakeWater>().WaterSpell();
-                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
                         Debug.Log(playerMana);
                     }
                     //Fire Attack
-                    if (whatSpellAmI == 2)
+                    if (whatSpellAmI == 2 && playerMana.mana > manaUse[0])
                     {
                         spellInUse = true;
                         StartCoroutine(ComboSpellCooldown());
                         animator.SetTrigger("Fire");
                         AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                         GameObject.Find("Player").GetComponent<FireProjectile>().FireSpell();
-                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
                         Debug.Log(playerMana);
                     }
                 }
                 }
-                
+                else if (playerMana.mana < manaUse[0])
+                {
+                    Debug.Log("Need to recharge mana!");
+                }
             }
 
             //Changes Primary Element
@@ -120,14 +120,13 @@ public class SpellManager : MonoBehaviour
                 if (playerMana.mana > manaUse[1])
                 {
 
-                   
+                    GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
 
                     //Grass and Water Mobility Spell
                     if (((whatSecondarySpellAmI == 0 && whatSpellAmI == 0) || (whatSecondarySpellAmI == 2 && whatSpellAmI == 1)) && !playerMovement.IsGrounded())
                     {
                         animator.SetTrigger("Glide");
                         GameObject.Find("Player").GetComponent<Glide>().GlideSpell();
-                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
                         spellInUse = true;
                         StartCoroutine(GlideSpellCooldown());
 
@@ -138,7 +137,6 @@ public class SpellManager : MonoBehaviour
                     {
                         animator.SetTrigger("Cloud");
                         GameObject.Find("Player").GetComponent<MakeCloud>().CloudSpell();
-                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
                         spellInUse = true;
                         StartCoroutine(ComboSpellCooldown());
 
@@ -149,7 +147,6 @@ public class SpellManager : MonoBehaviour
                         animator.SetTrigger("Dash");
                         dash.canDash = true;
                         GameObject.Find("Player").GetComponent<Dash>().DashSpell();
-                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
                         spellInUse = true;
                         StartCoroutine(GlideSpellCooldown());
 
@@ -159,7 +156,6 @@ public class SpellManager : MonoBehaviour
                     {
                         animator.SetTrigger("Grass");
                         GameObject.Find("Player").GetComponent<MakeVineWhip>().VineComboSpell();
-                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
                         spellInUse = true;
                         StartCoroutine(ComboSpellCooldown());
 
@@ -169,7 +165,6 @@ public class SpellManager : MonoBehaviour
                     {
                         animator.SetTrigger("Water");
                         GameObject.Find("Player").GetComponent<MakeWater>().WaterComboSpell();
-                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
                         spellInUse = true;
                         StartCoroutine(ComboSpellCooldown());
 
@@ -179,15 +174,16 @@ public class SpellManager : MonoBehaviour
                     {
                         animator.SetTrigger("Fire");
                         GameObject.Find("Player").GetComponent<FireProjectile>().FireComboSpell();
-                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
                         spellInUse = true;
                         StartCoroutine(ComboSpellCooldown());
 
                     }
                 }
             }
-          
-            
+            else
+            {
+                Debug.Log("Recharge Mana!");
+            }
             //Changes Secondary Element
             if (Input.GetButtonDown("Switch2") || Input.GetButtonDown("XboxRB"))
             {

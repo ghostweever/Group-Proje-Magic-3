@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Dash : MonoBehaviour
 
     
 {
 
-    public float dashSpeed = 20f;
+    public float dashSpeed = 10f;
     public float dashLength = 5f;
     public float dashCooldown = 1f;
 
@@ -51,7 +51,7 @@ public class Dash : MonoBehaviour
     private IEnumerator DisableDash()
     {
         yield return new WaitForSeconds(5f);
-        playerMovement.walking = 20f;
+        playerMovement.walking = 5f;
         CancelInvoke();
         
     }

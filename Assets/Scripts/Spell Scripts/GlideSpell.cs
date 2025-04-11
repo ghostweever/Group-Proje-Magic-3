@@ -17,7 +17,6 @@ public class Glide : MonoBehaviour
         {
 
             playerJumping.gravity = 2f;
-            transform.GetChild(2).gameObject.SetActive(true);
             StartCoroutine(EndSpell());
         
         }
@@ -32,8 +31,7 @@ public class Glide : MonoBehaviour
   
             yield return new WaitForSeconds(6.5f);
             playerJumping.gravity = 6f;
-            transform.GetChild(2).gameObject.SetActive(false);
-
+        
     }
 }
     

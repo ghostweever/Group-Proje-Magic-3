@@ -50,9 +50,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281e861b10d5280428cec3faf37e2acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatEnemyAmI: 0
-  enemyLives: 0
-  agent: {fileID: 0}
 --- !u!114 &4474339913076234642
 MonoBehaviour:
   m_ObjectHideFlags: 0
