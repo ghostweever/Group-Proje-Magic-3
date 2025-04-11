@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -7588229687705849613}
   m_Layer: 0
   m_Name: Fireball 1
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -163,3 +163,4 @@ MonoBehaviour:
   Fireball: {fileID: 7525640225070392789}
   FireballAmplifier: {fileID: 0}
   player: {fileID: 8656819230776656306, guid: 9bf80ab73bc0a7649babd944f21f4487, type: 3}
+  fireSpell: {fileID: 0}

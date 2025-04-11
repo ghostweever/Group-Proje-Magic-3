@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PortalScript : MonoBehaviour
 {
     private PlayerCrystalManager playerCrystalManager;
     public GameObject portal;
-    
+
 
     void Start()
     {
@@ -17,26 +18,19 @@ public class PortalScript : MonoBehaviour
     void Update()
     {
         ActivatePortal();
-        
+
     }
 
     void ActivatePortal()
     {
-        if (GameObject.Find("Player").GetComponent<PlayerCrystalManager>().WinCondition()){ 
-        
+        if (GameObject.Find("Player").GetComponent<PlayerCrystalManager>().WinCondition())
+        {
+
             portal.gameObject.SetActive(true);
-        } 
+        }
         else
         {
             portal.gameObject.SetActive(false);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player" && GameObject.Find("Player").GetComponent<PlayerCrystalManager>().WinCondition())
-        {
-            GameObject.Find("Void").GetComponent<MenuButtons>().Win();
         }
     }
 
