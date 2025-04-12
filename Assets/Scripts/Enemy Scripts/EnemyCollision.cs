@@ -84,7 +84,7 @@ public class EnemyCollision : MonoBehaviour
 
         if (collision.tag == "Player")
         {
-            GameObject.Find("Void").GetComponent<MenuButtons>().GameOver();
+            GameObject.Find("Void").GetComponent<InGameSettings>().Death();
         }
     }
 }

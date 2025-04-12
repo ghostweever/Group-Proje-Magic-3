@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class SpellManager : MonoBehaviour
 {
@@ -54,7 +54,7 @@ public class SpellManager : MonoBehaviour
             if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("XboxFire1"))
             {
 
-                if (playerMana.mana > manaUse[0]) {
+                if (playerMana.mana > manaUse[0] && !spellInUse) {
 
                     
 

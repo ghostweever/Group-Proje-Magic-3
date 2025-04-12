@@ -24,7 +24,7 @@ public class PlayerLives : MonoBehaviour
 
         if (playerLives <= 0)
         {
-            GameObject.Find("Void").GetComponent<MenuButtons>().GameOver();
+            GameObject.Find("Void").GetComponent<InGameSettings>().Death();
         }
 
     }

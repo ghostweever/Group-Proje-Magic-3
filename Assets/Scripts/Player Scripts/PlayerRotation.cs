@@ -7,7 +7,7 @@ public class PlayerRotation : MonoBehaviour
 
     private PlayerInputHandler inputHandler;
 
-    public float mouseSensitivity = .25f;
+    public float mouseSensitivity = 1.5f;
     private float upDownRange = 40.0f;
     private float verticalRotation;
     private float speed = 5;
@@ -23,7 +23,7 @@ public class PlayerRotation : MonoBehaviour
         if (GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().isPaused == false)
         {
 
-            float mouseXRotation = inputHandler.LookInput.x * mouseSensitivity * .7f;
+            float mouseXRotation = inputHandler.LookInput.x * mouseSensitivity;
             transform.Rotate(0, mouseXRotation, 0);
 
             verticalRotation -= inputHandler.LookInput.y * mouseSensitivity;
