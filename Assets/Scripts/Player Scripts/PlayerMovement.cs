@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     //Sends out raycast to detect if the player is touching the ground
     public bool IsGrounded()
     {

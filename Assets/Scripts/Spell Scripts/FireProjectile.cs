@@ -31,7 +31,7 @@ public class FireProjectile : MonoBehaviour
     {
         speed = 25f;
 
-         Vector3 playerPos = player.transform.position;
+         Vector3 playerPos =  new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
         Vector3 playerDirection = player.transform.forward;
         Quaternion playerRotation = player.transform.rotation;
         float spawnDistance = 1;
@@ -45,7 +45,7 @@ public class FireProjectile : MonoBehaviour
         var clone = Instantiate(Fireball, spawnPos, Quaternion.identity);
 
 
-        clone.velocity = Vector3.forward * speed;
+        clone.velocity = this.transform.forward * speed;
 
         Destroy(clone, 5f);
         
@@ -56,7 +56,7 @@ public class FireProjectile : MonoBehaviour
     {
         speed = 35f;
 
-        Vector3 playerPos = player.transform.position;
+        Vector3 playerPos = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
         Vector3 playerDirection = player.transform.forward;
         Quaternion playerRotation = player.transform.rotation;
         float spawnDistance = 1;
@@ -67,7 +67,7 @@ public class FireProjectile : MonoBehaviour
 
         AudioSource.PlayClipAtPoint(fireSpell, transform.position, 2f);
 
-        clone.velocity = Vector3.forward * speed;
+        clone.velocity = this.transform.forward * speed;
 
         Destroy(clone, 2f);
         

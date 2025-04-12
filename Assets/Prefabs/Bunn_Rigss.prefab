@@ -404,19 +404,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.2
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 486.15
+      value: 430.83
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 79.7
+      value: 201.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7335845
+      value: -0.16532184
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.x
@@ -424,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6795983
+      value: -0.9862397
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.z
@@ -436,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -274.375
+      value: -199.032
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   currentMovement: {x: 0, y: 0, z: 0}
   walking: 20
 --- !u!114 &2926416047035706449
