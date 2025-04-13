@@ -47,6 +47,8 @@ public class MenuButtons : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button loadGame;
 
+
+
     private void Start()
     {
         resolutions = Screen.resolutions;
@@ -76,6 +78,7 @@ public class MenuButtons : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolution;
         resolutionDropdown.RefreshShownValue();
+
     }
 
     public void SetResolution(int resolutionIndex)
@@ -86,13 +89,17 @@ public class MenuButtons : MonoBehaviour
 
     public void NewGame()
     {
+        
         DataPersistenceManager.instance.NewGame();
+
+        DataPersistenceManager.instance.SaveGame();
+
         SceneManager.LoadSceneAsync("Level1");
     }
 
     public void LoadGame()
     {
-        
+        DataPersistenceManager.instance.SaveGame();
 
         SceneManager.LoadSceneAsync("Level1");
     }

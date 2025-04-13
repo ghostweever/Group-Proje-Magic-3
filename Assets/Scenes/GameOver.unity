@@ -633,7 +633,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 916109176}
         m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
-        m_MethodName: BackToMain
+        m_MethodName: TryAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -693,6 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71dfe42596ed77047a784b5ecefb1407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 7600087220709157171, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
 --- !u!1 &1089002574
 GameObject:
   m_ObjectHideFlags: 0
