@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDataPersistence
 {   
     private SpellManager spellManager;
     private PlayerJumping jumping;
@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         rotation = GetComponent<PlayerRotation>();
         menuButtons = GetComponent<MenuButtons>();
-
         animator = GetComponent<Animator>();
     }
 
@@ -42,12 +41,24 @@ public class Player : MonoBehaviour
             animator.SetTrigger("Win");
         }
 
+
     }
 
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.playerPosition = this.transform.position;
+    }
+
+    //If player falls off and hits the void they will die
     void Void()
     {            
         if(player.transform.position.y <= -50)
-        GameObject.Find("Void").GetComponent<MenuButtons>().GameOver();
+        GameObject.Find("Void").GetComponent<InGameSettings>().Death();
         
     }
 

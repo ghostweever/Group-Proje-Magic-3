@@ -11,8 +11,10 @@ public class EnemyFOV : MonoBehaviour
 
     public GameObject player;
 
+    [Header("Audio")]
     public AudioClip enemyAlert;
 
+    [Header("Mask Layers")]
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 

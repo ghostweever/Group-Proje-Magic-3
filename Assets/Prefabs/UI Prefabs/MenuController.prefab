@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8470938230341561973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8114418606822611148}
+  - component: {fileID: 1872670210050548142}
+  m_Layer: 0
+  m_Name: MenuController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8114418606822611148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8470938230341561973}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41107178, y: 1, z: 89.96959}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1872670210050548142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8470938230341561973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b6875860b6be84189881cac6248fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newGameLevel: Level1
+  noSaveFile: {fileID: 0}
+  volumeText: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  defaultVolume: 0.5
+  confirmationPrompt: {fileID: 0}
+  controllerSensText: {fileID: 0}
+  controllerSensSlider: {fileID: 0}
+  defaultSens: 4
+  mainControllerSens: 4
+  brightnessSlider: {fileID: 0}
+  brightnessText: {fileID: 0}
+  defaultBrightness: 1
+  qualityDropdown: {fileID: 0}
+  fullScreenToggle: {fileID: 0}
+  resolutionDropdown: {fileID: 0}

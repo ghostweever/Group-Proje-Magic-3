@@ -33,9 +33,4 @@ public class Glide : MonoBehaviour
             playerJumping.gravity = 6f;
         
     }
-}
-    
-
-
-    
-    
+}   

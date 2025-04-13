@@ -19,6 +19,7 @@ public class PlayerMana : MonoBehaviour
         
     }
 
+    //Adds and subtracts mana depending on what calls it
     public void EarnMana(int manaAmount)
     {
         mana += manaAmount;
