@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public int score;
+
     void Start()
     {
-        
+        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void Score(int amount)
+    {
+        score += amount;
     }
 }

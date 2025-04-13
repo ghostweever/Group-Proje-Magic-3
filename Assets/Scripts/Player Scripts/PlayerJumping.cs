@@ -7,50 +7,66 @@ public class PlayerJumping : MonoBehaviour
 
     private CharacterController characterController;
     private PlayerMovement playerMovement;
+    private PauseMenu pauseMenu;
 
-    [SerializeField] private float jumpSpeed = 3.5f;
-    [SerializeField] private float gravity = 4.5f;
-    
+    [SerializeField] private float jumpSpeed = 5f;
+    public float gravity = 6;
+
+    private Animator animator;
+
     private bool canJump;
-    private int jumpAmount;
-    public AudioClip jumpClip;
 
+    [Header("Audio")]
+    public AudioClip jumpClip;
+    public AudioClip jumpSFXClip;
+
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();        
+    }
 
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
         playerMovement = GetComponent<PlayerMovement>();
-        jumpAmount = 2;
+        pauseMenu = GetComponent<PauseMenu>();
 
     }
 
     public void Jumping()
     {
-        if (playerMovement.IsGrounded() && playerMovement.currentMovement.y < 0)
+
+        if (GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().isPaused == false)
         {
-            playerMovement.currentMovement.y = 0f;
-            canJump = true;
-            jumpAmount = 2;
-        }
-
-        if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("XboxJump")) && canJump)
-        {
-            AudioSource.PlayClipAtPoint(jumpClip, transform.position, .7f);
-            playerMovement.currentMovement.y += Mathf.Sqrt(jumpSpeed * 2 * gravity);
-            playerMovement.currentMovement.y = jumpSpeed;
-            jumpAmount--;
-            Debug.Log(jumpAmount);
-
-
-            if (jumpAmount <= 0)
+            if (playerMovement.IsGrounded() && playerMovement.currentMovement.y < 0)
             {
-                canJump = false;
+                
+                canJump = true;
             }
 
+            if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("XboxJump")) && canJump)
+            {
+
+                animator.SetTrigger("Jump");
+                
+                StartCoroutine(JumpAnimator());
+                AudioSource.PlayClipAtPoint(jumpClip, transform.position, .7f);
+                AudioSource.PlayClipAtPoint(jumpSFXClip, transform.position, .7f);
+                playerMovement.currentMovement.y += Mathf.Sqrt(jumpSpeed * 2 * gravity);
+                playerMovement.currentMovement.y = jumpSpeed;
+            }
+
+            playerMovement.currentMovement.y -= gravity * Time.deltaTime;
+
         }
-
-        playerMovement.currentMovement.y -= gravity * Time.deltaTime;
-
     }
 
+    private IEnumerator JumpAnimator()
+    {
+        yield return new WaitForSeconds(.01f);
+        animator.SetBool("Jump", false);
+        canJump = false;
+
+    }
 }

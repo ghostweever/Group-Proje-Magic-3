@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class PlayerMana : MonoBehaviour
 {
-    private int mana;
+    public int mana;
+    private ManaBar manaBar;
+    public int maxMana;
 
-    void Start()
+    private void Start()
     {
-        mana = 100;
+        manaBar = GetComponent<ManaBar>();
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
-    public void HowMuchManaUsage(int manaUse)
+    //Adds and subtracts mana depending on what calls it
+    public void EarnMana(int manaAmount)
     {
-        mana -= (mana - manaUse);
+        mana += manaAmount;
+        manaBar.SetMana(mana);
+    }
 
-        if (manaUse > mana)
-        {
-
-        }
+    public void LoseMana(int manaAmount)
+    {
+        mana -= manaAmount;
+        manaBar.SetMana(mana);
     }
 }

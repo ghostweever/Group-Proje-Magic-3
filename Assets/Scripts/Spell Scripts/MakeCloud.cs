@@ -9,18 +9,7 @@ public class MakeCloud : MonoBehaviour
     public GameObject player;
     private int cloudAmount = 2;
     private bool canMakeCloud = true;
-    
-    void Start()
-    {
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+    public AudioClip cloudClip;
 
     public void CloudSpell()
     {
@@ -33,14 +22,14 @@ public class MakeCloud : MonoBehaviour
             canMakeCloud = true;
         }
 
-        
-
         if (canMakeCloud == true)
         {
             
             //Spawns cloud slightly below player so they dont get caught in it
-           var cloudCopy = Instantiate(cloud, new Vector3(player.transform.position.x, player.transform.position.y - 1.5f, player.transform.position.z), transform.rotation);
+           var cloudCopy = Instantiate(cloud, new Vector3(player.transform.position.x, player.transform.position.y - .5f, player.transform.position.z), transform.rotation);
             
+            AudioSource.PlayClipAtPoint(cloudClip, transform.position, 5f);
+
             cloudAmount--;
 
             Destroy(cloudCopy, 3f);

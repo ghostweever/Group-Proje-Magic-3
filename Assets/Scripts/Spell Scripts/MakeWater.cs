@@ -5,55 +5,64 @@ using UnityEngine;
 public class MakeWater : MonoBehaviour
 {
     [SerializeField] private GameObject water;
+    [SerializeField] private GameObject waterAmplifier;
     Rigidbody rb;
     public GameObject user;
-    private bool canCastWater = true;
+   
+    public AudioClip waterSound;
 
     float magnitude = 20;
 
     void Start()
     {
         rb = water.GetComponent<Rigidbody>();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void WaterSpell()
     {
-        //gets player position and rotation so it is shot in front
-        Vector3 playerPos = user.transform.position;
-        Vector3 playerDirection = user.transform.forward;
+
         Quaternion playerRotation = user.transform.rotation;
-        float spawnDistance = 1;
 
-        Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
+        Vector3 spawnPos = new(user.transform.position.x, user.transform.position.y + 2, user.transform.position.z + 1.5f);
 
-        if (canCastWater == true)
-        {
+            AudioSource.PlayClipAtPoint(waterSound, transform.position, 2f);
 
             GameObject currentWater = Instantiate(water, spawnPos, playerRotation);
 
             //Sends out the water prefab with force applied
-            currentWater.GetComponent<Rigidbody>().AddForce(Vector3.forward * magnitude, ForceMode.Impulse);
+            currentWater.GetComponent<Rigidbody>().AddForce(this.transform.forward * magnitude, ForceMode.Impulse);
 
             water.transform.Translate(new Vector3(0, 2, 0) * Time.deltaTime * 2f);
 
-            canCastWater = false;
+       
 
             Destroy(currentWater, .5f);
 
-            StartCoroutine(WaterWallCooldown());
-        }
+        
     }
 
-    private IEnumerator WaterWallCooldown()
+    //Powered up secondary spell
+    public void WaterComboSpell()
     {
-        yield return new WaitForSeconds(5f);
-        canCastWater = true;
+        Quaternion playerRotation = user.transform.rotation;
+
+        Vector3 spawnPos = new (user.transform.position.x, user.transform.position.y + 2, user.transform.position.z + 1.5f);
+
+      
+            AudioSource.PlayClipAtPoint(waterSound, transform.position, 2f);
+
+            GameObject currentWater = Instantiate(waterAmplifier, spawnPos, playerRotation);
+
+            //Sends out the water prefab with force applied
+            currentWater.GetComponent<Rigidbody>().AddForce(this.transform.forward * magnitude, ForceMode.Impulse);
+
+            water.transform.Translate(new Vector3(0, 2, 0) * Time.deltaTime * 2f);
+
+         
+
+            Destroy(currentWater, .5f);
+
+        
     }
+
 }

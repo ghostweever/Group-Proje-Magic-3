@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class SpellManager : MonoBehaviour
 {
@@ -13,11 +13,15 @@ public class SpellManager : MonoBehaviour
     private PlayerMovement playerMovement;
     private ChangeSpellImages changeSpellImages;
     private ManaBar manaBar;
-
+    private PlayerMana playerMana;
     private Dash dash;
-    public int[] manaUse = {10, 25, 10};
-    public int maxMana;
-    public int playerMana;
+
+    private bool spellInUse = false;
+
+    private Animator animator;
+
+    public int[] manaUse = { 10, 25 };
+
     public AudioClip attackClip;
     void Start()
     {
@@ -29,128 +33,191 @@ public class SpellManager : MonoBehaviour
         changeSpellImages = GetComponent<ChangeSpellImages>();
         dash = GetComponent<Dash>();
         manaBar = GetComponent<ManaBar>();
+        playerMana = GetComponent<PlayerMana>();
 
-        maxMana = 100;
-        playerMana = maxMana;
+        playerMana.maxMana = 100;
+        playerMana.mana = playerMana.maxMana;
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        manaBar.SetMana(playerMana);
+        //Updates mana bar constantly
+        manaBar.SetMana(playerMana.mana);
     }
 
     public void WhichSpellToCast()
+        //Finds which spell to cast based on their spell value
     {
-        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("XboxFire1"))
+        if (GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().isPaused == false)
         {
 
-            
+            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("XboxFire1"))
+            {
+                //If player is above mana requirement and a spell isnt in use they can cast a spell
+                if (playerMana.mana > manaUse[0] && !spellInUse) {
 
-            //Grass Attack Spell
-            if (whatSpellAmI == 0 && playerMana >= manaUse[0])
-            {
-                AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
-                GameObject.Find("Player").GetComponent<MakeVineWhip>().VineSpell();
-                playerMana -= manaUse[0];
-                Debug.Log(playerMana);
-            } else if (whatSpellAmI == 0 && (playerMana < manaUse[0]))
-            {
-                Debug.Log("Need to recharge mana!");
-            }
-            //Water Attack Spell
-            if (whatSpellAmI == 1 && playerMana >= manaUse[1])
-            {
-                AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
-                GameObject.Find("Player").GetComponent<MakeWater>().WaterSpell();
-                playerMana -= manaUse[1];
-                Debug.Log(playerMana);
-            }
-            else if (whatSpellAmI == 1 && playerMana < manaUse[1])
-            {
-                Debug.Log("Need to recharge mana!");
-            }
-            //Fire Attack Spell
-            if (whatSpellAmI == 2 && playerMana > manaUse[2])
-            {
-                AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
-                GameObject.Find("Player").GetComponent<FireProjectile>().FireSpell();
-                playerMana -= manaUse[2];
-                Debug.Log(playerMana);
-            }
-            else if (whatSpellAmI == 2 && playerMana < manaUse[2])
-            {
-                Debug.Log("Need to recharge mana!");
-            }
-        }
-        //Changes Primary Element
-        if (Input.GetButtonDown("Switch1") || Input.GetButtonDown("XboxLB"))
-        {
+                    
 
-            changeSpellImages.ChangePrimary();
-            whatSpellAmI++;
-            Debug.Log(whatSpellAmI);
-
-            if (whatSecondarySpellAmI == whatSpellAmI)
-            {
-                whatSpellAmI++;
-            }
-
-            if (whatSpellAmI >= 3)
-            {
-                whatSpellAmI = 0;
-            }
-        }
-    }
-
-    public void WhichSecondarySpellToCast()
-    {
-
-        if (Input.GetButtonDown("Fire2") || Input.GetButtonDown("XboxFire2"))
-        {
-            
-
-            //Grass and Water Mobility Spell
-            if (whatSecondarySpellAmI == 0)
-            {
+                    //Grass Attack Spell
+                    if (whatSpellAmI == 0)
+                    {
+                        spellInUse = true;
+                        StartCoroutine(ComboSpellCooldown());
+                        animator.SetTrigger("Grass");
+                        AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
+                        GameObject.Find("Player").GetComponent<MakeVineWhip>().VineSpell();
+                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
+                        Debug.Log(playerMana.mana);
+                    }
+                    //Water Attack Spell
+                    if (whatSpellAmI == 1)
+                    {
+                        spellInUse = true;
+                        StartCoroutine(ComboSpellCooldown());
+                        animator.SetTrigger("Water");
+                        AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
+                        GameObject.Find("Player").GetComponent<MakeWater>().WaterSpell();
+                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
+                        Debug.Log(playerMana);
+                    }
+                    //Fire Attack
+                    if (whatSpellAmI == 2)
+                    {
+                        spellInUse = true;
+                        StartCoroutine(ComboSpellCooldown());
+                        animator.SetTrigger("Fire");
+                        AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
+                        GameObject.Find("Player").GetComponent<FireProjectile>().FireSpell();
+                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
+                        Debug.Log(playerMana);
+                    }
+                }
+                }
                 
             }
-            //Fire and Water Mobility Spell
-            else if (whatSecondarySpellAmI == 1 && !playerMovement.IsGrounded())
+
+            //Changes Primary Element
+            if (Input.GetButtonDown("Switch1") || Input.GetButtonDown("XboxLB"))
             {
-                Debug.Log("Y");
-                GameObject.Find("Player").GetComponent<MakeCloud>().CloudSpell();
-            }
-            //Fire and Grass Mobility Spell
-            else if (whatSecondarySpellAmI == 2)
-            {
-                dash.canDash = true;
-                Debug.Log("MEOW");
-                GameObject.Find("Player").GetComponent<Dash>().DashSpell();
+
+                changeSpellImages.ChangePrimary();
+                whatSpellAmI++;
+                Debug.Log(whatSpellAmI);
+
+                if (whatSpellAmI >= 3)
+                {
+                    whatSpellAmI = 0;
+                }
             }
         }
-        //Changes Secondary Element
-        if (Input.GetButtonDown("Switch2") || Input.GetButtonDown("XboxRB"))
-        {
-            changeSpellImages.ChangeSecondary();
-            whatSecondarySpellAmI++;
-            Debug.Log(whatSecondarySpellAmI);
+    
+    public void WhichSecondarySpellToCast()
+    {
+        //Finds which spell to cast based on their spell value, it fetches the primary spell value to  determine which spell can be casted
 
-            if(whatSecondarySpellAmI == whatSpellAmI)
+        if (GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().isPaused == false) {
+
+            if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("XboxFire2")) && !spellInUse)
             {
-                whatSecondarySpellAmI++;
+                if (playerMana.mana > manaUse[1])
+                {
+
+                    //Grass and Water Mobility Spell
+                    if (((whatSecondarySpellAmI == 0 && whatSpellAmI == 0) || (whatSecondarySpellAmI == 2 && whatSpellAmI == 1)) && !playerMovement.IsGrounded())
+                    {
+                        animator.SetTrigger("Glide");
+                        GameObject.Find("Player").GetComponent<Glide>().GlideSpell();
+                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
+                        spellInUse = true;
+                        StartCoroutine(GlideSpellCooldown());
+
+                        
+                    }
+                    //Fire and Water Mobility Spell
+                    else if (((whatSecondarySpellAmI == 1 && whatSpellAmI == 1) || (whatSecondarySpellAmI == 0 && whatSpellAmI == 2)) && (!playerMovement.IsGrounded()))
+                    {
+                        animator.SetTrigger("Cloud");
+                        GameObject.Find("Player").GetComponent<MakeCloud>().CloudSpell();
+                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
+                        spellInUse = true;
+                        StartCoroutine(ComboSpellCooldown());
+
+                    }
+                    //Fire and Grass Mobility Spell
+                    else if ((whatSecondarySpellAmI == 2 && whatSpellAmI == 2) || (whatSecondarySpellAmI == 1 && whatSpellAmI == 0))
+                    {
+                        animator.SetTrigger("Dash");
+                        dash.canDash = true;
+                        GameObject.Find("Player").GetComponent<Dash>().DashSpell();
+                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
+                        spellInUse = true;
+                        StartCoroutine(GlideSpellCooldown());
+
+                    }
+                    //Grass and Grass Combo
+                    else if ((whatSecondarySpellAmI == 2 && whatSpellAmI == 0))
+                    {
+                        animator.SetTrigger("Grass");
+                        GameObject.Find("Player").GetComponent<MakeVineWhip>().VineComboSpell();
+                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
+                        spellInUse = true;
+                        StartCoroutine(ComboSpellCooldown());
+
+                    }
+                    //Water and Water Combo
+                    else if ((whatSecondarySpellAmI == 0 && whatSpellAmI == 1))
+                    {
+                        animator.SetTrigger("Water");
+                        GameObject.Find("Player").GetComponent<MakeWater>().WaterComboSpell();
+                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
+                        spellInUse = true;
+                        StartCoroutine(ComboSpellCooldown());
+
+                    }
+                    //Fire and Fire Combo
+                    else if ((whatSecondarySpellAmI == 1 && whatSpellAmI == 2))
+                    {
+                        animator.SetTrigger("Fire");
+                        GameObject.Find("Player").GetComponent<FireProjectile>().FireComboSpell();
+                        GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
+                        spellInUse = true;
+                        StartCoroutine(ComboSpellCooldown());
+
+                    }
+                }
             }
-
-            if (whatSecondarySpellAmI >= 3)
+          
+            
+            //Changes Secondary Element
+            if (Input.GetButtonDown("Switch2") || Input.GetButtonDown("XboxRB"))
             {
-                whatSecondarySpellAmI = 0;
+                changeSpellImages.ChangeSecondary();
+                whatSecondarySpellAmI++;
+                Debug.Log(whatSecondarySpellAmI);
+
+                if (whatSecondarySpellAmI >= 3)
+                {
+                    whatSecondarySpellAmI = 0;
+                }
             }
         }
     }
 
-    public void EarnMana(int manaAmount)
+    //different cooldown for longer spells
+    private IEnumerator GlideSpellCooldown()
     {
-        playerMana += manaAmount;
-        manaBar.SetMana(playerMana);
+
+        yield return new WaitForSeconds(7f);
+        spellInUse = false;
+
+    }
+         
+    private IEnumerator ComboSpellCooldown()
+    {
+        yield return new WaitForSeconds(.5f);
+        spellInUse = false;
     }
 
 }

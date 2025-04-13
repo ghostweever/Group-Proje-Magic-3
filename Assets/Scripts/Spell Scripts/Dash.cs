@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class Dash : MonoBehaviour
-
     
 {
-
-    public float dashSpeed = 10f;
+    [Header("Dash Variables")]
+    public float dashSpeed = 30f;
     public float dashLength = 5f;
     public float dashCooldown = 1f;
 
@@ -29,20 +28,9 @@ public class Dash : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void DashSpell()
     {
-        
-            playerMovement.walking = dashSpeed;
-            InvokeRepeating("RepeatRun", 0.001f, .001f);
-            StartCoroutine(DisableDash());         
-
+       StartCoroutine(EnableDash());              
     }
 
     void RepeatRun()
@@ -50,16 +38,22 @@ public class Dash : MonoBehaviour
         player.transform.Translate(Vector3.forward.normalized * Time.deltaTime * 10f);
     }
 
+    //Coroutines to prevent player from dashing continiously
     private IEnumerator DisableDash()
     {
         yield return new WaitForSeconds(5f);
-        playerMovement.walking = 5f;
+        playerMovement.walking = 20f;
         CancelInvoke();
         
     }
 
-
-
+    private IEnumerator EnableDash()
+    {
+        yield return new WaitForSeconds(.7f);
+        playerMovement.walking = dashSpeed;
+        InvokeRepeating("RepeatRun", 0.001f, .001f);
+        StartCoroutine(DisableDash());
+    }
 
 
 
