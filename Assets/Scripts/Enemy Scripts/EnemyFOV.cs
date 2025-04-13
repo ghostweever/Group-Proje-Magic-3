@@ -15,8 +15,10 @@ public class EnemyFOV : MonoBehaviour
 
     public GameObject player;
 
+    [Header("Audio")]
     public AudioClip enemyAlert;
 
+    [Header("Mask Layers")]
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
@@ -24,7 +26,6 @@ public class EnemyFOV : MonoBehaviour
     private int canShoot = 1;
 
     public bool canSeePlayer;
-    
 
     private NavMeshAgent enemy;
     private void Start()

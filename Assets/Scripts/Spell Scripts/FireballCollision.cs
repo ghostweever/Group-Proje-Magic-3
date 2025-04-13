@@ -6,13 +6,8 @@ public class FireballCollision : MonoBehaviour
 {
     private void Update()
     {
-
-
         Destroy(gameObject, 1);
-
-
     }
-
 
     public void OnCollisionEnter(UnityEngine.Collision collision)
     {
@@ -22,13 +17,8 @@ public class FireballCollision : MonoBehaviour
             Destroy(gameObject);
             Destroy(collision.gameObject);
 
-
         }
 
-
-
     }
-
-
 
 }

@@ -10,18 +10,6 @@ public class MakeVineWhip : MonoBehaviour
 
     public AudioClip vineSpell;
 
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void VineSpell()
     {
         player.transform.GetChild(0).gameObject.SetActive(true);
@@ -29,6 +17,7 @@ public class MakeVineWhip : MonoBehaviour
         StartCoroutine(DestroyVine());
     }
 
+    //Powered up secondary spell
     public void VineComboSpell()
     {
         player.transform.GetChild(1).gameObject.SetActive(true);

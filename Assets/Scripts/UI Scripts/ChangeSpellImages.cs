@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ChangeSpellImages : MonoBehaviour
 {
+    //Changes spell images based on whats pressed
 
     public Image originalPrimary;
     public Sprite[] sprites;

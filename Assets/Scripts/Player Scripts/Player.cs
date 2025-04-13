@@ -13,13 +13,6 @@ public class Player : MonoBehaviour, IDataPersistence
    
     public GameObject player;
 
-    void Awake()
-    {
-     
-        
-        
-    }
-
     void Start()
     {
         spellManager = GetComponent<SpellManager>();
@@ -27,7 +20,6 @@ public class Player : MonoBehaviour, IDataPersistence
         playerMovement = GetComponent<PlayerMovement>();
         rotation = GetComponent<PlayerRotation>();
         menuButtons = GetComponent<MenuButtons>();
-
         animator = GetComponent<Animator>();
     }
 
@@ -62,6 +54,7 @@ public class Player : MonoBehaviour, IDataPersistence
         data.playerPosition = this.transform.position;
     }
 
+    //If player falls off and hits the void they will die
     void Void()
     {            
         if(player.transform.position.y <= -50)

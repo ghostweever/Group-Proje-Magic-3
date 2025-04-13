@@ -10,17 +10,6 @@ public class MakeCloud : MonoBehaviour
     private int cloudAmount = 2;
     private bool canMakeCloud = true;
     public AudioClip cloudClip;
-    void Start()
-    {
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
 
     public void CloudSpell()
     {
@@ -32,8 +21,6 @@ public class MakeCloud : MonoBehaviour
         {
             canMakeCloud = true;
         }
-
-        
 
         if (canMakeCloud == true)
         {
