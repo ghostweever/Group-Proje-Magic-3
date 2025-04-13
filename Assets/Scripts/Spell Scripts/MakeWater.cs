@@ -8,7 +8,6 @@ public class MakeWater : MonoBehaviour
     [SerializeField] private GameObject waterAmplifier;
     Rigidbody rb;
     public GameObject user;
-    private bool canCastWater = true;
    
     public AudioClip waterSound;
 
@@ -17,12 +16,6 @@ public class MakeWater : MonoBehaviour
     void Start()
     {
         rb = water.GetComponent<Rigidbody>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void WaterSpell()
@@ -48,6 +41,7 @@ public class MakeWater : MonoBehaviour
         
     }
 
+    //Powered up secondary spell
     public void WaterComboSpell()
     {
         Quaternion playerRotation = user.transform.rotation;

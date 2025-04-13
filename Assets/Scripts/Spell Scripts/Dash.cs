@@ -4,11 +4,10 @@ using UnityEngine;
 
 
 public class Dash : MonoBehaviour
-
     
 {
-
-    public float dashSpeed = 20f;
+    [Header("Dash Variables")]
+    public float dashSpeed = 30f;
     public float dashLength = 5f;
     public float dashCooldown = 1f;
 
@@ -29,18 +28,9 @@ public class Dash : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void DashSpell()
     {
-            StartCoroutine(EnableDash());
-                   
-
+       StartCoroutine(EnableDash());              
     }
 
     void RepeatRun()
@@ -48,6 +38,7 @@ public class Dash : MonoBehaviour
         player.transform.Translate(Vector3.forward.normalized * Time.deltaTime * 10f);
     }
 
+    //Coroutines to prevent player from dashing continiously
     private IEnumerator DisableDash()
     {
         yield return new WaitForSeconds(5f);
@@ -55,7 +46,6 @@ public class Dash : MonoBehaviour
         CancelInvoke();
         
     }
-
 
     private IEnumerator EnableDash()
     {

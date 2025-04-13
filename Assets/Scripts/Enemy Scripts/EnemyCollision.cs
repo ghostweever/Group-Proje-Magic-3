@@ -17,13 +17,8 @@ public class EnemyCollision : MonoBehaviour
         WhoAmI();
         agent = GetComponent<NavMeshAgent>();  
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void WhoAmI()
+        //Changes enemy values
     {
         if (whatEnemyAmI == 0)
         {
@@ -48,6 +43,7 @@ public class EnemyCollision : MonoBehaviour
     }
 
     void EnemyLives(int amount)
+        //Depending on enemy value it will reward diffferently
     {
         enemyLives -= amount;
 

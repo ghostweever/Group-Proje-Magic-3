@@ -12,12 +12,6 @@ public class PlayerLives : MonoBehaviour
         playerLives = 3;        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Damage(int amount)
     {
         playerLives -= amount;

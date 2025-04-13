@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class PortalScript : MonoBehaviour
+{
+    private PlayerCrystalManager playerCrystalManager;
+    public GameObject portal;
+
+
+    void Start()
+    {
+        playerCrystalManager = GetComponent<PlayerCrystalManager>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        ActivatePortal();
+
+    }
+
+    void ActivatePortal()
+        //If win condition is true the portal activates
+    {
+        if (GameObject.Find("Player").GetComponent<PlayerCrystalManager>().WinCondition())
+        {
+
+            portal.gameObject.SetActive(true);
+        }
+        else
+        {
+            portal.gameObject.SetActive(false);
+        }
+    }
+
+}

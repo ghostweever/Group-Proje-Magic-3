@@ -35,9 +35,4 @@ public class Glide : MonoBehaviour
             transform.GetChild(2).gameObject.SetActive(false);
 
     }
-}
-    
-
-
-    
-    
+}   

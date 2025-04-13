@@ -15,6 +15,8 @@ public class PlayerJumping : MonoBehaviour
     private Animator animator;
 
     private bool canJump;
+
+    [Header("Audio")]
     public AudioClip jumpClip;
     public AudioClip jumpSFXClip;
 

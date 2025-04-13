@@ -10,7 +10,6 @@ public class PlayerRotation : MonoBehaviour
     public float mouseSensitivity = 1.5f;
     private float upDownRange = 40.0f;
     private float verticalRotation;
-    private float speed = 5;
 
     void Start()
     {

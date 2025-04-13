@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class InGameSettings : MonoBehaviour
 {
+    //Used to access options from the MenuButtons Script without having it in the scene
 
     private Vector3 startPoint = new Vector3(-3.1f, 430.83f, 201.2f);
     public GameObject player;

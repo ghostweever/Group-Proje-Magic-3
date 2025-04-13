@@ -11,7 +11,6 @@ public class MenuButtons : MonoBehaviour
     [Header("Levels to Load")]
     public string newGameLevel;
     private string levelToLoad;
-    [SerializeField] private GameObject noSaveFile = null;
 
 
     [Header("Volume")]

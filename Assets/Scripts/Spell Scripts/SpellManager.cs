@@ -43,17 +43,19 @@ public class SpellManager : MonoBehaviour
 
     void Update()
     {
+        //Updates mana bar constantly
         manaBar.SetMana(playerMana.mana);
     }
 
     public void WhichSpellToCast()
+        //Finds which spell to cast based on their spell value
     {
         if (GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().isPaused == false)
         {
 
             if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("XboxFire1"))
             {
-
+                //If player is above mana requirement and a spell isnt in use they can cast a spell
                 if (playerMana.mana > manaUse[0] && !spellInUse) {
 
                     
@@ -113,14 +115,14 @@ public class SpellManager : MonoBehaviour
     
     public void WhichSecondarySpellToCast()
     {
+        //Finds which spell to cast based on their spell value, it fetches the primary spell value to  determine which spell can be casted
+
         if (GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().isPaused == false) {
 
             if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("XboxFire2")) && !spellInUse)
             {
                 if (playerMana.mana > manaUse[1])
                 {
-
-                   
 
                     //Grass and Water Mobility Spell
                     if (((whatSecondarySpellAmI == 0 && whatSpellAmI == 0) || (whatSecondarySpellAmI == 2 && whatSpellAmI == 1)) && !playerMovement.IsGrounded())
@@ -203,6 +205,7 @@ public class SpellManager : MonoBehaviour
         }
     }
 
+    //different cooldown for longer spells
     private IEnumerator GlideSpellCooldown()
     {
 
