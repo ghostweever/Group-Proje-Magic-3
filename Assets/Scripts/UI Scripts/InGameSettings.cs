@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class InGameSettings : MonoBehaviour
 {
+
+    private Vector3 startPoint = new Vector3(-3.1f, 430.83f, 201.2f);
+    public GameObject player;
     void Start()
     {
         
@@ -16,6 +19,7 @@ public class InGameSettings : MonoBehaviour
 
     public void BackToMain()
     {
+        GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().Resume();
         SceneManager.LoadSceneAsync("MainMenu");
     }
 
@@ -24,6 +28,12 @@ public class InGameSettings : MonoBehaviour
         GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().SaveGame();
     }
 
+    public void TryAgain()
+    {
+        
+        SceneManager.LoadSceneAsync("Level1");
+        player.transform.position = startPoint;
+    }
     public void Death()
     {
         SceneManager.LoadSceneAsync("GameOver");

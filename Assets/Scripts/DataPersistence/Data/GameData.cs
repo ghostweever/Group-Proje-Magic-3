@@ -9,7 +9,7 @@ public class GameData
 
 
     public Vector3 playerPosition;
-    public int playerCrystalCount;
+ 
 
     public GameData()
     {
