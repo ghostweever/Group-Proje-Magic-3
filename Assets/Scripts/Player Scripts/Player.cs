@@ -76,4 +76,12 @@ public class Player : MonoBehaviour, IDataPersistence
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "WeaponEnemy")
+        {
+            GameObject.Find("Player").GetComponent<PlayerLives>().Damage(1);
+        }
+    }
+
 }
