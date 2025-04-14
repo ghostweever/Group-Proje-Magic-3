@@ -4,29 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TeleportationScript : MonoBehaviour
 {
-   private PortalScript portalScript;
-    public GameObject player;
-    public GameObject loadingScreen;
-    public GameObject portal;
-    
-    public void Start()
-    {
-        portalScript = GetComponent<PortalScript>();
-        
-    }
+    // Start is called before the first frame update
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && GameObject.Find("PortalManager (Level 1)").GetComponent<PortalScript>().portalType == 0)
+        if (other.tag == "Player" && GameObject.Find("Player").GetComponent<PlayerCrystalManager>().WinCondition())
         {
-            loadingScreen.SetActive(true);
-            SceneManager.LoadSceneAsync("Forest Level");
-            player.transform.position = new Vector3(-3.1f, 430.83f, 201.2f);
-
-
-        } 
-
-        
+            SceneManager.LoadScene("Win");
+        }
     }
-
 }
