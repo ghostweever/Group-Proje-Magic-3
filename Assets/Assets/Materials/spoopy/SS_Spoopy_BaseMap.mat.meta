@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Assets/Materials/spoopy/SS_Spoopy_BaseMap.mat.meta
 guid: 331d4c6ee1289204cb53d1539de20e99
+=======
+guid: 671ec20dfaae4524fa590e4594b37096
+>>>>>>> main:Assets/Assets/Textures/SS_Spoopy_BaseMap.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000

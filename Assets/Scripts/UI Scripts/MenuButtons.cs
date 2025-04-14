@@ -93,14 +93,14 @@ public class MenuButtons : MonoBehaviour
 
         DataPersistenceManager.instance.SaveGame();
 
-        SceneManager.LoadSceneAsync("Level1");
+        SceneManager.LoadSceneAsync("Hub");
     }
 
     public void LoadGame()
     {
         DataPersistenceManager.instance.SaveGame();
 
-        SceneManager.LoadSceneAsync("Level1");
+        SceneManager.LoadSceneAsync("Hub");
     }
 
     public void SaveGame() {

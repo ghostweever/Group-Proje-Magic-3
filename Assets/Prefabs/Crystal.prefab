@@ -1,9 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &5574799189631909109
 =======
 --- !u!1001 &1147898617914499669
+>>>>>>> main
+=======
+--- !u!1001 &7895544720349418418
 >>>>>>> main
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,28 +76,16 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: edc5da286b002d24c96cb1b430d41ed3, type: 3}
 =======
     - target: {fileID: -8679921383154817045, guid: 5a4137bd3e9055643871f17fda4343ee, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.022111552
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a4137bd3e9055643871f17fda4343ee, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.022111552
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a4137bd3e9055643871f17fda4343ee, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.022111552
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a4137bd3e9055643871f17fda4343ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.91
+      value: 1.4018608
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a4137bd3e9055643871f17fda4343ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.85
+      value: 0.9267124
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a4137bd3e9055643871f17fda4343ee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 43.17
+      value: -0.8580019
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a4137bd3e9055643871f17fda4343ee, type: 3}
       propertyPath: m_LocalRotation.w
@@ -123,10 +115,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 5a4137bd3e9055643871f17fda4343ee, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2e3f39d4b231063418901967bdf7e850, type: 2}
     - target: {fileID: 919132149155446097, guid: 5a4137bd3e9055643871f17fda4343ee, type: 3}
 >>>>>>> main
       propertyPath: m_Name

@@ -46,12 +46,26 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.transform.position = data.playerPosition;
+        if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Hub")
+        {
+            this.transform.position = data.hubPosition;
+        }
+        else if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Forest Level")
+        {
+            this.transform.position = data.forestPosition;
+        }
     }
 
     public void SaveData(GameData data)
     {
-        data.playerPosition = this.transform.position;
+        if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Hub")
+        {
+            data.hubPosition = this.transform.position;
+        }
+        else if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Forest Level")
+        {
+            data.forestPosition = this.transform.position;
+        }
     }
 
     //If player falls off and hits the void they will die
@@ -60,14 +74,6 @@ public class Player : MonoBehaviour, IDataPersistence
         if(player.transform.position.y <= -50)
         GameObject.Find("Void").GetComponent<InGameSettings>().Death();
         
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "WeaponEnemy")
-        {
-            GameObject.Find("Player").GetComponent<PlayerLives>().Damage(1);
-        }
     }
 
 }
