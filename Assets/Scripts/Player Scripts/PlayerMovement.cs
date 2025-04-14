@@ -69,14 +69,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out RaycastHit hit, 1f))
         {
-            Debug.Log("hit");
+            
 
             return true;
 
         }
         else
         {
-            Debug.Log("no");
+            
 
             return false;
         }

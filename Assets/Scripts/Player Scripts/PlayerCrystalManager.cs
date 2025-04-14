@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCrystalManager : MonoBehaviour
 {
@@ -27,17 +28,6 @@ public class PlayerCrystalManager : MonoBehaviour
     }
 
 
-    public bool WinCondition()
-    {
-        if(playerCrystalCount == crystalsNeeded)
-        {
-            return true;
-            
-        } else
-        {
-            return false;
-        }
-    }
-
-
+    
+    
 }
