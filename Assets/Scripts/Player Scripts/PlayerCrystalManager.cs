@@ -11,21 +11,20 @@ public class PlayerCrystalManager : MonoBehaviour
 
     void Start()
     {
-        playerCrystalCount = 0;
+        playerCrystalCount = 3;
         crystalsNeeded = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void EarnCrystal(int amount)
     {
         playerCrystalCount += amount;
     }
-
 
 
     public bool WinCondition()
@@ -39,5 +38,6 @@ public class PlayerCrystalManager : MonoBehaviour
             return false;
         }
     }
+
 
 }
