@@ -9,30 +9,42 @@ public class PortalScript : MonoBehaviour
     public GameObject portal;
 
 
+    public int portalType;
+
     void Start()
     {
         playerCrystalManager = GetComponent<PlayerCrystalManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        ActivatePortal();
-
+        WhatPortalAmI();
     }
 
-    void ActivatePortal()
-        //If win condition is true the portal activates
+    public void WhatPortalAmI()
     {
-        if (GameObject.Find("Player").GetComponent<PlayerCrystalManager>().WinCondition())
+        if (portalType == 0)
         {
 
-            portal.gameObject.SetActive(true);
         }
-        else
+        else if (portalType == 1)
         {
-            portal.gameObject.SetActive(false);
+
+        }
+        else if (portalType == 2)
+        {
+
+        }
+        else if (portalType == 3)
+        {
+
+        }
+        else if (portalType == 4)
+        {
+
         }
     }
 
-}
+    }
+
+
