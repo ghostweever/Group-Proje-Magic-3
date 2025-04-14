@@ -6,11 +6,20 @@ public class BackToHub : MonoBehaviour
 {
     public GameObject portal;
 
-    private void OnTriggerEnter(Collider other)
+
+    public void Update()
     {
-        if (other.tag == "Player" && GameObject.Find("Player").GetComponent<PlayerCrystalManager>().playerCrystalCount == 3)
+        if (GameObject.Find("Player").GetComponent<PlayerCrystalManager>().playerCrystalCount == 3)
         {
             portal.gameObject.SetActive(true);
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
             SceneManager.LoadScene("Hub");
         }
     }

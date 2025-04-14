@@ -27,7 +27,5 @@ public class PlayerCrystalManager : MonoBehaviour
         playerCrystalCount += amount;
     }
 
-
-    
     
 }

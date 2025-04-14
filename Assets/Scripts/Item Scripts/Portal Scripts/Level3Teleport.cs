@@ -8,7 +8,7 @@ public class Level3Teleport : MonoBehaviour
     public GameObject loadingScreen;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
