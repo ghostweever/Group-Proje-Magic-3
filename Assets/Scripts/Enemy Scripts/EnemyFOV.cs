@@ -2,16 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
 
 public class EnemyFOV : MonoBehaviour
 {
     public float radius;
     [Range(0,360)]
     public float angle;
-
-    private EnemyCollision enemyCollision;
-    private EnemyShooting enemyShooting;
 
     public GameObject player;
 
@@ -23,7 +19,6 @@ public class EnemyFOV : MonoBehaviour
     public LayerMask obstacleMask;
 
     private int canPlayAudio = 1;
-    private int canShoot = 1;
 
     public bool canSeePlayer;
 
@@ -34,8 +29,6 @@ public class EnemyFOV : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FOV());
         enemy = GetComponent<NavMeshAgent>();
-        enemyCollision = GetComponent<EnemyCollision>();
-        enemyShooting = GetComponent<EnemyShooting>();
     }
 
     //Runs function to check if player is in FOV+
@@ -68,23 +61,12 @@ public class EnemyFOV : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask))
                 {
-                    
-
-
                     if (canPlayAudio == 1)
                     {
                         AudioSource.PlayClipAtPoint(enemyAlert, transform.position, 2f);
                         canPlayAudio--;
                         StartCoroutine(resetAudio());
                     }
-
-                    if(enemyCollision.whatEnemyAmI == 1 && canShoot == 1)
-                    {
-                        enemyShooting.EnemyShoot();
-                        canShoot--;
-                        StartCoroutine(ShootingCooldown());
-                    }
-
                     canSeePlayer = true;
                     enemy.SetDestination(player.transform.position);
                 }
@@ -103,19 +85,14 @@ public class EnemyFOV : MonoBehaviour
         {
             canSeePlayer = false;
         }
+
     }
 
-    private IEnumerator ShootingCooldown()
-    {
-        yield return new WaitForSeconds(3f);
-        canShoot = 1;
-    }
 
     private IEnumerator resetAudio()
     {
         yield return new WaitForSeconds(2f);
         canPlayAudio = 1;
     }
-
 }
 
