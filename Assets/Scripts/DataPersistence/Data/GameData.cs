@@ -10,7 +10,6 @@ public class GameData
 
     public Vector3 hubPosition;
     public Vector3 forestPosition;
- 
 
     public GameData()
     {

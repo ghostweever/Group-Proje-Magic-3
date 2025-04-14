@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class SceneHandler : MonoBehaviour
 {
-    public int whatSceneAmI;
+    [SerializeField] private int whatSceneAmI;
     public string sceneName = null;
 
-    void Update()
+
+    void Start()
     {
-        WhichScene();
+        
     }
 
-    public void WhichScene()
+    // Update is called once per frame
+    void Update()
+    {
+        SceneType();
+    }
+
+    void SceneType()
     {
         if (whatSceneAmI == 0)
         {
@@ -20,7 +27,7 @@ public class SceneHandler : MonoBehaviour
         }
         else if (whatSceneAmI == 1)
         {
-            sceneName = "Forest Level";
+            sceneName = "Level1";
         }
         else if (whatSceneAmI == 2)
         {
