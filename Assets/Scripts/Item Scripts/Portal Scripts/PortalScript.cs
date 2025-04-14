@@ -37,11 +37,17 @@ public class PortalScript : MonoBehaviour
         }
         else if (portalType == 3)
         {
-
+            if (GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().completedLevel == 1)
+            {
+                portal.gameObject.SetActive(true);
+            }
         }
-        else if (portalType == 4)
+        if (portalType == 4)
         {
-
+            if (GameObject.Find("Player").GetComponent<PlayerCrystalManager>().playerCrystalCount == 3)
+            {
+                portal.SetActive(true);
+            }
         }
     }
 

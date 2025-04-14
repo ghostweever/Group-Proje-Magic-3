@@ -6,7 +6,12 @@ public class SceneHandler : MonoBehaviour
 {
     [SerializeField] private int whatSceneAmI;
     public string sceneName = null;
+    
 
+    private void Awake()
+    {
+        
+    }
 
     void Start()
     {
@@ -24,10 +29,11 @@ public class SceneHandler : MonoBehaviour
         if (whatSceneAmI == 0)
         {
             sceneName = "Hub";
+            
         }
         else if (whatSceneAmI == 1)
         {
-            sceneName = "Level1";
+            sceneName = "Forest Level";
         }
         else if (whatSceneAmI == 2)
         {

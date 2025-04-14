@@ -18,7 +18,7 @@ public class Carrot : MonoBehaviour
     
     void CollectCarrot()
     {
-        GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(15);
+        GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(5);
         GameObject.Find("GameManager").GetComponent<GameManager>().Score(50);
         AudioSource.PlayClipAtPoint(carrotClip, transform.position, .7f);
     }
