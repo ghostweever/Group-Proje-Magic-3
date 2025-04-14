@@ -6,11 +6,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    PlayerCrystalManager playerCrystalManager;
+
     public int score;
 
     void Start()
     {
         score = 0;
+        playerCrystalManager = GetComponent<PlayerCrystalManager>();
     }
 
     // Update is called once per frame

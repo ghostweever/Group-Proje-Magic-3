@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 public class BackToHub : MonoBehaviour
 {
     public GameObject portal;
-
+    PlayerCrystalManager playerCrystalManager;
+    public int completedLevel;
+    private void Start()
+    {
+        playerCrystalManager = GetComponent<PlayerCrystalManager>();
+    }
 
     public void Update()
     {
-        if (GameObject.Find("Player").GetComponent<PlayerCrystalManager>().playerCrystalCount == 3)
-        {
-            portal.gameObject.SetActive(true);
-        }
+        
     }
 
 
@@ -20,7 +22,9 @@ public class BackToHub : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            
             SceneManager.LoadScene("Hub");
+            GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().completedLevel++;
         }
     }
 }

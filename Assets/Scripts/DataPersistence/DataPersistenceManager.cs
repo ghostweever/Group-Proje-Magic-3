@@ -18,6 +18,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     private FileDataHandler fileDataHandler;
 
+    public int completedLevel;
 
     private bool saveData;
 
