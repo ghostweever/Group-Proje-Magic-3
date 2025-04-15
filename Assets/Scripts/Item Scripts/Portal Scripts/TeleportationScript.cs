@@ -20,7 +20,7 @@ public class TeleportationScript : MonoBehaviour
         if (other.tag == "Player" && GameObject.Find("PortalManager (Level 1)").GetComponent<PortalScript>().portalType == 0)
         {
             loadingScreen.SetActive(true);
-            SceneManager.LoadSceneAsync("Level1");
+            SceneManager.LoadSceneAsync("Forest Level");
             player.transform.position = new Vector3(-3.1f, 430.83f, 201.2f);
         }
     }

@@ -13,6 +13,11 @@ public class Player : MonoBehaviour, IDataPersistence
    
     public GameObject player;
 
+    void Awake()
+    {
+        
+    }
+
     void Start()
     {
         spellManager = GetComponent<SpellManager>();
@@ -21,6 +26,7 @@ public class Player : MonoBehaviour, IDataPersistence
         rotation = GetComponent<PlayerRotation>();
         menuButtons = GetComponent<MenuButtons>();
         animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -79,6 +85,10 @@ public class Player : MonoBehaviour, IDataPersistence
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "WeaponEnemy")
+        {
+            GameObject.Find("Player").GetComponent<PlayerLives>().Damage(1);
+        }
+        if(other.tag == "Enemy")
         {
             GameObject.Find("Player").GetComponent<PlayerLives>().Damage(1);
         }

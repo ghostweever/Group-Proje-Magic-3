@@ -9,17 +9,29 @@ public class PlayerCrystalManager : MonoBehaviour
     public int playerCrystalCount;
     public bool winCon = true;
     private int crystalsNeeded;
+    public int playerCrystalInHand;
 
     void Start()
     {
-        playerCrystalCount = 3;
+        
         crystalsNeeded = 3;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+    public void SaveCrystal()
+    {
+        PlayerPrefs.SetInt("PlayerCrystal", playerCrystalCount);
+    }
+
+    public void LoadCrystal()
+    {
+        playerCrystalCount = PlayerPrefs.GetInt("PlayerCrystal");
     }
 
     public void EarnCrystal(int amount)
@@ -27,5 +39,9 @@ public class PlayerCrystalManager : MonoBehaviour
         playerCrystalCount += amount;
     }
 
-    
+    public void AddToCrystal()
+    {
+        playerCrystalInHand += 3;
+    }
+
 }
