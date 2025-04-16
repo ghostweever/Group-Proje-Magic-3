@@ -127,6 +127,7 @@ public class SpellManager : MonoBehaviour
                     //Grass and Water Mobility Spell
                     if (((whatSecondarySpellAmI == 0 && whatSpellAmI == 0) || (whatSecondarySpellAmI == 2 && whatSpellAmI == 1)) && !playerMovement.IsGrounded())
                     {
+                        animator.ResetTrigger("Idle");
                         animator.SetTrigger("Glide");
                         GameObject.Find("Player").GetComponent<Glide>().GlideSpell();
                         GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);

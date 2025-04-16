@@ -18,7 +18,11 @@ public class DataPersistenceManager : MonoBehaviour
 
     private FileDataHandler fileDataHandler;
 
-    public int completedLevel;
+    [SerializeField] internal bool grassCompleted = false;
+    [SerializeField] internal bool lavaCompleted = false;
+    [SerializeField] internal bool waterCompleted = false;
+
+    internal bool gameCompleted = false;
 
     private bool saveData;
 
@@ -47,6 +51,11 @@ public class DataPersistenceManager : MonoBehaviour
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void Update()
+    {
+        WinGame();
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -112,5 +121,13 @@ public class DataPersistenceManager : MonoBehaviour
     public bool HasGameData()
     {
         return gameData != null;
+    }
+
+    private void WinGame()
+    {
+        if(waterCompleted == true && lavaCompleted == true && grassCompleted == true)
+        {
+            gameCompleted = true;
+        }
     }
 }
