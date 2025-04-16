@@ -14,6 +14,8 @@ public class PortalScript : MonoBehaviour
     void Start()
     {
         playerCrystalManager = GetComponent<PlayerCrystalManager>();
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(false);
     }
 
     void Update()
@@ -25,19 +27,34 @@ public class PortalScript : MonoBehaviour
     {
         if (portalType == 0)
         {
-
+            if (GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().grassCompleted == true)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(2).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(true);
+            }
         }
         else if (portalType == 1)
         {
-
+            if (GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().waterCompleted == true)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(2).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(true);
+            }
         }
         else if (portalType == 2)
         {
-
+            if (GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().lavaCompleted == true)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(2).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(true);
+            }
         }
         else if (portalType == 3)
         {
-            if (GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().completedLevel == 1)
+            if (GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().gameCompleted == true)
             {
                 portal.gameObject.SetActive(true);
             }
