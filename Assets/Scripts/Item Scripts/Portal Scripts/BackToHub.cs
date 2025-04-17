@@ -22,9 +22,26 @@ public class BackToHub : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            
-            SceneManager.LoadScene("Hub");
-            GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().completedLevel++;
+            if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Forest Level")
+            {
+
+                SceneManager.LoadScene("Hub");
+
+                GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().grassCompleted = true;
+
+            }
+            else if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Water Level")
+            {
+                SceneManager.LoadScene("Hub");
+
+                GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().waterCompleted = true;
+            }
+            else if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Lava Level")
+            {
+                SceneManager.LoadScene("Hub");
+
+                GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().lavaCompleted = true;
+            }
         }
     }
 }
