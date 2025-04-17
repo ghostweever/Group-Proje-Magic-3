@@ -28,10 +28,10 @@ public class PlayerMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         inputHandler = PlayerInputHandler.Instance;
         animator = GetComponent<Animator>();
-        
+
     }
 
-   public void Movement()
+    public void Movement()
     {
         if (GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().isPaused == false)
         {
@@ -69,18 +69,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out RaycastHit hit, 1f))
         {
-            
 
+            if (hit.collider != null)
+            {
+                GameObject.Find("Player").GetComponent<PlayerJumping>().canJump = false;
+            }
             return true;
-
         }
         else
         {
-            
-
+            GameObject.Find("Player").GetComponent<PlayerJumping>().canJump = true;
             return false;
         }
     }
 
 }
+
 
