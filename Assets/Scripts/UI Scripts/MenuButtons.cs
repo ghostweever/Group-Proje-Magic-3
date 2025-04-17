@@ -21,23 +21,14 @@ public class MenuButtons : MonoBehaviour
     [Header("Confirmation")]
     [SerializeField] private GameObject confirmationPrompt = null;
 
-    [Header("Gameplay Settings")]
-    [SerializeField] private TMP_Text controllerSensText = null;
-    [SerializeField] private Slider controllerSensSlider = null;
-    [SerializeField] private int defaultSens = 4;
-    public int mainControllerSens = 4;
-
     [Header("Graphics")]
-    [SerializeField] private Slider brightnessSlider = null;
-    [SerializeField] private TMP_Text brightnessText = null;
-    [SerializeField] private float defaultBrightness = 1;
 
     [SerializeField] private TMP_Dropdown qualityDropdown;
     [SerializeField] private Toggle fullScreenToggle;
 
     private int qualityLevel;
     private bool isFullscreen;
-    private float brightnessLevel;
+
 
     [Header("Resolution")]
     public TMP_Dropdown resolutionDropdown;
@@ -144,24 +135,14 @@ public class MenuButtons : MonoBehaviour
 
     }
 
-    public void SetControllerSens(float sensitivity)
-    {
-        mainControllerSens = Mathf.RoundToInt(sensitivity);
-        controllerSensText.text = sensitivity.ToString("0");
-    }
+   
 
     public void GamePlaySave()
     {
-        PlayerPrefs.SetFloat("masterSens", mainControllerSens);
+         
         StartCoroutine(Confirm());
     }
 
-    public void SetBrightness(float brightness)
-    {
-        brightnessLevel = brightness;
-        brightnessText.text = brightness.ToString("0.0");
-
-    }
 
     public void SetFullscreen(bool _isFullscreen)
     {
@@ -175,7 +156,6 @@ public class MenuButtons : MonoBehaviour
 
     public void GraphicsApply()
     {
-        PlayerPrefs.SetFloat("masterBrightness", brightnessLevel);
         PlayerPrefs.SetInt("masterQuality", qualityLevel);
         QualitySettings.SetQualityLevel(qualityLevel);
 
@@ -197,16 +177,12 @@ public class MenuButtons : MonoBehaviour
 
         if(MenuType == "Gameplay")
         {
-            controllerSensText.text = defaultSens.ToString("0");
-            controllerSensSlider.value = defaultSens;
-            mainControllerSens = defaultSens;
+            
             GamePlaySave();
         }
 
         if(MenuType == "Graphics")
         {
-            brightnessSlider.value = defaultBrightness;
-            brightnessText.text = defaultBrightness.ToString("0.0");
 
             qualityDropdown.value = 1;
             QualitySettings.SetQualityLevel(1);

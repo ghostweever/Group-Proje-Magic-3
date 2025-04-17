@@ -7,7 +7,6 @@ public class Player : MonoBehaviour, IDataPersistence
     private SpellManager spellManager;
     private PlayerJumping jumping;
     private PlayerMovement playerMovement;
-    private PlayerRotation rotation;
     private MenuButtons menuButtons;
     private Animator animator;
    
@@ -23,7 +22,6 @@ public class Player : MonoBehaviour, IDataPersistence
         spellManager = GetComponent<SpellManager>();
         jumping = GetComponent<PlayerJumping>();
         playerMovement = GetComponent<PlayerMovement>();
-        rotation = GetComponent<PlayerRotation>();
         menuButtons = GetComponent<MenuButtons>();
         animator = GetComponent<Animator>();
         
@@ -38,7 +36,6 @@ public class Player : MonoBehaviour, IDataPersistence
         spellManager.WhichSecondarySpellToCast();
         jumping.Jumping();
         playerMovement.Movement();
-        rotation.Rotation();
         Void();
 
         if (Input.GetKeyDown(KeyCode.L))
