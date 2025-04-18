@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerLives : MonoBehaviour
 {
@@ -8,16 +9,35 @@ public class PlayerLives : MonoBehaviour
     public int playerLives;
     public bool isInvincible;
 
+    public Image originalPrimary;
+    public Sprite[] sprites;
     void Start()
     {
-        playerLives = 3;        
+        playerLives = 3;
+        originalPrimary.sprite = sprites[0];
     }
 
     void Update()
     {
         FlashFrames();
+        ChangeLives();
     }
 
+    void ChangeLives()
+    {
+        if (playerLives == 3)
+        {
+            originalPrimary.sprite = sprites[0];
+        }
+        else if (playerLives == 2)
+        {
+            originalPrimary.sprite = sprites[1];
+        }
+        else if (playerLives == 1)
+        {
+            originalPrimary.sprite = sprites[2];
+        }
+    }
     public void Damage(int amount)
     {
         playerLives -= amount;
