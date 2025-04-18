@@ -80,11 +80,13 @@ public class EnemyCollision : MonoBehaviour
     {
         if (collision.tag == "Weapon")
         {
+            {
 
-            EnemyLives(1);
-            Debug.Log(enemyLives);
+                EnemyLives(1);
+                Debug.Log(enemyLives);
+            }
+
         }
-
     }
 }
 

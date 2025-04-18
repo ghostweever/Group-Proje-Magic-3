@@ -83,12 +83,15 @@ public class Player : MonoBehaviour, IDataPersistence
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "WeaponEnemy")
+        if(other.tag == "WeaponEnemy" && GameObject.Find("Player").GetComponent<PlayerLives>().isInvincible == false)
         {
+            StartCoroutine(GameObject.Find("Player").GetComponent<PlayerLives>().Invincible());
+            
             GameObject.Find("Player").GetComponent<PlayerLives>().Damage(1);
         }
-        if(other.tag == "Enemy")
+        if(other.tag == "Enemy" && GameObject.Find("Player").GetComponent<PlayerLives>().isInvincible == false)
         {
+            StartCoroutine(GameObject.Find("Player").GetComponent<PlayerLives>().Invincible());
             GameObject.Find("Player").GetComponent<PlayerLives>().Damage(1);
         }
     }
