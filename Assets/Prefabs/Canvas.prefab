@@ -144,8 +144,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3174160550310471061}
   - component: {fileID: 6865082454066784428}
-  - component: {fileID: 5157890357371643539}
   - component: {fileID: 4565460766859683503}
+  - component: {fileID: 7826328874591114123}
   m_Layer: 5
   m_Name: PauseMenuUI
   m_TagString: Untagged
@@ -187,19 +187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 4668427631292264307}
   isPaused: 0
---- !u!114 &5157890357371643539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781645686672040704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41b6875860b6be84189881cac6248fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingsMenu: {fileID: 0}
 --- !u!223 &4565460766859683503
 Canvas:
   m_ObjectHideFlags: 0
@@ -223,6 +210,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &7826328874591114123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781645686672040704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a079b63b7dcb4e47bcc9c8a25f2a131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 4668427631292264307}
+  isPaused: 0
 --- !u!1 &817625892505222224
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +785,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b6875860b6be84189881cac6248fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsMenu: {fileID: 0}
+  newGameLevel: 
+  volumeText: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  defaultVolume: 0.5
+  confirmationPrompt: {fileID: 0}
+  qualityDropdown: {fileID: 0}
+  fullScreenToggle: {fileID: 0}
+  resolutionDropdown: {fileID: 0}
+  loadGame: {fileID: 0}
 --- !u!1 &1033034404801357781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,7 +2166,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b6875860b6be84189881cac6248fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsMenu: {fileID: 5151158714290302110}
+  newGameLevel: 
+  volumeText: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  defaultVolume: 0.5
+  confirmationPrompt: {fileID: 0}
+  qualityDropdown: {fileID: 0}
+  fullScreenToggle: {fileID: 0}
+  resolutionDropdown: {fileID: 0}
+  loadGame: {fileID: 0}
 --- !u!1 &5961355010229445726
 GameObject:
   m_ObjectHideFlags: 0

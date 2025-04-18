@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Geyser : MonoBehaviour
 {
-    public Transform geyser;
-    public float speed = .5f;
-    private Vector3 velocity = Vector3.zero;
     private bool inGeyser;
 
      void Start()
@@ -17,36 +14,38 @@ public class Geyser : MonoBehaviour
 
     void Update()
     {
+        Propel();
+    }
+
+    public void Propel()
+    {
         if (inGeyser)
         {
-            GameObject.Find("Player").GetComponent<CharacterController>().Move(Vector3.up * .5f);
-            StartCoroutine(DisableGeyser());
-        } else
+            GameObject.Find("Player").GetComponent<CharacterController>().Move(this.transform.up * .5f);
+        }
+        else
         {
 
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Geyser")
+        if(other.tag == "Player")
         {
             inGeyser = true;
+           
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        inGeyser = false;
-
+        if (other.tag == "Player")
+        {
+            inGeyser = false;
+        }
     }
 
-    private IEnumerator DisableGeyser()
-    {
-        yield return new WaitForSeconds(.5f);
-        geyser.GetChild(0).gameObject.SetActive(false);
-        yield return new WaitForSeconds(3);
-        geyser.GetChild(0).gameObject.SetActive(true);
-    }
 
 }

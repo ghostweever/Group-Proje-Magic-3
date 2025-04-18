@@ -10,10 +10,12 @@ public class PlayerRotation : MonoBehaviour
     public float mouseSensitivity = 5.5f;
     private float upDownRange = 40.0f;
     private float verticalRotation;
+    private Transform cameraMain;
 
     void Start()
     {
         inputHandler = PlayerInputHandler.Instance;
+        
     }
 
     // Update is called once per frame

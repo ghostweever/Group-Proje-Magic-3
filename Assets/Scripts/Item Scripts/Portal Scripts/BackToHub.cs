@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class BackToHub : MonoBehaviour
@@ -7,15 +8,13 @@ public class BackToHub : MonoBehaviour
     public GameObject portal;
     PlayerCrystalManager playerCrystalManager;
     public int completedLevel;
+    public bool canBeatLevel = false;
     private void Start()
     {
         playerCrystalManager = GetComponent<PlayerCrystalManager>();
     }
 
-    public void Update()
-    {
-        
-    }
+  
 
 
     private void OnTriggerEnter(Collider other)
