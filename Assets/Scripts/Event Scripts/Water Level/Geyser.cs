@@ -21,7 +21,7 @@ public class Geyser : MonoBehaviour
     {
         if (inGeyser)
         {
-            GameObject.Find("Player").GetComponent<CharacterController>().Move(GameObject.FindWithTag("Geyser").transform.up * .5f);
+            GameObject.Find("Player").GetComponent<CharacterController>().Move(this.transform.up * .5f);
         }
         else
         {
@@ -29,29 +29,23 @@ public class Geyser : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Geyser")
+        if(other.tag == "Player")
         {
             inGeyser = true;
-            
+           
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Geyser")
+        if (other.tag == "Player")
         {
             inGeyser = false;
         }
     }
 
-    //private IEnumerator DisableGeyser()
-    //{
-    //    yield return new WaitForSeconds(.5f);
-    //    geyser.GetChild(0).gameObject.SetActive(false);
-    //    yield return new WaitForSeconds(3);
-    //    geyser.GetChild(0).gameObject.SetActive(true);
-    //}
 
 }
