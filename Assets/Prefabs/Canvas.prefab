@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Back to Main
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -143,9 +143,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3174160550310471061}
-  - component: {fileID: 6865082454066784428}
   - component: {fileID: 4565460766859683503}
   - component: {fileID: 7826328874591114123}
+  - component: {fileID: 8196952382039730625}
   m_Layer: 5
   m_Name: PauseMenuUI
   m_TagString: Untagged
@@ -173,20 +173,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 804.4647, y: 440.32}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6865082454066784428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781645686672040704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a079b63b7dcb4e47bcc9c8a25f2a131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 4668427631292264307}
-  isPaused: 0
 --- !u!223 &4565460766859683503
 Canvas:
   m_ObjectHideFlags: 0
@@ -224,6 +210,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 4668427631292264307}
   isPaused: 0
+--- !u!114 &8196952382039730625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781645686672040704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dfe42596ed77047a784b5ecefb1407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &817625892505222224
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +650,6 @@ GameObject:
   - component: {fileID: 6775974393211380532}
   - component: {fileID: 2895212042345378952}
   - component: {fileID: 4878613949873488523}
-  - component: {fileID: 5796846870047354545}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -761,8 +759,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5796846870047354545}
-        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+      - m_Target: {fileID: 8196952382039730625}
+        m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -773,27 +771,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5796846870047354545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002105980565998662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41b6875860b6be84189881cac6248fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newGameLevel: 
-  volumeText: {fileID: 0}
-  volumeSlider: {fileID: 0}
-  defaultVolume: 0.5
-  confirmationPrompt: {fileID: 0}
-  qualityDropdown: {fileID: 0}
-  fullScreenToggle: {fileID: 0}
-  resolutionDropdown: {fileID: 0}
-  loadGame: {fileID: 0}
 --- !u!1 &1033034404801357781
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,7 +966,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6865082454066784428}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -2031,7 +2008,6 @@ GameObject:
   - component: {fileID: 5035917449921408085}
   - component: {fileID: 3423914739855136463}
   - component: {fileID: 7932042355584724204}
-  - component: {fileID: 3274783728398555516}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -2142,9 +2118,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3274783728398555516}
-        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
-        m_MethodName: GoToSettings
+      - m_Target: {fileID: 8196952382039730625}
+        m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
+        m_MethodName: BackToMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2154,27 +2130,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3274783728398555516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5554399180368668651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41b6875860b6be84189881cac6248fc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newGameLevel: 
-  volumeText: {fileID: 0}
-  volumeSlider: {fileID: 0}
-  defaultVolume: 0.5
-  confirmationPrompt: {fileID: 0}
-  qualityDropdown: {fileID: 0}
-  fullScreenToggle: {fileID: 0}
-  resolutionDropdown: {fileID: 0}
-  loadGame: {fileID: 0}
 --- !u!1 &5961355010229445726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,7 +2799,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3274783728398555516}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
         m_MethodName: SettingsToMain
         m_Mode: 1

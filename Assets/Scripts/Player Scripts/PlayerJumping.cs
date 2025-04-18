@@ -9,8 +9,8 @@ public class PlayerJumping : MonoBehaviour
     private PlayerMovement playerMovement;
     private PauseMenu pauseMenu;
 
-    [SerializeField] private float jumpSpeed = 5f;
-    [SerializeField] internal float gravity = 6;
+    [SerializeField] private float jumpSpeed = 9f;
+    [SerializeField] internal float gravity = 9.81f;
 
     private Animator animator;
 
