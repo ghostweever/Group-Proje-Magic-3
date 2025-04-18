@@ -7,21 +7,27 @@ public class Player : MonoBehaviour, IDataPersistence
     private SpellManager spellManager;
     private PlayerJumping jumping;
     private PlayerMovement playerMovement;
-    private PlayerRotation rotation;
     private MenuButtons menuButtons;
     private Animator animator;
    
     public GameObject player;
+
+    void Awake()
+    {
+        
+    }
 
     void Start()
     {
         spellManager = GetComponent<SpellManager>();
         jumping = GetComponent<PlayerJumping>();
         playerMovement = GetComponent<PlayerMovement>();
-        rotation = GetComponent<PlayerRotation>();
         menuButtons = GetComponent<MenuButtons>();
         animator = GetComponent<Animator>();
+        
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -30,7 +36,6 @@ public class Player : MonoBehaviour, IDataPersistence
         spellManager.WhichSecondarySpellToCast();
         jumping.Jumping();
         playerMovement.Movement();
-        rotation.Rotation();
         Void();
 
         if (Input.GetKeyDown(KeyCode.L))
@@ -74,6 +79,21 @@ public class Player : MonoBehaviour, IDataPersistence
         if(player.transform.position.y <= -50)
         GameObject.Find("Void").GetComponent<InGameSettings>().Death();
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "WeaponEnemy" && GameObject.Find("Player").GetComponent<PlayerLives>().isInvincible == false)
+        {
+            StartCoroutine(GameObject.Find("Player").GetComponent<PlayerLives>().Invincible());
+            
+            GameObject.Find("Player").GetComponent<PlayerLives>().Damage(1);
+        }
+        if(other.tag == "Enemy" && GameObject.Find("Player").GetComponent<PlayerLives>().isInvincible == false)
+        {
+            StartCoroutine(GameObject.Find("Player").GetComponent<PlayerLives>().Invincible());
+            GameObject.Find("Player").GetComponent<PlayerLives>().Damage(1);
+        }
     }
 
 }

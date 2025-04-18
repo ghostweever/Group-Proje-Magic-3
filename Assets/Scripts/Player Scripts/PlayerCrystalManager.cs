@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCrystalManager : MonoBehaviour
 {
@@ -8,17 +9,29 @@ public class PlayerCrystalManager : MonoBehaviour
     public int playerCrystalCount;
     public bool winCon = true;
     private int crystalsNeeded;
+    public int playerCrystalInHand;
 
     void Start()
     {
-        playerCrystalCount = 3;
+        
         crystalsNeeded = 3;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+    public void SaveCrystal()
+    {
+        PlayerPrefs.SetInt("PlayerCrystal", playerCrystalCount);
+    }
+
+    public void LoadCrystal()
+    {
+        playerCrystalCount = PlayerPrefs.GetInt("PlayerCrystal");
     }
 
     public void EarnCrystal(int amount)
@@ -26,18 +39,9 @@ public class PlayerCrystalManager : MonoBehaviour
         playerCrystalCount += amount;
     }
 
-
-    public bool WinCondition()
+    public void AddToCrystal()
     {
-        if(playerCrystalCount == crystalsNeeded)
-        {
-            return true;
-            
-        } else
-        {
-            return false;
-        }
+        playerCrystalInHand += 3;
     }
-
 
 }

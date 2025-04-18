@@ -10,7 +10,7 @@ public class Level2Teleport : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +19,7 @@ public class Level2Teleport : MonoBehaviour
         {
             loadingScreen.SetActive(true);
             SceneManager.LoadSceneAsync("Level2");
-            player.transform.position =  new Vector3(0, 1, 0);
+            player.transform.position = new Vector3(0, 1, 0);
         }
     }
 }

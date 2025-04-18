@@ -4,19 +4,32 @@ using UnityEngine;
 
 public class SceneHandler : MonoBehaviour
 {
-    public int whatSceneAmI;
+    [SerializeField] private int whatSceneAmI;
     public string sceneName = null;
+    
 
-    void Update()
+    private void Awake()
     {
-        WhichScene();
+        
     }
 
-    public void WhichScene()
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        SceneType();
+    }
+
+    void SceneType()
     {
         if (whatSceneAmI == 0)
         {
             sceneName = "Hub";
+            
         }
         else if (whatSceneAmI == 1)
         {

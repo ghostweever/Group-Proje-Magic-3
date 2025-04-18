@@ -9,21 +9,13 @@ public class TeleportToWin : MonoBehaviour
 
     private void Update()
     {
-        ActivatePortal();
+
     }
 
-
-    void ActivatePortal()
-    {
-        if(GameObject.Find("Player").GetComponent<PlayerCrystalManager>().playerCrystalCount == 9)
-        {
-            gameObject.SetActive(true);
-        }
-    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             SceneManager.LoadScene("Win");
         }

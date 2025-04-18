@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Assets/Materials/buff/Buf_low_standardSurface1_MaskMap.png.meta
 guid: 6b613c24b162d834f8633a033a9f90eb
+=======
+guid: e4b7306eaf3fd0444b1e3585ec850d71
+>>>>>>> main:Assets/Materials/Buf_low_standardSurface1_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

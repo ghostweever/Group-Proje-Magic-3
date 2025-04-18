@@ -50,10 +50,17 @@ public class EnemyCollision : MonoBehaviour
         if (enemyLives <= 0 && whatEnemyAmI == 1)
         {
             Destroy(gameObject);
-            GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(25);
+            GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(50);
             GameObject.Find("GameManager").GetComponent<GameManager>().Score(100);
             GameObject.Find("CrystalHolder").GetComponent<Crystal>().ActivateCrystal();
-        } else if (enemyLives <= 0 && whatEnemyAmI == 2)
+        }
+         else if (enemyLives <= 0 && whatEnemyAmI == 0)
+        {
+            Destroy(gameObject);
+            GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(15);
+            GameObject.Find("GameManager").GetComponent<GameManager>().Score(100);
+        }
+        else if (enemyLives <= 0 && whatEnemyAmI == 2)
         {
             Destroy(gameObject);
             GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(25);
@@ -62,7 +69,7 @@ public class EnemyCollision : MonoBehaviour
         } else if (enemyLives <= 0 && whatEnemyAmI == 3)
         {
             Destroy(gameObject);
-            GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(25);
+            GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(35);
             GameObject.Find("GameManager").GetComponent<GameManager>().Score(100);
             GameObject.Find("CrystalHolder (2)").GetComponent<Crystal>().ActivateCrystal();
         }
@@ -73,14 +80,12 @@ public class EnemyCollision : MonoBehaviour
     {
         if (collision.tag == "Weapon")
         {
+            {
 
-            EnemyLives(1);
-            Debug.Log(enemyLives);
-        }
+                EnemyLives(1);
+                Debug.Log(enemyLives);
+            }
 
-        if (collision.tag == "Player")
-        {
-            GameObject.Find("Void").GetComponent<InGameSettings>().Death();
         }
     }
 }

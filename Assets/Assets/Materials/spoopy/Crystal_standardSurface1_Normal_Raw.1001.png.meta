@@ -7,7 +7,11 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+<<<<<<< HEAD:Assets/Assets/Materials/spoopy/Crystal_standardSurface1_Normal_Raw.1001.png.meta
     sRGBTexture: 0
+=======
+    sRGBTexture: 1
+>>>>>>> main:Assets/Assets/Textures/Crystal_standardSurface1_Normal_Raw.1001.png.meta
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -54,7 +58,11 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
+<<<<<<< HEAD:Assets/Assets/Materials/spoopy/Crystal_standardSurface1_Normal_Raw.1001.png.meta
   textureType: 1
+=======
+  textureType: 0
+>>>>>>> main:Assets/Assets/Textures/Crystal_standardSurface1_Normal_Raw.1001.png.meta
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1

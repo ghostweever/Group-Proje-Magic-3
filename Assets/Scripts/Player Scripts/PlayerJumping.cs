@@ -9,14 +9,12 @@ public class PlayerJumping : MonoBehaviour
     private PlayerMovement playerMovement;
     private PauseMenu pauseMenu;
 
-    [SerializeField] private float jumpSpeed = 5f;
-
-    [SerializeField] internal float gravity = 6;
-
+    [SerializeField] private float jumpSpeed = 9f;
+    [SerializeField] internal float gravity = 9.81f;
 
     private Animator animator;
 
-    private bool canJump;
+    public bool canJump;
 
     [Header("Audio")]
     public AudioClip jumpClip;
@@ -43,8 +41,13 @@ public class PlayerJumping : MonoBehaviour
         {
             if (playerMovement.IsGrounded() && playerMovement.currentMovement.y < 0)
             {
-                
+                playerMovement.currentMovement.y = -2;
                 canJump = true;
+            }
+            else
+            {
+                playerMovement.currentMovement.y -= gravity * Time.deltaTime;
+                canJump = false;
             }
 
             if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("XboxJump")) && canJump)
@@ -59,16 +62,22 @@ public class PlayerJumping : MonoBehaviour
                 playerMovement.currentMovement.y = jumpSpeed;
             }
 
-            playerMovement.currentMovement.y -= gravity * Time.deltaTime;
+            
+
+            
 
         }
+
+       
+
     }
 
     private IEnumerator JumpAnimator()
     {
-        yield return new WaitForSeconds(.01f);
+        yield return new WaitForSeconds(.05f);
         animator.SetBool("Jump", false);
         canJump = false;
+
 
     }
 }

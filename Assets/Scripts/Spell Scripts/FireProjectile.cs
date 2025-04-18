@@ -25,7 +25,7 @@ public class FireProjectile : MonoBehaviour
     //Primary spell
     public void FireSpell()
     {
-        speed = 25f;
+        speed = 55f;
 
         Vector3 playerPos =  new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
         Vector3 playerDirection = player.transform.forward;
@@ -46,7 +46,7 @@ public class FireProjectile : MonoBehaviour
     //Powered up secondary spell
     public void FireComboSpell()
     {
-        speed = 35f;
+        speed = 75f;
 
         Vector3 playerPos = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
         Vector3 playerDirection = player.transform.forward;
