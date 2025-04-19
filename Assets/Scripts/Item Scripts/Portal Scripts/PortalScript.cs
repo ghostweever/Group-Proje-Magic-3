@@ -66,6 +66,10 @@ public class PortalScript : MonoBehaviour
                 portal.SetActive(true);
             }
         }
+        if (portalType == 5)
+        {
+            portal.SetActive(true);
+        }
     }
 
     }

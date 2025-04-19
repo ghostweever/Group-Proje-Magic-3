@@ -43,5 +43,9 @@ public class SceneHandler : MonoBehaviour
         {
             sceneName = "Level3";
         }
+        else if (whatSceneAmI == 4)
+        {
+            sceneName = "Tutorial";
+        }
     }
 }

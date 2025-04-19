@@ -84,7 +84,7 @@ public class MenuButtons : MonoBehaviour
 
         DataPersistenceManager.instance.SaveGame();
 
-        SceneManager.LoadSceneAsync("Hub");
+        SceneManager.LoadSceneAsync("Owasis Tutorial");
     }
 
     public void LoadGame()
