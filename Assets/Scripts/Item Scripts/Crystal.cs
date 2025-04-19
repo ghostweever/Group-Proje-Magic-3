@@ -42,6 +42,7 @@ public class Crystal : MonoBehaviour
             DeactivateCrystal();
             ActivateCrystalIcon();
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
+            GameObject.Find("Player").GetComponent<PlayerLives>().playerLives = 3;
         } else if (collision.tag == "Player" && whatCrystalAmI == 1 && canCollect)
         {
             AudioSource.PlayClipAtPoint(crystalClip, transform.position, 2f);
@@ -49,6 +50,7 @@ public class Crystal : MonoBehaviour
             ActivateCrystalIcon();
 
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
+            GameObject.Find("Player").GetComponent<PlayerLives>().playerLives = 3;
         }
         else if (collision.tag == "Player" && whatCrystalAmI == 2 && canCollect)
         {
@@ -56,6 +58,7 @@ public class Crystal : MonoBehaviour
             DeactivateCrystal();
             ActivateCrystalIcon();
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
+            GameObject.Find("Player").GetComponent<PlayerLives>().playerLives = 3;
         }
     }
 

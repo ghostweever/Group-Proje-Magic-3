@@ -41,6 +41,10 @@ public class BackToHub : MonoBehaviour
 
                 GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().lavaCompleted = true;
             }
+            else if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Tutorial")
+            {
+                SceneManager.LoadScene("Hub");
+            }
         }
     }
 }
