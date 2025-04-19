@@ -9,6 +9,15 @@ public class Crystal : MonoBehaviour
     private PlayerCrystalManager playerCrystalManager;
     public int whatCrystalAmI;
 
+    [SerializeField] private string id;
+
+    [ContextMenu("Generate guid for id")]
+    private void Generateguid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
+
+
     public AudioClip crystalClip;
 
     private bool canCollect;
@@ -43,12 +52,13 @@ public class Crystal : MonoBehaviour
             ActivateCrystalIcon();
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
             GameObject.Find("Player").GetComponent<PlayerLives>().playerLives = 3;
+            canCollect = false;
         } else if (collision.tag == "Player" && whatCrystalAmI == 1 && canCollect)
         {
             AudioSource.PlayClipAtPoint(crystalClip, transform.position, 2f);
             DeactivateCrystal();
             ActivateCrystalIcon();
-
+            canCollect = false;
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
             GameObject.Find("Player").GetComponent<PlayerLives>().playerLives = 3;
         }
@@ -57,6 +67,7 @@ public class Crystal : MonoBehaviour
             AudioSource.PlayClipAtPoint(crystalClip, transform.position, 2f);
             DeactivateCrystal();
             ActivateCrystalIcon();
+            canCollect = false;
             GameObject.Find("Player").GetComponent<PlayerCrystalManager>().EarnCrystal(1);
             GameObject.Find("Player").GetComponent<PlayerLives>().playerLives = 3;
         }

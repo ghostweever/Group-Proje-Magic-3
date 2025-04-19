@@ -37,16 +37,6 @@ public class Player : MonoBehaviour, IDataPersistence
         jumping.Jumping();
         playerMovement.Movement();
         Void();
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            animator.SetTrigger("Death");
-        } else if (Input.GetKeyDown(KeyCode.R))
-        {
-            animator.SetTrigger("Win");
-        }
-
-
     }
 
     public void LoadData(GameData data)
