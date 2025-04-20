@@ -14,6 +14,8 @@ public class DataPersistenceManager : MonoBehaviour
     public static DataPersistenceManager instance { get; private set; }
     public GameData gameData;
 
+    
+
     public List<IDataPersistence> dataPersistenceObjects;
 
     private FileDataHandler fileDataHandler;
@@ -21,6 +23,8 @@ public class DataPersistenceManager : MonoBehaviour
     [SerializeField] internal bool grassCompleted = false;
     [SerializeField] internal bool lavaCompleted = false;
     [SerializeField] internal bool waterCompleted = false;
+
+    public Dictionary<string, bool> crystalDict;
 
     internal bool gameCompleted = false;
 
@@ -35,9 +39,22 @@ public class DataPersistenceManager : MonoBehaviour
             return;
         }
 
+
         instance = this;
         DontDestroyOnLoad(this.gameObject);
-        
+
+        crystalDict = new Dictionary<string, bool>()
+        {
+            {"Crystal1_1", false},
+            {"Crystal1_2", false},
+            {"Crystal1_3", false},
+            {"Crystal2_1", false},
+            {"Crystal2_2", false},
+            {"Crystal2_3", false},
+            {"Crystal3_1", false},
+            {"Crystal3_2", false},
+            {"Crystal3_3", false},
+        };
 
         this.fileDataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
     }
@@ -70,6 +87,22 @@ public class DataPersistenceManager : MonoBehaviour
     {
         this.gameData = new GameData();
 
+        grassCompleted = false;
+        lavaCompleted = false;
+        waterCompleted = false;
+
+        crystalDict = new Dictionary<string, bool>()
+        {
+            {"Crystal1_1", false},
+            {"Crystal1_2", false},
+            {"Crystal1_3", false},
+            {"Crystal2_1", false},
+            {"Crystal2_2", false},
+            {"Crystal2_3", false},
+            {"Crystal3_1", false},
+            {"Crystal3_2", false},
+            {"Crystal3_3", false},
+        };
     }
 
     public void LoadGame()

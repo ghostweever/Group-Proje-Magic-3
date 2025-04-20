@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: portal
       value: 
       objectReference: {fileID: 249854161}
+    - target: {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
+      propertyPath: portalType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4601716142575456446, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -324,17 +328,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3135526442652748918, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
-    - {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4990413428991919639, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       insertIndex: -1
       addedObject: {fileID: 249854162}
-    - targetCorrespondingSourceObject: {fileID: 4601716142575456446, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 249854165}
   m_SourcePrefab: {fileID: 100100000, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
 --- !u!1 &249854160 stripped
 GameObject:
@@ -359,25 +359,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 249854161}
-  portalType: 3
+  portalTypes: 5
 --- !u!4 &249854163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7627758844430510972, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
   m_PrefabInstance: {fileID: 249854159}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &249854165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249854161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9533e3d132fae04397be0c8096e0514, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portal: {fileID: 249854161}
 --- !u!1001 &361658245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -476,6 +463,14 @@ PrefabInstance:
       propertyPath: portal
       value: 
       objectReference: {fileID: 529011695}
+    - target: {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
+      propertyPath: portalType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
+      propertyPath: loadingScreen
+      value: 
+      objectReference: {fileID: 1013236300}
     - target: {fileID: 4601716142575456446, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -525,8 +520,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3135526442652748918, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
-    - {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7627758844430510972, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
@@ -536,9 +530,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4990413428991919639, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       insertIndex: -1
       addedObject: {fileID: 529011696}
-    - targetCorrespondingSourceObject: {fileID: 4601716142575456446, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 529011699}
   m_SourcePrefab: {fileID: 100100000, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
 --- !u!1 &529011694 stripped
 GameObject:
@@ -563,26 +554,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 529011695}
-  portalType: 1
+  portalTypes: 1
 --- !u!4 &529011697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7627758844430510972, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
   m_PrefabInstance: {fileID: 529011693}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &529011699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529011695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d355542230b34e44a88462c808489ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1298505725}
-  loadingScreen: {fileID: 1013236300}
 --- !u!1001 &550296105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -604,9 +581,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 550296107}
     - target: {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
+      propertyPath: portalType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       propertyPath: loadingScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1829403699}
     - target: {fileID: 4601716142575456446, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -656,8 +637,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3135526442652748918, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
-    - {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7627758844430510972, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
@@ -667,9 +647,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4990413428991919639, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       insertIndex: -1
       addedObject: {fileID: 550296108}
-    - targetCorrespondingSourceObject: {fileID: 4601716142575456446, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 550296111}
   m_SourcePrefab: {fileID: 100100000, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
 --- !u!1 &550296106 stripped
 GameObject:
@@ -694,26 +671,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 550296107}
-  portalType: 2
+  portalTypes: 2
 --- !u!4 &550296109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7627758844430510972, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
   m_PrefabInstance: {fileID: 550296105}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &550296111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550296107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bc4f549e5a45e140aebb1f394e8fe8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1298505725}
-  loadingScreen: {fileID: 1829403699}
 --- !u!1 &565620812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5621307154271233897, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
@@ -1391,7 +1354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 1544372755}
-  portalType: 0
+  portalTypes: 0
 --- !u!4 &1544372757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7627758844430510972, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}

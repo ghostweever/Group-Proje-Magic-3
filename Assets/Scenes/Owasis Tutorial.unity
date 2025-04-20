@@ -213,7 +213,7 @@ PrefabInstance:
       addedObject: {fileID: 249854162}
     - targetCorrespondingSourceObject: {fileID: 4601716142575456446, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 249854170}
+      addedObject: {fileID: 249854164}
   m_SourcePrefab: {fileID: 100100000, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
 --- !u!1 &249854160 stripped
 GameObject:
@@ -238,13 +238,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 249854161}
-  portalType: 5
+  portalTypes: 4
 --- !u!4 &249854163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7627758844430510972, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
   m_PrefabInstance: {fileID: 249854159}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &249854170
+--- !u!114 &249854164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,12 +253,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 249854161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5861dba2b58554bbb34de9303d6f1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 129831d47428a7f4bad60bac6434da63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portal: {fileID: 249854161}
-  completedLevel: 0
-  canBeatLevel: 0
+  player: {fileID: 1298505725}
+  loadingScreen: {fileID: 606751870}
+  portalType: 3
 --- !u!1001 &361658245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -445,6 +445,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
+--- !u!1 &606751870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5621307154271233897, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
+  m_PrefabInstance: {fileID: 606751869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &802191096
 PrefabInstance:
   m_ObjectHideFlags: 0
