@@ -7,6 +7,7 @@ public class Carrot : MonoBehaviour
 {
 
     public AudioClip carrotClip;
+    public CarrotType carrot;
     
 
     void Start()
@@ -14,20 +15,29 @@ public class Carrot : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    
-    void CollectCarrot()
+    public enum CarrotType
     {
-        GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(5);
-        GameObject.Find("GameManager").GetComponent<GameManager>().Score(50);
-        AudioSource.PlayClipAtPoint(carrotClip, transform.position, .7f);
+        Heal,
+        Mana
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            CollectCarrot();
+            
+            switch (carrot)
+            {
+                case CarrotType.Heal:
+                    GameObject.Find("Player").GetComponent<PlayerLives>().Heal(1);
+                break;
+
+                case CarrotType.Mana:
+                    GameObject.Find("Player").GetComponent<PlayerMana>().EarnMana(10);
+                break;
+
+            }
+
             Destroy(gameObject);
         }
     }

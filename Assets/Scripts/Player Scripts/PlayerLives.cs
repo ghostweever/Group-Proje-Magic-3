@@ -8,12 +8,13 @@ public class PlayerLives : MonoBehaviour
 
     public int playerLives;
     public bool isInvincible;
+    private int maxLives = 3;
 
     public Image originalPrimary;
     public Sprite[] sprites;
     void Start()
     {
-        playerLives = 3;
+        playerLives = maxLives;
         originalPrimary.sprite = sprites[0];
     }
 
@@ -45,6 +46,17 @@ public class PlayerLives : MonoBehaviour
         if (playerLives <= 0)
         {
             GameObject.Find("Void").GetComponent<InGameSettings>().Death();
+        }
+
+    }
+
+    public void Heal(int amount)
+    {
+        playerLives += amount;
+
+        if (playerLives <= 3)
+        {
+            playerLives = maxLives;
         }
 
     }

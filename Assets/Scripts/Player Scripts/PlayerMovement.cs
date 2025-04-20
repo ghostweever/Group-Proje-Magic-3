@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public Vector3 currentMovement = Vector3.zero;
 
-    public float walking = 7f;
+    internal float walking = 40f;
     private float sprintMultiplier = 1.5f;
 
     private int rotationSpeed = 5;

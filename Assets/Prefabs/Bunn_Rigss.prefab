@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12307fa6cee5fe343bf7a57c50d74ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 9
+  jumpSpeed: 12
   gravity: 15
   canJump: 0
   jumpClip: {fileID: 8300000, guid: e893401bafe95de4e99a55dcbd84d457, type: 3}
@@ -637,7 +637,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   currentMovement: {x: 0, y: 0, z: 0}
-  walking: 20
 --- !u!114 &4386206884255725604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7a05d6e4698f74fa1359a959593057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 10
+  dashSpeed: 50
   dashLength: 5
   dashCooldown: 1
   dashTimer: 0
