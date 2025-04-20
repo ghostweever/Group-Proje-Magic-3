@@ -37,11 +37,11 @@ public class SceneHandler : MonoBehaviour
         }
         else if (whatSceneAmI == 2)
         {
-            sceneName = "Level2";
+            sceneName = "Water Level";
         }
         else if (whatSceneAmI == 3)
         {
-            sceneName = "Level3";
+            sceneName = "Lava Level";
         }
         else if (whatSceneAmI == 4)
         {
