@@ -7,7 +7,7 @@ public class TeleportationScript : MonoBehaviour
     private PortalScript portalScript;
     public GameObject player;
     public GameObject loadingScreen;
-    public GameObject portal;
+    public Portal portalType;
 
     public void Start()
     {
@@ -15,13 +15,82 @@ public class TeleportationScript : MonoBehaviour
 
     }
 
+
+    public enum Portal
+    {
+        Grass,
+        Water,
+        Lava,
+        Oasis,
+        Win,
+        GrassHub,
+        WaterHub,
+        LavaHub
+    }
+
+
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && GameObject.Find("PortalManager (Level 1)").GetComponent<PortalScript>().portalType == 0)
+        if(other.tag == "Player")
         {
-            loadingScreen.SetActive(true);
-            SceneManager.LoadSceneAsync("Level 1 Forest");
-            player.transform.position = new Vector3(-3.1f, 430.83f, 201.2f);
+            switch (portalType)
+            {
+                case Portal.Grass:
+                    loadingScreen.SetActive(true);
+                    SceneManager.LoadSceneAsync("Level 1 Forest");
+                break;
+
+                case Portal.Water:
+                    loadingScreen.SetActive(true);
+                    SceneManager.LoadSceneAsync("Level2");
+                break;
+
+                case Portal.Lava:
+                    loadingScreen.SetActive(true);
+                    SceneManager.LoadSceneAsync("Level3");
+                break;
+
+                case Portal.Oasis:
+                    loadingScreen.SetActive(true);
+                    SceneManager.LoadSceneAsync("Hub");
+                break;
+
+                case Portal.Win:
+                    loadingScreen.SetActive(true);
+                    SceneManager.LoadSceneAsync("Win");
+                break;
+
+                case Portal.GrassHub:
+                   if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Forest Level")
+                    {
+                        GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().grassCompleted = true;
+                    }
+
+                    SceneManager.LoadSceneAsync("Hub");
+
+                break;
+
+                case Portal.WaterHub:
+                    if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Water Level")
+                    {
+                        GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().waterCompleted = true;
+                    }
+
+                    SceneManager.LoadSceneAsync("Hub");
+
+                break;
+
+                case Portal.LavaHub:
+                    if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Lava Level")
+                    {
+                        GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().lavaCompleted = true;
+                    }
+
+                    SceneManager.LoadSceneAsync("Hub");
+
+                    break;
+            }
         }
     }
 }
