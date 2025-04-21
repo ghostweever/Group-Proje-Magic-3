@@ -6,7 +6,6 @@ public class SceneHandler : MonoBehaviour
 {
     [SerializeField] private int whatSceneAmI;
     public string sceneName = null;
-    
 
     private void Awake()
     {
@@ -17,6 +16,7 @@ public class SceneHandler : MonoBehaviour
     {
         
     }
+
 
     // Update is called once per frame
     void Update()

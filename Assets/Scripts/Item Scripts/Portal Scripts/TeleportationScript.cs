@@ -8,11 +8,12 @@ public class TeleportationScript : MonoBehaviour
     public GameObject player;
     public GameObject loadingScreen;
     public Portal portalType;
+    public AudioSource audioSource;
 
     public void Start()
     {
         portalScript = GetComponent<PortalScript>();
-
+        audioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
     }
 
 
@@ -34,32 +35,33 @@ public class TeleportationScript : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+
             switch (portalType)
             {
                 case Portal.Grass:
                     loadingScreen.SetActive(true);
-                    SceneManager.LoadSceneAsync("Level 1 Forest");
-                break;
+                    StartCoroutine(LoadScene("Level 1 Forest"));
+                    break;
 
                 case Portal.Water:
                     loadingScreen.SetActive(true);
-                    SceneManager.LoadSceneAsync("Level2");
-                break;
+                    StartCoroutine(LoadScene("Paul Water Level"));
+                    break;
 
                 case Portal.Lava:
                     loadingScreen.SetActive(true);
-                    SceneManager.LoadSceneAsync("Level3");
-                break;
+                    StartCoroutine(LoadScene("Lava Level"));
+                    break;
 
                 case Portal.Oasis:
                     loadingScreen.SetActive(true);
-                    SceneManager.LoadSceneAsync("Hub");
+                    StartCoroutine(LoadScene("Cutscenes"));
                 break;
 
                 case Portal.Win:
                     loadingScreen.SetActive(true);
-                    SceneManager.LoadSceneAsync("Win");
-                break;
+                    StartCoroutine(LoadScene("Win"));
+                    break;
 
                 case Portal.GrassHub:
                    if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Forest Level")
@@ -67,9 +69,9 @@ public class TeleportationScript : MonoBehaviour
                         GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().grassCompleted = true;
                     }
 
-                    SceneManager.LoadSceneAsync("Hub");
+                    StartCoroutine(LoadScene("Hub"));
 
-                break;
+                    break;
 
                 case Portal.WaterHub:
                     if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Water Level")
@@ -77,9 +79,9 @@ public class TeleportationScript : MonoBehaviour
                         GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().waterCompleted = true;
                     }
 
-                    SceneManager.LoadSceneAsync("Hub");
+                    StartCoroutine(LoadScene("Hub"));
 
-                break;
+                    break;
 
                 case Portal.LavaHub:
                     if (GameObject.Find("SceneHandler").GetComponent<SceneHandler>().sceneName == "Lava Level")
@@ -87,10 +89,18 @@ public class TeleportationScript : MonoBehaviour
                         GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().lavaCompleted = true;
                     }
 
-                    SceneManager.LoadSceneAsync("Hub");
+                    StartCoroutine(LoadScene("Hub"));
 
                     break;
             }
         }
     }
+
+    private IEnumerator LoadScene(string sceneToLoad)
+    {
+        audioSource.volume = 0f;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync(sceneToLoad);
+    }
+
 }
