@@ -14,12 +14,16 @@ public class EnemyCollision : MonoBehaviour
     private PlayerMana playerMana;
     private PlayerLives lives;
     public GameObject player;
+    private MeshRenderer enemyRenderer;
+    public Material[] materials;
 
     void Start()
     {
         crystal = GetComponent<Crystal>();
         agent = GetComponent<NavMeshAgent>();  
         
+        enemyRenderer = this.transform.GetChild(1).GetComponent<MeshRenderer>();
+        enemyRenderer.material = materials[0];
 
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -42,7 +46,11 @@ public class EnemyCollision : MonoBehaviour
         Common,
         BossOne,
         BossTwo,
-        BossThree
+        BossThree,
+        FireBuf,
+        WaterBuf,
+        GrassBuf,
+
     }
 
     private void SetEnemyStats()
@@ -51,18 +59,36 @@ public class EnemyCollision : MonoBehaviour
         {
             case EnemyType.Common:
                 enemyLives = 1;
+                enemyRenderer.material = materials[0];
                 break;
             case EnemyType.BossOne:
                 enemyLives = 5;
                 agent.speed = 7f;
+                enemyRenderer.material = materials[2];
                 break;
             case EnemyType.BossTwo:
                 enemyLives = 3;
-                agent.speed = 7f;
+                agent.speed = 10f;
+                enemyRenderer.material = materials[2];
                 break;
             case EnemyType.BossThree:
-                enemyLives = 4;
+                enemyLives = 8;
                 agent.speed = 5f;
+                enemyRenderer.material = materials[2];
+                break;
+            case EnemyType.FireBuf:
+                enemyLives = 1;
+                agent.speed = 7;
+                enemyRenderer.material = materials[4];
+            break;
+            case EnemyType.WaterBuf:
+                enemyLives = 2;
+                enemyRenderer.material = materials[1];
+                break;
+            case EnemyType.GrassBuf:
+                enemyLives = 1;
+                agent.speed = 5;
+                enemyRenderer.material = materials[3];
                 break;
         }
     }
@@ -97,6 +123,8 @@ public class EnemyCollision : MonoBehaviour
                 break;
 
         }
+
+        Destroy(gameObject);
 
      }
 

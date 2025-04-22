@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Teleporter : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class Teleporter : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-           player.transform.position = new Vector3(otherEnd.transform.position.x + 7, otherEnd.transform.position.y, otherEnd.transform.position.z);
+
+           player.transform.position = new Vector3(otherEnd.transform.position.x - 7, otherEnd.transform.position.y, otherEnd.transform.position.z);
         }
 
     }

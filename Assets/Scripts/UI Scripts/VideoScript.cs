@@ -7,9 +7,10 @@ public class VideoScript : MonoBehaviour
 {
 
     VideoPlayer video;
-
+    private DataPersistenceManager dataPersistenceManager;
     private void Awake()
     {
+        dataPersistenceManager = GetComponent<DataPersistenceManager>();
         video = GetComponent<VideoPlayer>();
         video.Play();
         video.loopPointReached += CheckOver;
@@ -17,7 +18,19 @@ public class VideoScript : MonoBehaviour
 
     void CheckOver(UnityEngine.Video.VideoPlayer vp)
     {
-        SceneManager.LoadSceneAsync("Hub");
+        if (GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().gameCompleted == false)
+        {
+            StartCoroutine(LoadScene("Hub"));
+        } else
+        {
+            StartCoroutine(LoadScene("Win"));
+        }
     }
 
+    private IEnumerator LoadScene(string sceneToLoad)
+    {
+
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync(sceneToLoad);
+    }
 }
