@@ -404,19 +404,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.9019
+      value: 462
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 431.35
+      value: 643
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 160.71
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.16532184
+      value: -0.7219377
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.x
@@ -424,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9862397
+      value: -0.6919581
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.z
@@ -436,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -199.032
+      value: -272.42902
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -822,10 +822,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef480701b9c7684e8cba24b08148204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLives: 0
+  playerLives: 3
   isInvincible: 0
   originalPrimary: {fileID: 0}
   sprites:
   - {fileID: 21300000, guid: ba02d7baf703196438c096e93c14279a, type: 3}
   - {fileID: 21300000, guid: dbe879db484f867499cb108de254cee3, type: 3}
   - {fileID: 21300000, guid: fef888a20c22e414ebcf265fdd604192, type: 3}
+  damageClips:
+  - {fileID: 8300000, guid: fa0bafa7050e0b048ab5ac4a20d524a8, type: 3}
+  - {fileID: 8300000, guid: 036c6d7bdb4a5644091f5084d42d9f7e, type: 3}
+  - {fileID: 8300000, guid: 0bb8b5c394a2dce49922aff308b86b61, type: 3}

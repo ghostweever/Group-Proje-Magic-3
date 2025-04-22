@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class Teleporter : MonoBehaviour
 {
     [SerializeField] GameObject otherEnd;
+    [SerializeField] GameObject otherEndPoint;
     [SerializeField] GameObject player;
 
     private void OnTriggerEnter(Collider other)
@@ -13,7 +14,7 @@ public class Teleporter : MonoBehaviour
         if (other.tag == "Player")
         {
 
-           player.transform.position = new Vector3(otherEnd.transform.position.x - 7, otherEnd.transform.position.y, otherEnd.transform.position.z);
+           player.transform.position = new Vector3(otherEndPoint.transform.position.x, otherEndPoint.transform.position.y, otherEndPoint.transform.position.z);
         }
 
     }
