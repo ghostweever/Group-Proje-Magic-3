@@ -72,7 +72,7 @@ public class EnemyCollision : MonoBehaviour
                 enemyRenderer.material = materials[2];
                 break;
             case EnemyType.BossThree:
-                enemyLives = 8;
+                enemyLives = 3;
                 agent.speed = 5f;
                 enemyRenderer.material = materials[2];
                 break;
