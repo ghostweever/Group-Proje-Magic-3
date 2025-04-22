@@ -127,6 +127,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8564964017398888990, guid: 956a9eae6ec58b94c8f0ec35d5d9eb8d, type: 3}
   m_PrefabInstance: {fileID: 459264792}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &53742015
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1569400756}
+    m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
+    - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Name
+      value: CobblePlat (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2058193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.035557378
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.22053182
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7005816
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.71357226
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 91.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+--- !u!4 &72940553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+  m_PrefabInstance: {fileID: 53742015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &88556619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,6 +337,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (43)
@@ -325,6 +407,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (91)
@@ -402,7 +488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &126029565
 Transform:
   m_ObjectHideFlags: 0
@@ -620,6 +706,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (39)
@@ -934,6 +1024,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (28)
@@ -1001,6 +1095,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (45)
@@ -1067,6 +1165,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (76)
@@ -1194,6 +1296,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (71)
@@ -1379,6 +1485,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (10)
@@ -1630,6 +1740,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (18)
@@ -1692,17 +1806,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
   m_PrefabInstance: {fileID: 339678487}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &341847172 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2909957672597876170, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
-  m_PrefabInstance: {fileID: 1380162296}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &343636172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1711,6 +1814,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (62)
@@ -1888,6 +1995,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4170863958933738824, guid: 844dd72cb12c8f3449bc83a99bc12744, type: 3}
   m_PrefabInstance: {fileID: 359053940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &361057562 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+  m_PrefabInstance: {fileID: 648113863}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &380967843
 PrefabInstance:
@@ -2099,6 +2211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (69)
@@ -2173,6 +2289,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (85)
@@ -2273,6 +2393,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (46)
@@ -2463,6 +2587,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (73)
@@ -2594,6 +2722,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (64)
@@ -2784,6 +2916,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (60)
@@ -2846,6 +2982,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (40)
@@ -3037,6 +3177,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (25)
@@ -3169,6 +3313,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (81)
@@ -3231,6 +3379,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (59)
@@ -3304,6 +3456,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (4)
@@ -3547,6 +3703,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (24)
@@ -3746,6 +3906,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (84)
@@ -3870,6 +4034,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (56)
@@ -3932,14 +4100,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 463714963604403249, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
-      propertyPath: playerLives
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 463714963604403249, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
-      propertyPath: originalPrimary
-      value: 
-      objectReference: {fileID: 341847172}
     - target: {fileID: 676408251760239918, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
       propertyPath: originalPrimary
       value: 
@@ -3948,17 +4108,25 @@ PrefabInstance:
       propertyPath: originalSecondary
       value: 
       objectReference: {fileID: 535610717}
+    - target: {fileID: 2152367747694332625, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739443157002511064, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
+      propertyPath: gravity
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7076069412983976841, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 462
+      value: -584.4
       objectReference: {fileID: 0}
     - target: {fileID: 7076069412983976841, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 643
+      value: 455.6
       objectReference: {fileID: 0}
     - target: {fileID: 7076069412983976841, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27
+      value: 356
       objectReference: {fileID: 0}
     - target: {fileID: 7076069412983976841, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3988,6 +4156,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7207381864584764630, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7600087220709157171, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3996,7 +4168,8 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 1163262539}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2926416047035706449, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4133,6 +4306,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (12)
@@ -4257,6 +4434,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4170863958933738824, guid: 844dd72cb12c8f3449bc83a99bc12744, type: 3}
   m_PrefabInstance: {fileID: 645400505}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &648113863
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1569400756}
+    m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
+    - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Name
+      value: CobblePlat (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20157859
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03482475
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.21598797
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -44.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7005816
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.71357226
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 91.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
 --- !u!1001 &649975465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4265,6 +4515,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (66)
@@ -4478,6 +4732,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (14)
@@ -4548,6 +4806,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (86)
@@ -4667,6 +4929,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (36)
@@ -4904,6 +5170,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (7)
@@ -5055,6 +5325,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (90)
@@ -5244,6 +5518,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (48)
@@ -5310,6 +5588,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (47)
@@ -5442,6 +5724,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (75)
@@ -5504,6 +5790,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (11)
@@ -5817,6 +6107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (44)
@@ -6012,6 +6306,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (21)
@@ -6086,6 +6384,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (82)
@@ -6346,6 +6648,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (16)
@@ -6483,6 +6789,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (88)
@@ -6793,6 +7103,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (32)
@@ -6855,6 +7169,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (67)
@@ -6925,6 +7243,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (89)
@@ -7135,6 +7457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (51)
@@ -7277,7 +7603,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.12703864, y: 0.68116057, z: -0.12176317, w: 0.7106724}
-  m_LocalPosition: {x: 409.24744, y: 662.5, z: -29.238081}
+  m_LocalPosition: {x: -637.1526, y: 475.1, z: 353.76193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7421,6 +7747,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (61)
@@ -7483,6 +7813,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat
@@ -7557,6 +7891,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (27)
@@ -7681,6 +8019,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (80)
@@ -7805,6 +8147,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (38)
@@ -7995,6 +8341,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (17)
@@ -8440,6 +8790,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (74)
@@ -8502,6 +8856,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (9)
@@ -8758,6 +9116,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (15)
@@ -9046,6 +9408,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4385583822671903791, guid: d38ba402adcfed947a0b80fe18f2f593, type: 3}
   m_PrefabInstance: {fileID: 1172694322}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1175311203 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+  m_PrefabInstance: {fileID: 1448255161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1179504732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1947304018728765937, guid: fc22944b2f114b348852f662b72a50aa, type: 3}
@@ -9314,6 +9681,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (41)
@@ -9386,7 +9757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 603858544}
-  deathClip: {fileID: 8300000, guid: 10ab73d01074f51438d868ae06052f57, type: 3}
+  deathClip: {fileID: 0}
 --- !u!4 &1218144754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4170863958933738824, guid: 844dd72cb12c8f3449bc83a99bc12744, type: 3}
@@ -9786,6 +10157,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (78)
@@ -9915,6 +10290,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (72)
@@ -10063,6 +10442,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (8)
@@ -10125,6 +10508,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (58)
@@ -10500,7 +10887,6 @@ PrefabInstance:
     - {fileID: 6865082454066784428, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
     - {fileID: 3274783728398555516, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
     - {fileID: 5796846870047354545, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
-    - {fileID: 8196952382039730625, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -10578,6 +10964,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (13)
@@ -10799,6 +11189,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4170863958933738824, guid: 844dd72cb12c8f3449bc83a99bc12744, type: 3}
   m_PrefabInstance: {fileID: 1433814441}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1448255161
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1569400756}
+    m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
+    - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Name
+      value: CobblePlat (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.21005522
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.036289174
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.22507054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7005816
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.71357226
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 91.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
 --- !u!1001 &1449453495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10869,6 +11332,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (19)
@@ -11119,6 +11586,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (70)
@@ -11189,6 +11660,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (54)
@@ -11263,6 +11738,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (68)
@@ -11677,6 +12156,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (83)
@@ -11808,6 +12291,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (20)
@@ -11882,6 +12369,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (22)
@@ -11956,6 +12447,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (63)
@@ -12201,6 +12696,9 @@ Transform:
   - {fileID: 695736908}
   - {fileID: 891925015}
   - {fileID: 933345210}
+  - {fileID: 72940553}
+  - {fileID: 1175311203}
+  - {fileID: 361057562}
   - {fileID: 1889011913}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12353,6 +12851,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (35)
@@ -12477,6 +12979,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (77)
@@ -12601,6 +13107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (37)
@@ -13071,6 +13581,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (52)
@@ -13137,6 +13651,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (34)
@@ -13203,6 +13721,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (33)
@@ -13265,6 +13787,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (57)
@@ -13327,6 +13853,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (2)
@@ -13455,6 +13985,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (50)
@@ -13521,6 +14055,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (79)
@@ -13667,6 +14205,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (6)
@@ -13799,6 +14341,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (65)
@@ -14356,6 +14902,113 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eebac19c99271044b83c7efedf5939f0, type: 3}
+--- !u!1 &1862382367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862382371}
+  - component: {fileID: 1862382370}
+  - component: {fileID: 1862382369}
+  - component: {fileID: 1862382368}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &1862382368
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862382367}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1862382369
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862382367}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: bc1c412b2f2690b42ba98390ebd972ec, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1862382370
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862382367}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1862382371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862382367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.1, y: 1058.9, z: -37.5}
+  m_LocalScale: {x: 95.655525, y: 4.8273563, z: 102.6613}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1864740418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7c377784894794f43a7bbe4e7d6a67a1, type: 3}
@@ -14499,27 +15152,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0222588
+      value: 0.39886492
       objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1766056
+      value: 0.06890797
       objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.0953326
+      value: 0.42737687
       objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.9
       objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 38.6
       objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14567,6 +15220,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (29)
@@ -14698,6 +15355,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (55)
@@ -14760,6 +15421,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (49)
@@ -14830,6 +15495,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (23)
@@ -14900,6 +15569,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (1)
@@ -15170,6 +15843,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (42)
@@ -15472,6 +16149,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (53)
@@ -15653,6 +16334,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (31)
@@ -16068,6 +16753,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (5)
@@ -16200,6 +16889,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1569400756}
     m_Modifications:
+    - target: {fileID: 3213201358934050624, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4668b5695502cf94f8b32cadebfa462a, type: 2}
     - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_Name
       value: CobblePlat (30)
@@ -16335,15 +17028,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3014480883300243245, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 409.24744
+      value: -637.1526
       objectReference: {fileID: 0}
     - target: {fileID: 3014480883300243245, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 662.5
+      value: 475.1
       objectReference: {fileID: 0}
     - target: {fileID: 3014480883300243245, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.238081
+      value: 353.76193
       objectReference: {fileID: 0}
     - target: {fileID: 3014480883300243245, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16395,19 +17088,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7157715230735470934, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70677835
+      value: 0.7067783
       objectReference: {fileID: 0}
     - target: {fileID: 7157715230735470934, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.074492075
+      value: -0.07449205
       objectReference: {fileID: 0}
     - target: {fileID: 7157715230735470934, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.64388144
+      value: 0.6438815
       objectReference: {fileID: 0}
     - target: {fileID: 7157715230735470934, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.28342918
+      value: -0.2834292
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16423,11 +17116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7050914
+      value: 0.70509136
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08905471
+      value: -0.089054696
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.y
@@ -16435,7 +17128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.27008772
+      value: -0.27008778
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16451,19 +17144,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7081687
+      value: 0.7081686
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.059847645
+      value: -0.059847623
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6378772
+      value: 0.63787735
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.2966951
+      value: -0.29669517
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16492,3 +17185,4 @@ SceneRoots:
   - {fileID: 1568655455}
   - {fileID: 265749494}
   - {fileID: 1860531512}
+  - {fileID: 1862382371}
