@@ -1194,7 +1194,7 @@ AnimatorController:
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
   - m_Name: Win
     m_Type: 9
@@ -2192,7 +2192,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -5961960811355001108}
-    m_Position: {x: 70, y: 100, z: 0}
+    m_Position: {x: 70, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4894115306491498162}
     m_Position: {x: 490, y: 500, z: 0}

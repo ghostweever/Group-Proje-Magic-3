@@ -388,6 +388,7 @@ MonoBehaviour:
   player: {fileID: 1298505725}
   loadingScreen: {fileID: 606751870}
   portalType: 3
+  audioSource: {fileID: 0}
 --- !u!1001 &361658245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2934,6 +2935,10 @@ PrefabInstance:
     - target: {fileID: 4170863958933738824, guid: 3d620fe9ae92323489dd6825508b2795, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976980967609717351, guid: 3d620fe9ae92323489dd6825508b2795, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

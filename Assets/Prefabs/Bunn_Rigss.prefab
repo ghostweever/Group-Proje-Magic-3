@@ -404,19 +404,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.751497
+      value: -7.9019
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 435.09
+      value: 431.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 205.9297
+      value: 160.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7219377
+      value: -0.16532184
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.x
@@ -424,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6919581
+      value: -0.9862397
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalRotation.z
@@ -436,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -272.42902
+      value: -199.032
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a9e135696ad1e5046812854567a5c5ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -650,7 +650,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaUse: 0a00000019000000
-  attackClip: {fileID: 8300000, guid: 00d7f5872243e404b8af085c9c2f79ab, type: 3}
+  attackClip:
+  - {fileID: 8300000, guid: 1cebcefa25ea9c246ad5d993fc9ccc2d, type: 3}
+  - {fileID: 8300000, guid: 47553276091c4524d8ba52492de428f5, type: 3}
+  - {fileID: 8300000, guid: 31bf029e719e9004793fefc2351f483d, type: 3}
 --- !u!114 &4792381432513199072
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -143,11 +143,6 @@ public class EnemyCollision : MonoBehaviour
                 Debug.Log(enemyLives);
             }
         }
-
-        if(collision.tag == "Player")
-        {
-            lives.Damage(1);
-        }
     }
 }
 
