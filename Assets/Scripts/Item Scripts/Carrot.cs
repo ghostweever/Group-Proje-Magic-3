@@ -25,7 +25,8 @@ public class Carrot : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            
+            AudioSource.PlayClipAtPoint(carrotClip, transform.position, 1.5f);
+
             switch (carrot)
             {
                 case CarrotType.Heal:

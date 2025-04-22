@@ -32,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.86, y: 3.26, z: -0.00000011920929}
-  m_LocalScale: {x: 1.6806, y: 1.6806, z: 1.6806}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 240, y: 240, z: 240}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7106974906255185046}
   - {fileID: 9216883887822279989}
@@ -53,7 +53,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatEnemyAmI: 0
   enemyLives: 0
+  enemyType: 6
   agent: {fileID: 8253683616869064719}
+  player: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: df79f36a88507d64d9b9806f192b1efa, type: 2}
+  - {fileID: 2100000, guid: 7ffc6ab529150204989e37b43e6dd22c, type: 2}
+  - {fileID: 2100000, guid: 8b3fe5c9fd0c5fd41a455c987fbf5ebc, type: 2}
+  - {fileID: 2100000, guid: b5983f7865087e04a9868e08ee5f09ff, type: 2}
+  - {fileID: 2100000, guid: 7f0a36ee4043bed46a742648392bb23d, type: 2}
 --- !u!114 &4474339913076234642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 10
-  center: {fileID: 0}
+  center: {fileID: 7106974906255185046}
 --- !u!195 &8253683616869064719
 NavMeshAgent:
   m_ObjectHideFlags: 0
