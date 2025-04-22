@@ -11,12 +11,15 @@ public class PlayerMana : MonoBehaviour
     private void Start()
     {
         manaBar = GetComponent<ManaBar>();
-
+        maxMana = 100;
     }
 
     void Update()
     {
-        
+        if(mana > maxMana)
+        {
+            mana = maxMana;
+        }
     }
 
     //Adds and subtracts mana depending on what calls it
