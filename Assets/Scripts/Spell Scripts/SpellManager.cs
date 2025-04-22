@@ -22,7 +22,7 @@ public class SpellManager : MonoBehaviour
 
     public int[] manaUse = { 10, 25 };
 
-    public AudioClip attackClip;
+    public AudioClip[] attackClip;
     void Start()
     {
         whatSpellAmI = 0;
@@ -58,7 +58,7 @@ public class SpellManager : MonoBehaviour
                 //If player is above mana requirement and a spell isnt in use they can cast a spell
                 if (playerMana.mana > manaUse[0] && !spellInUse) {
 
-                    
+                    AudioSource.PlayClipAtPoint(attackClip[Random.Range(0, attackClip.Length)], transform.position, 5f);
 
                     //Grass Attack Spell
                     if (whatSpellAmI == 0)
@@ -66,7 +66,7 @@ public class SpellManager : MonoBehaviour
                         spellInUse = true;
                         StartCoroutine(ComboSpellCooldown());
                         animator.SetTrigger("Grass");
-                        AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
+                        
                         GameObject.Find("Player").GetComponent<MakeVineWhip>().VineSpell();
                         GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
                         Debug.Log(playerMana.mana);
@@ -77,7 +77,6 @@ public class SpellManager : MonoBehaviour
                         spellInUse = true;
                         StartCoroutine(ComboSpellCooldown());
                         animator.SetTrigger("Water");
-                        AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                         GameObject.Find("Player").GetComponent<MakeWater>().WaterSpell();
                         GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
                         Debug.Log(playerMana);
@@ -88,7 +87,6 @@ public class SpellManager : MonoBehaviour
                         spellInUse = true;
                         StartCoroutine(ComboSpellCooldown());
                         animator.SetTrigger("Fire");
-                        AudioSource.PlayClipAtPoint(attackClip, transform.position, 1f);
                         GameObject.Find("Player").GetComponent<FireProjectile>().FireSpell();
                         GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[0]);
                         Debug.Log(playerMana);
@@ -123,6 +121,8 @@ public class SpellManager : MonoBehaviour
             {
                 if (playerMana.mana > manaUse[1])
                 {
+
+                    AudioSource.PlayClipAtPoint(attackClip[Random.Range(0, attackClip.Length)], transform.position, 5f);
 
                     //Grass and Water Mobility Spell
                     if (((whatSecondarySpellAmI == 0 && whatSpellAmI == 0) || (whatSecondarySpellAmI == 2 && whatSpellAmI == 1)) && !playerMovement.IsGrounded())
@@ -171,6 +171,7 @@ public class SpellManager : MonoBehaviour
                     else if ((whatSecondarySpellAmI == 0 && whatSpellAmI == 1))
                     {
                         animator.SetTrigger("Water");
+                        AudioSource.PlayClipAtPoint(attackClip[Random.Range(0, attackClip.Length - 1)], transform.position, 1f);
                         GameObject.Find("Player").GetComponent<MakeWater>().WaterComboSpell();
                         GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
                         spellInUse = true;
@@ -181,6 +182,7 @@ public class SpellManager : MonoBehaviour
                     else if ((whatSecondarySpellAmI == 1 && whatSpellAmI == 2))
                     {
                         animator.SetTrigger("Fire");
+                        AudioSource.PlayClipAtPoint(attackClip[Random.Range(0, attackClip.Length - 1)], transform.position, 1f);
                         GameObject.Find("Player").GetComponent<FireProjectile>().FireComboSpell();
                         GameObject.Find("Player").GetComponent<PlayerMana>().LoseMana(manaUse[1]);
                         spellInUse = true;

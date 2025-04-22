@@ -8,6 +8,7 @@ public class InGameSettings : MonoBehaviour
     private Vector3 startPoint = new Vector3(5f, 430.83f, 201.2f);
     public GameObject player;
     private Animator animator;
+    [SerializeField] AudioClip deathClip;
     void Start()
     {
         animator = player.GetComponent<Animator>();
@@ -37,7 +38,7 @@ public class InGameSettings : MonoBehaviour
     }
     public void Death()
     {
-        StartCoroutine(DeathCooldown());
+        StartCoroutine(LoadScene("GameOver"));
         
     }
 
@@ -46,12 +47,11 @@ public class InGameSettings : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    private IEnumerator DeathCooldown()
+    private IEnumerator LoadScene(string sceneToLoad)
     {
-        animator.SetTrigger("Death");
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadSceneAsync("GameOver");
-        
-        
+        animator.SetTrigger("Death");    
+        AudioSource.PlayClipAtPoint(deathClip, transform.position, 1f);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync(sceneToLoad);
     }
 }

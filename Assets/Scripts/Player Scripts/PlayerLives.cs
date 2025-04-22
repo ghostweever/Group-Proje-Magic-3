@@ -12,6 +12,7 @@ public class PlayerLives : MonoBehaviour
 
     public Image originalPrimary;
     public Sprite[] sprites;
+    public AudioClip[] damageClips;
     void Start()
     {
         playerLives = maxLives;
@@ -42,6 +43,8 @@ public class PlayerLives : MonoBehaviour
     public void Damage(int amount)
     {
         playerLives -= amount;
+        AudioSource.PlayClipAtPoint(damageClips[Random.Range(0, damageClips.Length)], transform.position, 1f);
+
 
         if (playerLives <= 0)
         {
