@@ -20,16 +20,20 @@ Material:
   stringTagMap:
     RenderType: Opaque
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _BaseColor _BaseMap
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ac4098d9e75bda744871bbe777b0bda3, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -43,7 +47,8 @@ Material:
     - _Smoothness: 0.5
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.9433962, g: 0.004449993, b: 0.004449993, a: 1}
+    - _Color: {r: 0.9433962, g: 0.004449993, b: 0.004449993, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &1825166191060875464
 MonoBehaviour:
