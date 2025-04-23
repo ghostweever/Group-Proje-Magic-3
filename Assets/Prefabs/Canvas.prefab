@@ -201,9 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Settings
-
-'
+  m_text: Settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 925aeef693082bb4a90589d04df0bf66, type: 2}
   m_sharedMaterial: {fileID: 2783434724369379685, guid: 925aeef693082bb4a90589d04df0bf66, type: 2}
@@ -567,7 +565,7 @@ GameObject:
   - component: {fileID: 3174160550310471061}
   - component: {fileID: 4565460766859683503}
   - component: {fileID: 7826328874591114123}
-  - component: {fileID: 8196952382039730625}
+  - component: {fileID: 7932041686341184152}
   m_Layer: 5
   m_Name: PauseMenuUI
   m_TagString: Untagged
@@ -637,7 +635,7 @@ MonoBehaviour:
   pauseImage: {fileID: 1453864502041399420}
   isPaused: 0
   settings: {fileID: 7932042355584724204}
---- !u!114 &8196952382039730625
+--- !u!114 &7932041686341184152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -650,6 +648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 10ab73d01074f51438d868ae06052f57, type: 3}
 --- !u!1 &817625892505222224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1146,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8196952382039730625}
+      - m_Target: {fileID: 7932041686341184152}
         m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -3993,7 +3992,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8196952382039730625}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
         m_MethodName: BackToMain
         m_Mode: 1
@@ -5392,7 +5391,6 @@ GameObject:
   - component: {fileID: 1945963280190291088}
   - component: {fileID: 2295099446941050100}
   - component: {fileID: 6048631740084271017}
-  - component: {fileID: 8079396214448789797}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5507,20 +5505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 2226066230876727658}
-  remainingTime: 180
---- !u!114 &8079396214448789797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220661634664755058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb0b9e6fe4af52c4188a7d82cd8a1095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 2690987780264301342}
   remainingTime: 180
 --- !u!1 &4301690527259633716
 GameObject:
@@ -7302,10 +7286,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4668427631292264307}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 7932041686341184152}
+        m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
+        m_MethodName: BackToMain
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8475,7 +8459,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8196952382039730625}
+      - m_Target: {fileID: 7932041686341184152}
         m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
         m_MethodName: SaveData
         m_Mode: 1
