@@ -3758,8 +3758,8 @@ Transform:
   m_GameObject: {fileID: 1502668012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35, y: 146, z: 853}
-  m_LocalScale: {x: 3580.1736, y: 61.76772, z: 3322.3215}
+  m_LocalPosition: {x: 35, y: 246, z: 853}
+  m_LocalScale: {x: 3580.1736, y: 29.533617, z: 3322.3215}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4190,7 +4190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616759002}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.023614101, y: 0.9754919, z: -0.17437734, w: -0.13210069}
+  m_LocalRotation: {x: -0.02361498, y: 0.975491, z: -0.17438011, w: -0.13210337}
   m_LocalPosition: {x: -298.15723, y: 488.27, z: 567.4983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4663,19 +4663,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7157715230735470934, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.4631372
+      value: -0.46314
       objectReference: {fileID: 0}
     - target: {fileID: 7157715230735470934, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.043773964
+      value: 0.04377288
       objectReference: {fileID: 0}
     - target: {fileID: 7157715230735470934, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8130284
+      value: 0.81302613
       objectReference: {fileID: 0}
     - target: {fileID: 7157715230735470934, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.3501037
+      value: -0.35010552
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4691,19 +4691,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.46213573
+      value: -0.46213588
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.053317644
+      value: 0.053317588
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.82007694
+      value: 0.8200768
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.33325917
+      value: -0.33325928
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4719,19 +4719,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.46394408
+      value: -0.46394643
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.03417885
+      value: 0.034177694
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.805608
+      value: 0.8056058
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.36685634
+      value: -0.3668581
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5634,6 +5634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 361658246}
+  deathClip: {fileID: 0}
 --- !u!1 &2028973458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d2227f710b204a4ea5ce32890c24c39, type: 3}
