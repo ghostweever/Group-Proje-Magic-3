@@ -2395,6 +2395,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -38.69995
       objectReference: {fileID: 0}
+    - target: {fileID: 7932041686341184152, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1298505725}
     - target: {fileID: 8196952382039730625, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
       propertyPath: player
       value: 
@@ -2963,6 +2967,7 @@ GameObject:
   - component: {fileID: 1616759003}
   - component: {fileID: 1616759006}
   - component: {fileID: 1616759007}
+  - component: {fileID: 1616759008}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3088,7 +3093,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: cacea6570e18c4c428d3f0d9074d4a4b, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 9cbd117b30a95804293a6a4dcd9c90ef, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4a7fd8eacbc44f94ea247d3d0c879dfb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3174,6 +3179,50 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1616759008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616759002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1001 &1649245586
 PrefabInstance:
   m_ObjectHideFlags: 0
