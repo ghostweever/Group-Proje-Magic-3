@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.06
+      value: 148.99396
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 437.92
+      value: 125.95795
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 204.0588
+      value: 167.96094
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalRotation.y
@@ -82,6 +82,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3489174804940475173}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6948618562195688148}
   m_SourcePrefab: {fileID: 100100000, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
 --- !u!1 &3650785426673356786 stripped
 GameObject:
@@ -101,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carrotClip: {fileID: 8300000, guid: 9596e197cc3cc1e4f98dd2bb69e30b09, type: 3}
+  carrot: 0
 --- !u!65 &3489174804940475173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122,3 +126,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 185.11102, y: 365.31805, z: 243.62602}
   m_Center: {x: 0, y: -1.4121323, z: -0.0000076293945}
+--- !u!95 &6948618562195688148
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650785426673356786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29d52e53084875c49a1125dca6eca6b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
