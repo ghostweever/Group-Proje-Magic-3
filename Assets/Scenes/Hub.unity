@@ -2482,6 +2482,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 781645686672040704, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4220661634664755058, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2576,6 +2580,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5479855153105303890, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709849319407750361, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6191265984269178128, guid: 91f8fbebe80926b489ef8c3fa3e62790, type: 3}
