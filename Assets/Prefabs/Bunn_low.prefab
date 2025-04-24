@@ -281,7 +281,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSpeed: 3.5
   gravity: 4.5
+  canJump: 0
   jumpClip: {fileID: 8300000, guid: 50c5d1b0735294245be01277f319685b, type: 3}
+  jumpSFXClip: {fileID: 0}
 --- !u!114 &985909726887791212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,6 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2cbb2d979c8ca4ab2b26575d455606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseSensitivity: 5.5
 --- !u!114 &5890285462737995349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,9 +311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   currentMovement: {x: 0, y: 0, z: 0}
-  walking: 5
 --- !u!114 &6975514222899190757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloud: {fileID: 4971713501620716578, guid: 01bcc8fca53886c43a14f1be07f65ff8, type: 3}
   player: {fileID: 8949305923299689219}
+  cloudClip: {fileID: 0}
 --- !u!114 &6125680680801532713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,7 +360,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vine: {fileID: 2345704783783229201}
+  vineAmplifier: {fileID: 0}
   player: {fileID: 8949305923299689219}
+  vineSpell: {fileID: 0}
 --- !u!114 &5493106822546400608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +376,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   water: {fileID: 4880888843221495150, guid: da22dd9967a202f43a8c9dd5181d9984, type: 3}
+  waterAmplifier: {fileID: 0}
   user: {fileID: 8949305923299689219}
+  waterSound: {fileID: 0}
 --- !u!114 &7221031250698404533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,7 +393,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   Fireball: {fileID: 7525640225070392789, guid: faa2bbfa6289703498d3c70bb34f7af4, type: 3}
+  FireballAmplifier: {fileID: 0}
   player: {fileID: 8949305923299689219}
+  fireSpell: {fileID: 0}
 --- !u!114 &7354338628272519552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +409,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaUse: 0a000000190000000a000000
-  attackClip: {fileID: 8300000, guid: bc7f8b856d005ff4aacac26e6ad97135, type: 3}
+  attackClip:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &3382418977496445282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,3 +475,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCrystalCount: 0
+  winCon: 1
+  playerCrystalInHand: 0
