@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lava Level.unity
     guid: 5f1edab9fab5f5441ac2fd3e59f49171
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 059a24fb27515df48877bfe4eb548851
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 7adb76d1729d95b4c99de7b0fd395147
   m_configObjects: {}
