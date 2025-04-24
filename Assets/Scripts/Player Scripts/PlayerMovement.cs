@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().isPaused == false)
         {
-            float speed = walking * (inputHandler.SprintValue > 0 ? sprintMultiplier : 1f);
+            float speed = walking;
 
             
             Vector3 horizontalMovement = new Vector3(inputHandler.MoveInput.x, 0f, inputHandler.MoveInput.y);
@@ -53,10 +53,6 @@ public class PlayerMovement : MonoBehaviour
             if (horizontalMovement == Vector3.zero)
             {
                 animator.SetFloat("Speed", 0);
-            }
-            else if (speed > walking)
-            {
-                animator.SetFloat("Speed", 1f);
             }
             else
             {

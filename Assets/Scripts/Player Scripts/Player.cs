@@ -36,7 +36,7 @@ public class Player : MonoBehaviour, IDataPersistence
         spellManager.WhichSecondarySpellToCast();
         jumping.Jumping();
         playerMovement.Movement();
-        Void();
+
     }
 
     public void LoadData(GameData data)
@@ -63,13 +63,6 @@ public class Player : MonoBehaviour, IDataPersistence
         }
     }
 
-    //If player falls off and hits the void they will die
-    void Void()
-    {            
-        if(player.transform.position.y <= -50)
-        GameObject.Find("Void").GetComponent<InGameSettings>().Death();
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
