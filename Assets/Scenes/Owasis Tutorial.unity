@@ -2692,6 +2692,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.04831088
       objectReference: {fileID: 0}
+    - target: {fileID: 6542120194214505090, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
+      propertyPath: Fireball
+      value: 
+      objectReference: {fileID: 8008849198362595030, guid: 8e4da63d9ce753d43a59b12aebe1fc94, type: 3}
     - target: {fileID: 6966343764155270157, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9558237e-11

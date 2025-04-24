@@ -23,7 +23,7 @@ public class MakeWater : MonoBehaviour
 
         Quaternion playerRotation = user.transform.rotation;
 
-        Vector3 spawnPos = new(user.transform.position.x, user.transform.position.y + 2, user.transform.position.z + 1.5f);
+        Vector3 spawnPos = new(user.transform.position.x+ 2, user.transform.position.y, user.transform.position.z + 2.5f);
 
             AudioSource.PlayClipAtPoint(waterSound, transform.position, 2f);
 
