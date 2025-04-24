@@ -20,9 +20,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: smoke_MMat
+  m_Name: gyser_Particle_Mat
   m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 2100000, guid: f1cd3022616558e4399d248d263d9c10, type: 2}
+  m_Parent: {fileID: 2100000, guid: 550b0d2874c564742b454a793649689f, type: 2}
   m_ModifiedSerializedProperties: 16
   m_ValidKeywords:
   - EFFECT_BUMP
@@ -52,5 +52,5 @@ Material:
     - _SrcBlend: 5
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.4298683, g: 0.55632085, b: 0.5660378, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
