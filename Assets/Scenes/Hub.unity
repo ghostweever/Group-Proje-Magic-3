@@ -1555,7 +1555,7 @@ PrefabInstance:
       objectReference: {fileID: 550296107}
     - target: {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       propertyPath: portalType
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4246880214274322543, guid: 211b3af92d917b94baf4d35d9febdb59, type: 3}
       propertyPath: loadingScreen
