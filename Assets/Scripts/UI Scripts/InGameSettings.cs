@@ -22,12 +22,17 @@ public class InGameSettings : MonoBehaviour
     public void BackToMain()
     {
         GameObject.Find("PauseMenuUI").GetComponent<PauseMenu>().Resume();
-        SceneManager.LoadSceneAsync("MainMenu");
+        StartCoroutine(LoadScene("MainMenu"));
     }
 
     public void SaveData()
     {
         GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().SaveGame();
+    }
+
+    public void BackToHub()
+    {
+        StartCoroutine(LoadScene("Hub"));
     }
 
     public void TryAgain()
