@@ -70,7 +70,9 @@ MonoBehaviour:
   crystalHolder: {fileID: 2058822692378063325}
   crystalIcon: {fileID: 0}
   whatCrystalAmI: 0
+  crystal: 0
   crystalClip: {fileID: 0}
+  canCollect: 1
 --- !u!1001 &5111808507278377696
 PrefabInstance:
   m_ObjectHideFlags: 0
