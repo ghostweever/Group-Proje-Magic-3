@@ -36,7 +36,7 @@ public class Glide : MonoBehaviour
 
     public void ResetGravity()
     {
-        playerJumping.gravity = 9.81f;
+        playerJumping.gravity = 18f;
         transform.GetChild(2).gameObject.SetActive(false);
     }
 
