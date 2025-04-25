@@ -572,7 +572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3174160550310471061
 RectTransform:
   m_ObjectHideFlags: 0
@@ -634,7 +634,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 4668427631292264307}
   pauseImage: {fileID: 1453864502041399420}
   isPaused: 0
-  settings: {fileID: 7932042355584724204}
+  settings: {fileID: 8386527926644457506}
 --- !u!114 &7932041686341184152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3964,7 +3964,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 4878613949873488523}
-    m_SelectOnDown: {fileID: 7932042355584724204}
+    m_SelectOnDown: {fileID: 3714402771259808203}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1

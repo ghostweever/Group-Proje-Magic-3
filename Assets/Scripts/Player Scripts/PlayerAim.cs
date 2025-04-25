@@ -26,6 +26,7 @@ public class PlayerAim : MonoBehaviour
         {
             mainCamera.SetActive(false);
             aimCamera.SetActive(true);
+            GameObject.Find("Player").GetComponent<PlayerMovement>().walking *= .5f;
             StartCoroutine(Reticle());
         }
 
@@ -33,6 +34,7 @@ public class PlayerAim : MonoBehaviour
         {
             mainCamera.SetActive(true);
             aimCamera.SetActive(false);
+            GameObject.Find("Player").GetComponent<PlayerMovement>().walking = 40f;
             aimReticle.SetActive(false);
             StopAllCoroutines();
         }
