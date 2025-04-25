@@ -8300,6 +8300,7 @@ GameObject:
   - component: {fileID: 1690415966}
   - component: {fileID: 1690415965}
   - component: {fileID: 1690415964}
+  - component: {fileID: 1690415968}
   m_Layer: 0
   m_Name: plane
   m_TagString: Untagged
@@ -8394,6 +8395,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1690415968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690415963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 9720bcd54caee7441b6f08ef102bc179, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1728662129
 GameObject:
   m_ObjectHideFlags: 0
@@ -9464,7 +9496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232607994444305701, guid: a63b3cae22268964b86fc8c7e8afadd3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 0.823
       objectReference: {fileID: 0}
     - target: {fileID: 232607994444305701, guid: a63b3cae22268964b86fc8c7e8afadd3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9501,6 +9533,10 @@ PrefabInstance:
     - target: {fileID: 608464312590438303, guid: a63b3cae22268964b86fc8c7e8afadd3, type: 3}
       propertyPath: m_Name
       value: Buf_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441831976220253651, guid: a63b3cae22268964b86fc8c7e8afadd3, type: 3}
+      propertyPath: m_BaseOffset
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -14,6 +14,8 @@ public class Dash : MonoBehaviour
     CharacterController characterController;
     private PlayerMovement playerMovement;
 
+    public AudioClip dashClip;
+
     public float dashTimer;
     public bool isDashing;
     public bool canDash;
@@ -30,7 +32,8 @@ public class Dash : MonoBehaviour
 
     public void DashSpell()
     {
-       StartCoroutine(EnableDash());              
+       StartCoroutine(EnableDash());  
+        
     }
 
     void RepeatRun()
@@ -50,6 +53,7 @@ public class Dash : MonoBehaviour
     private IEnumerator EnableDash()
     {
         yield return new WaitForSeconds(.7f);
+        AudioSource.PlayClipAtPoint(dashClip, transform.position, 1f);
         playerMovement.walking = dashSpeed;
         InvokeRepeating("RepeatRun", 0.001f, .001f);
         StartCoroutine(DisableDash());

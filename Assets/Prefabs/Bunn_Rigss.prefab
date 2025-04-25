@@ -593,6 +593,8 @@ MonoBehaviour:
   playerCrystalCount: 0
   winCon: 1
   playerCrystalInHand: 0
+  mainCamera: {fileID: 0}
+  portalCamera: {fileID: 0}
 --- !u!114 &6739443157002511064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,8 +607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12307fa6cee5fe343bf7a57c50d74ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 12
-  gravity: 15
   canJump: 0
   jumpClip: {fileID: 8300000, guid: e893401bafe95de4e99a55dcbd84d457, type: 3}
   jumpSFXClip: {fileID: 8300000, guid: 027d31bdd110bb14ca3634f05f438448, type: 3}
@@ -672,6 +672,7 @@ MonoBehaviour:
   dashSpeed: 50
   dashLength: 5
   dashCooldown: 1
+  dashClip: {fileID: 8300000, guid: e834e09b3fa9a9649a3dcc2a7ab4a522, type: 3}
   dashTimer: 0
   isDashing: 0
   canDash: 0
@@ -850,3 +851,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   aimCamera: {fileID: 0}
+  aimReticle: {fileID: 0}
