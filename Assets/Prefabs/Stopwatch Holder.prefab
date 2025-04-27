@@ -40,6 +40,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9012637591023282624}
     m_Modifications:
+    - target: {fileID: 235083859750818726, guid: 40cbf72fc5952c640a600daa80821ce1, type: 3}
+      propertyPath: clockClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b98902b3b36388b4fb1d285bba0bc265, type: 3}
     - target: {fileID: 8164033169162134156, guid: 40cbf72fc5952c640a600daa80821ce1, type: 3}
       propertyPath: m_Name
       value: Stopwatch

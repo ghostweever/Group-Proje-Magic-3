@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireBall: {fileID: 6073023261164854939, guid: f1d9b4147c2bb1a49b2f677f3ada2efb, type: 3}
+  eruption: {fileID: 8300000, guid: 779ce8cb7a046a04d8d803fac6cc91e9, type: 3}

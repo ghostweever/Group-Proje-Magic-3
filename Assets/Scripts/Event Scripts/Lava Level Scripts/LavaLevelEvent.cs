@@ -9,7 +9,7 @@ public class LavaLevelEvent : MonoBehaviour
     public Rigidbody fireBall;
     private float speed;
     private bool canSpawnFireBall;
-    
+    public AudioClip eruption;
     
     void Start()
     {
@@ -26,6 +26,8 @@ public class LavaLevelEvent : MonoBehaviour
         var clone = Instantiate(fireBall, this.transform.position, this.transform.rotation);
 
         clone.velocity = -this.transform.up * speed;
+
+        AudioSource.PlayClipAtPoint(eruption, transform.position, 1);
 
     }
 
