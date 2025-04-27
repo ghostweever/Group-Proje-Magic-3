@@ -2061,8 +2061,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8937614159824128524, guid: a6d4bc063a0b61241a412d7796c84e3d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 603858544}
     m_RemovedComponents:
     - {fileID: 7904589303599865014, guid: a6d4bc063a0b61241a412d7796c84e3d, type: 3}
+    - {fileID: 7164059991571709899, guid: a6d4bc063a0b61241a412d7796c84e3d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2088,7 +2093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 603858544}
-  spawnPos: {fileID: 0}
+  spawnPos: {fileID: 894742815}
 --- !u!1001 &310922629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6971,28 +6976,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4542814229697902110, guid: eebac19c99271044b83c7efedf5939f0, type: 3}
   m_PrefabInstance: {fileID: 780739482}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &793986020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9103465203832774155, guid: 9dfbd2b6e60955d44b563b59eb283cd7, type: 3}
-  m_PrefabInstance: {fileID: 946494525}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &793986021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793986020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c0d3f3a4c7cc9345ac76f20c18a5380, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 603858544}
-  GuppyClip:
-  - {fileID: 8300000, guid: 61015a7bf79d6cd4e8f6fb10f8fb87d4, type: 3}
-  - {fileID: 8300000, guid: 976decfeb40a52140b39e824d0f2f071, type: 3}
-  - {fileID: 8300000, guid: 047fc009002b8b64bb3ef359d67dba44, type: 3}
 --- !u!1001 &797744143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7911,6 +7894,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3011637433539816933, guid: 33ac11238fd063647ba8106bde074865, type: 3}
   m_PrefabInstance: {fileID: 894233031}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &894742815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4419717182877751967, guid: 6198b11eb6875d1438a72fc8935b2080, type: 3}
+  m_PrefabInstance: {fileID: 64757752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &907189196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8283,6 +8271,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6125620787101141689, guid: 9dfbd2b6e60955d44b563b59eb283cd7, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 603858544}
+    - target: {fileID: 6125620787101141689, guid: 9dfbd2b6e60955d44b563b59eb283cd7, type: 3}
+      propertyPath: GuppyClip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ead687b4359fdf5418a43cfa861def9f, type: 3}
+    - target: {fileID: 6125620787101141689, guid: 9dfbd2b6e60955d44b563b59eb283cd7, type: 3}
+      propertyPath: GuppyClip.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 228d70020d2c31b419a648f7bf04c967, type: 3}
+    - target: {fileID: 6125620787101141689, guid: 9dfbd2b6e60955d44b563b59eb283cd7, type: 3}
+      propertyPath: GuppyClip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: abbda10163821f74eaf75d452adab514, type: 3}
     - target: {fileID: 8439132116106904753, guid: 9dfbd2b6e60955d44b563b59eb283cd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -499.0266
@@ -8327,14 +8331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guppy
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4529712545037457046, guid: 9dfbd2b6e60955d44b563b59eb283cd7, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9103465203832774155, guid: 9dfbd2b6e60955d44b563b59eb283cd7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 793986021}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dfbd2b6e60955d44b563b59eb283cd7, type: 3}
 --- !u!1001 &958435497
 PrefabInstance:
@@ -8692,10 +8692,10 @@ AudioSource:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: cacea6570e18c4c428d3f0d9074d4a4b, type: 2}
   m_audioClip: {fileID: 8300000, guid: d6fcf33a75e810e468eaecb7234fd136, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.204
   m_Pitch: 1
   Loop: 0
   Mute: 0
