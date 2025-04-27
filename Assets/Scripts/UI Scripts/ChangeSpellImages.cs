@@ -13,6 +13,9 @@ public class ChangeSpellImages : MonoBehaviour
     public Image originalSecondary;
     public Sprite[] spritesSecondary;
 
+    public Image originalCombo;
+    public Sprite[] spritesCombo;
+
 
     void Start()
     {
@@ -22,7 +25,7 @@ public class ChangeSpellImages : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        ChangeCombo();
     }
 
     public void ChangePrimary()
@@ -54,6 +57,34 @@ public class ChangeSpellImages : MonoBehaviour
         else if (originalSecondary.sprite == sprites[2])
         {
             originalSecondary.sprite = sprites[0];
+        }
+    }
+
+    public void ChangeCombo()
+    {
+        if (originalSecondary.sprite == sprites[0] && originalPrimary.sprite == sprites[0])
+        {
+            originalCombo.sprite = spritesCombo[4];
+        }
+        if (originalSecondary.sprite == sprites[1] && originalPrimary.sprite == sprites[1])
+        {
+            originalCombo.sprite = spritesCombo[3];
+        }
+        if (originalSecondary.sprite == sprites[2] && originalPrimary.sprite == sprites[2])
+        {
+            originalCombo.sprite = spritesCombo[2];
+        }
+        if ((originalSecondary.sprite == sprites[0] && originalPrimary.sprite == sprites[1]) || ( originalSecondary.sprite == sprites[1] && originalPrimary.sprite == sprites[0]))
+        {
+            originalCombo.sprite = spritesCombo[0];
+        }
+        if (originalSecondary.sprite == sprites[1] && originalPrimary.sprite == sprites[2] || (originalSecondary.sprite == sprites[2] && originalPrimary.sprite == sprites[1]))
+        {
+            originalCombo.sprite = spritesCombo[1];
+        }
+        if (originalSecondary.sprite == sprites[0] && originalPrimary.sprite == sprites[2] || (originalSecondary.sprite == sprites[2] && originalPrimary.sprite == sprites[0]))
+        {
+            originalCombo.sprite = spritesCombo[5];
         }
     }
 }
