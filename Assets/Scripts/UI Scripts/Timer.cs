@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
      [SerializeField] internal float remainingTime;
+    public AudioClip clockClip;
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +22,11 @@ public class Timer : MonoBehaviour
 
         timerText.text = string.Format("{0:00}:{1:00}",minutes, seconds);
 
+        if (remainingTime <= 10)
+        {
+            AudioSource.PlayClipAtPoint(clockClip, transform.position, 1);
+        }
+
         PlayerDeath();
     }
 
@@ -32,5 +38,6 @@ public class Timer : MonoBehaviour
             GameObject.Find("Void").GetComponent<InGameSettings>().Death();
         }
     }
+
 
 }
