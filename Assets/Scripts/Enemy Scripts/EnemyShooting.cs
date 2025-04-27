@@ -14,7 +14,7 @@ public class EnemyShooting : MonoBehaviour
 
     private Vector3 direction;
 
-    public float rotateSpeed = 100f;
+    public float rotateSpeed = 300f;
 
 
     void Start()
