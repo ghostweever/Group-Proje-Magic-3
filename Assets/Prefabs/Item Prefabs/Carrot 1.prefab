@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 148.99396
+      value: 201.12837
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 125.95795
+      value: 141.48795
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 167.96094
+      value: 146.80426
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ce9230ed18cf4e418a28fed0925f4e4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carrotClip: {fileID: 8300000, guid: 9596e197cc3cc1e4f98dd2bb69e30b09, type: 3}
-  carrot: 0
+  carrot: 1
 --- !u!65 &3489174804940475173
 BoxCollider:
   m_ObjectHideFlags: 0
