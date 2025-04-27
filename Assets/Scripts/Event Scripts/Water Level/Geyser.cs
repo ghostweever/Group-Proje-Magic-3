@@ -21,7 +21,7 @@ public class Geyser : MonoBehaviour
     {
         if (inGeyser)
         {
-            GameObject.Find("Player").GetComponent<CharacterController>().Move(this.transform.up * .5f);
+            GameObject.Find("Player").GetComponent<CharacterController>().Move(this.transform.up * .8f);
         }
         else
         {
