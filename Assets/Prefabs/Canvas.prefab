@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 3174160550310471061}
   - component: {fileID: 4565460766859683503}
   - component: {fileID: 7826328874591114123}
-  - component: {fileID: 7932041686341184152}
+  - component: {fileID: 6688621626370183300}
   m_Layer: 5
   m_Name: PauseMenuUI
   m_TagString: Untagged
@@ -635,7 +635,7 @@ MonoBehaviour:
   pauseImage: {fileID: 1453864502041399420}
   isPaused: 0
   settings: {fileID: 8386527926644457506}
---- !u!114 &7932041686341184152
+--- !u!114 &6688621626370183300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7932041686341184152}
+      - m_Target: {fileID: 6688621626370183300}
         m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -3992,7 +3992,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7932041686341184152}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
         m_MethodName: BackToHub
         m_Mode: 1
@@ -5507,6 +5507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 2226066230876727658}
   remainingTime: 180
+  clockClip: {fileID: 8300000, guid: 4065902b9a413c946b02eeec700ec91c, type: 3}
 --- !u!1 &4301690527259633716
 GameObject:
   m_ObjectHideFlags: 0
@@ -7362,7 +7363,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7932041686341184152}
+      - m_Target: {fileID: 6688621626370183300}
         m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
         m_MethodName: BackToMain
         m_Mode: 1
@@ -7490,7 +7491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3050413155338068072
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8534,7 +8535,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7932041686341184152}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InGameSettings, Assembly-CSharp
         m_MethodName: SaveData
         m_Mode: 1
