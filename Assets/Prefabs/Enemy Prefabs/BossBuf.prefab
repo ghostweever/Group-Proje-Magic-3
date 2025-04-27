@@ -146,7 +146,7 @@ MonoBehaviour:
   enemyLives: 0
   enemyType: 1
   agent: {fileID: 4985024999951312977}
-  player: {fileID: 0}
+  player: {fileID: 7600087220709157171, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
   materials:
   - {fileID: 2100000, guid: df79f36a88507d64d9b9806f192b1efa, type: 2}
   - {fileID: 2100000, guid: ac8ee37d816cf6c4f84e7e91a6bdea69, type: 2}
@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  enemyProjectile: {fileID: 6073023261164854939, guid: e5a9355a960b45e489e6c2f2fe4597f0, type: 3}
-  player: {fileID: 0}
+  enemyProjectile: {fileID: 6073023261164854939, guid: af91cbc0c7856c741908c3f046fb57c1, type: 3}
+  player: {fileID: 7076069412983976841, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
   shootArea: {fileID: 2381777948103319244}
   rotateSpeed: 200
 --- !u!1 &8988979938549001984

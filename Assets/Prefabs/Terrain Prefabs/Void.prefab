@@ -81,5 +81,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71dfe42596ed77047a784b5ecefb1407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 7600087220709157171, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
   deathClip: {fileID: 8300000, guid: 10ab73d01074f51438d868ae06052f57, type: 3}
