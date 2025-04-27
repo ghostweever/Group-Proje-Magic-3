@@ -16917,27 +16917,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7847225139235441366, guid: 86c1d8332b3f13242ac752c542b74cc4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5214999
+      value: 0.32257015
       objectReference: {fileID: 0}
     - target: {fileID: 7847225139235441366, guid: 86c1d8332b3f13242ac752c542b74cc4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.5791845
+      value: 3.703858
       objectReference: {fileID: 0}
     - target: {fileID: 7847225139235441366, guid: 86c1d8332b3f13242ac752c542b74cc4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.6288383
+      value: 0.7693428
       objectReference: {fileID: 0}
     - target: {fileID: 7847225139235441366, guid: 86c1d8332b3f13242ac752c542b74cc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -100.8
+      value: -97.3
       objectReference: {fileID: 0}
     - target: {fileID: 7847225139235441366, guid: 86c1d8332b3f13242ac752c542b74cc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 499.5
+      value: 468.5
       objectReference: {fileID: 0}
     - target: {fileID: 7847225139235441366, guid: 86c1d8332b3f13242ac752c542b74cc4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 798.6
+      value: 786.8
       objectReference: {fileID: 0}
     - target: {fileID: 7847225139235441366, guid: 86c1d8332b3f13242ac752c542b74cc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21020,6 +21020,7 @@ GameObject:
   - component: {fileID: 1502668015}
   - component: {fileID: 1502668014}
   - component: {fileID: 1502668013}
+  - component: {fileID: 1502668017}
   m_Layer: 0
   m_Name: water
   m_TagString: Untagged
@@ -21113,6 +21114,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &1502668017
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502668012}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 1, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1515859466
 GameObject:
   m_ObjectHideFlags: 0
