@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4969118829867181163}
   - component: {fileID: 3407307794975863285}
   - component: {fileID: 7164059991571709899}
+  - component: {fileID: 8937614159824128524}
   m_Layer: 0
   m_Name: Void
   m_TagString: Void
@@ -68,3 +69,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   spawnPos: {fileID: 0}
+--- !u!114 &8937614159824128524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271800194385469806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dfe42596ed77047a784b5ecefb1407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 10ab73d01074f51438d868ae06052f57, type: 3}
