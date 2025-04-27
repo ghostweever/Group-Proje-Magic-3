@@ -11,11 +11,12 @@ public class Guf : MonoBehaviour
 
     }
 
-    void OnTriggerEmter(Collider other)
+   public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            AudioSource.PlayClipAtPoint(GuppyClip[Random.Range(0, GuppyClip.Length)], transform.position, 5f);
+            AudioSource.PlayClipAtPoint(GuppyClip[Random.Range(0, GuppyClip.Length - 1)], transform.position, 5f);
+            
         }
     }
 
