@@ -9,8 +9,8 @@ public class PlayerJumping : MonoBehaviour
     private PlayerMovement playerMovement;
     private PauseMenu pauseMenu;
 
-    internal float jumpSpeed = 22f;
-    internal float gravity = 20f;
+    internal float jumpSpeed = 19f;
+    internal float gravity = 28.81f;
 
     private Animator animator;
 
