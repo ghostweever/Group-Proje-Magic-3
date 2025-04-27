@@ -5,7 +5,6 @@ using UnityEngine;
 public class Geyser : MonoBehaviour
 {
     private bool inGeyser;
-    public GameObject player;
 
      void Start()
     {
@@ -22,7 +21,7 @@ public class Geyser : MonoBehaviour
     {
         if (inGeyser)
         {
-            GameObject.Find("Player").GetComponent<CharacterController>().Move((this.transform.up * .8f) * 5);
+            GameObject.Find("Player").GetComponent<CharacterController>().Move(this.transform.up * .8f);
         }
         else
         {
@@ -45,7 +44,6 @@ public class Geyser : MonoBehaviour
         if (other.tag == "Player")
         {
             inGeyser = false;
-            GameObject.Find("Player").GetComponent<CharacterController>().Move(player.transform.forward * 2);
         }
     }
 
