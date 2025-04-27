@@ -7,7 +7,7 @@ public class Dash : MonoBehaviour
     
 {
     [Header("Dash Variables")]
-    public float dashSpeed = 50f;
+    public float dashSpeed = 65f;
     public float dashLength = 6f;
     public float dashCooldown = 1f;
 
@@ -45,7 +45,7 @@ public class Dash : MonoBehaviour
     private IEnumerator DisableDash()
     {
         yield return new WaitForSeconds(5f);
-        playerMovement.walking = 40f;
+        playerMovement.walking = 50f;
         CancelInvoke();
         
     }
