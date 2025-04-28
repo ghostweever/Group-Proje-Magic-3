@@ -33,6 +33,7 @@ public class InGameSettings : MonoBehaviour
     public void BackToHub()
     {
         SceneManager.LoadScene("Hub");
+        Time.timeScale = 1f;
     }
 
     public void TryAgain()
