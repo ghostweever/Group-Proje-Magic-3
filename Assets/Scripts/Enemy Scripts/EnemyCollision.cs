@@ -16,6 +16,7 @@ public class EnemyCollision : MonoBehaviour
     public GameObject player;
     private MeshRenderer enemyRenderer;
     public Material[] materials;
+    public AudioClip hitClip;
 
     void Start()
     {
@@ -126,14 +127,15 @@ public class EnemyCollision : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "Weapon")
         {
-            {
+            Debug.Log("hi");
                 TakeDamage(1);
+                AudioSource.PlayClipAtPoint(hitClip, transform.position);
                 Debug.Log(enemyLives);
-            }
+            
         }
     }
 }
