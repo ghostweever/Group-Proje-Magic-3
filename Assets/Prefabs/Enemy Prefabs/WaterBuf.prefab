@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2404801783507011837}
   - component: {fileID: 4842594552955088334}
   - component: {fileID: 7291535583775129088}
+  - component: {fileID: 641762883341432346}
   m_Layer: 0
   m_Name: WaterBuf
   m_TagString: Enemy
@@ -120,6 +121,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8b3fe5c9fd0c5fd41a455c987fbf5ebc, type: 2}
   - {fileID: 2100000, guid: 7f0a36ee4043bed46a742648392bb23d, type: 2}
   - {fileID: 2100000, guid: 4e85e354238522e43bee229523382d60, type: 2}
+  hitClip: {fileID: 8300000, guid: e809d70a85d5eb642ae301351b523dc0, type: 3}
 --- !u!136 &7291535583775129088
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -143,6 +145,33 @@ CapsuleCollider:
   m_Height: 2.2029636
   m_Direction: 1
   m_Center: {x: -0.003440857, y: -0.0007749796, z: 0}
+--- !u!54 &641762883341432346
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6732362365327857521}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7666069759428112044
 GameObject:
   m_ObjectHideFlags: 0
