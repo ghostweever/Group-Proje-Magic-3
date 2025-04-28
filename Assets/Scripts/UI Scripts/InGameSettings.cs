@@ -32,7 +32,7 @@ public class InGameSettings : MonoBehaviour
 
     public void BackToHub()
     {
-        StartCoroutine(LoadScene("Hub"));
+        SceneManager.LoadScene("Hub");
     }
 
     public void TryAgain()

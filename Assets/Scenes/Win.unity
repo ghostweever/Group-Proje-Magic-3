@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -827,7 +827,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7600087220709157171, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
   deathClip: {fileID: 8300000, guid: 10ab73d01074f51438d868ae06052f57, type: 3}
-  clickClip: {fileID: 8300000, guid: b0b24412b8737c846a0b0f88db313017, type: 3}
 --- !u!1 &1151101537
 GameObject:
   m_ObjectHideFlags: 0
