@@ -69,7 +69,7 @@ public class TeleportationScript : MonoBehaviour
                         GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().grassCompleted = true;
                     }
 
-                    StartCoroutine(LoadScene("Hub"));
+                    SceneManager.LoadScene("Hub");
 
                     break;
 
@@ -79,7 +79,7 @@ public class TeleportationScript : MonoBehaviour
                         GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().waterCompleted = true;
                     }
 
-                    StartCoroutine(LoadScene("Hub"));
+                    SceneManager.LoadScene("Hub");
 
                     break;
 
@@ -89,7 +89,7 @@ public class TeleportationScript : MonoBehaviour
                         GameObject.Find("DataPersistenceManager").GetComponent<DataPersistenceManager>().lavaCompleted = true;
                     }
 
-                    StartCoroutine(LoadScene("Hub"));
+                    SceneManager.LoadScene("Hub");
 
                     break;
             }
