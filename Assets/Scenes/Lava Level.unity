@@ -11277,6 +11277,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
+    - target: {fileID: 4005786858616170133, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.23972341
@@ -11291,7 +11295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -557.4
+      value: -558.2
       objectReference: {fileID: 0}
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11324,6 +11328,10 @@ PrefabInstance:
     - target: {fileID: 4385583822671903791, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903439150069185421, guid: f56ea471ff82f254087024dddd0418d0, type: 3}
+      propertyPath: m_CookingOptions
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
