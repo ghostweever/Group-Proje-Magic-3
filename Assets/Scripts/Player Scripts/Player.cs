@@ -9,7 +9,8 @@ public class Player : MonoBehaviour, IDataPersistence
     private PlayerMovement playerMovement;
     private MenuButtons menuButtons;
     private Animator animator;
-   
+
+    public AudioClip playerDance;
     public GameObject player;
 
     void Awake()
@@ -36,6 +37,13 @@ public class Player : MonoBehaviour, IDataPersistence
         spellManager.WhichSecondarySpellToCast();
         jumping.Jumping();
         playerMovement.Movement();
+
+        if(Input.GetButtonDown("XboxTaunt") || Input.GetButtonDown("KeyboardTaunt"))
+        {
+            animator.SetTrigger("Win");
+            AudioSource.PlayClipAtPoint(playerDance, transform.position);
+
+        }
 
     }
 
@@ -77,6 +85,12 @@ public class Player : MonoBehaviour, IDataPersistence
             StartCoroutine(GameObject.Find("Player").GetComponent<PlayerLives>().Invincible());
             GameObject.Find("Player").GetComponent<PlayerLives>().Damage(1);
         }
+    }
+
+    private IEnumerator resetAnim()
+    {
+        yield return new WaitForSeconds(5);
+        animator.ResetTrigger("Win");
     }
 
 }
