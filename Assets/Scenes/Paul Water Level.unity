@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientSkyColor: {r: 0.74514955, g: 0.764062, b: 0.8018868, a: 1}
+  m_AmbientEquatorColor: {r: 0.08904416, g: 0.5280704, b: 0.8207547, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: bc5c10bbb7fc5ab4381ecd5738f4c191, type: 2}
   m_HaloStrength: 0.5
@@ -69,7 +69,7 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
-    m_ReflectionCompression: 2
+    m_ReflectionCompression: 1
     m_MixedBakeMode: 2
     m_BakeBackend: 1
     m_PVRSampling: 1
@@ -25592,8 +25592,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.63
+  m_Color: {r: 0.6839622, g: 1, b: 0.9969981, a: 1}
+  m_Intensity: 0.84
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -70553,19 +70553,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.014965698
+      value: -0.014965795
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00061574444
+      value: 0.0006157426
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.95153874
+      value: -0.95153874
       objectReference: {fileID: 0}
     - target: {fileID: 8475773060426187863, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.30716404
+      value: 0.30716407
       objectReference: {fileID: 0}
     - target: {fileID: 8621801607158752028, guid: 374cce43c31b9134da23e418f3ec4bbc, type: 3}
       propertyPath: m_LocalPosition.x
