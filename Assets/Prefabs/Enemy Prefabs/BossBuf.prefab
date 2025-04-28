@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 49831585721601468}
   - component: {fileID: 1941276953452983989}
   - component: {fileID: 2108476317178205235}
+  - component: {fileID: 3769700184270589133}
   m_Layer: 0
   m_Name: BossBuf
   m_TagString: Enemy
@@ -153,6 +154,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8b3fe5c9fd0c5fd41a455c987fbf5ebc, type: 2}
   - {fileID: 2100000, guid: 7f0a36ee4043bed46a742648392bb23d, type: 2}
   - {fileID: 2100000, guid: 4e85e354238522e43bee229523382d60, type: 2}
+  hitClip: {fileID: 8300000, guid: e809d70a85d5eb642ae301351b523dc0, type: 3}
 --- !u!136 &1941276953452983989
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -193,6 +195,33 @@ MonoBehaviour:
   player: {fileID: 7076069412983976841, guid: 8e5d522fd1303134998355fae36c9623, type: 3}
   shootArea: {fileID: 2381777948103319244}
   rotateSpeed: 200
+--- !u!54 &3769700184270589133
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944847685762291329}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8988979938549001984
 GameObject:
   m_ObjectHideFlags: 0
